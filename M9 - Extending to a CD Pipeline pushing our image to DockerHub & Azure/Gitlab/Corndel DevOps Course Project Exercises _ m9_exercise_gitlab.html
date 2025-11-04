@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m9_exercise_gitlab.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ m9_exercise_gitlab_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ m9_exercise_gitlab_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ m9_exercise_gitlab_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ m9_exercise_gitlab_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-9---project-exercise">Module 9 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#module-9---project-exercise" id="markdown-toc-module-9---project-exercise">Module 9 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#part-1-build-artefacts" id="markdown-toc-part-1-build-artefacts">Part 1: Build Artefacts</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#step-1-add-a-second-job" id="markdown-toc-step-1-add-a-second-job">Step 1: Add a second job</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#step-2-docker-login" id="markdown-toc-step-2-docker-login">Step 2: Docker Login</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#step-3-build-and-push" id="markdown-toc-step-3-build-and-push">Step 3: Build and Push</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#step-4-release-to-azure" id="markdown-toc-step-4-release-to-azure">Step 4: Release to Azure</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#stretch-goal-pipeline-optimisation" id="markdown-toc-stretch-goal-pipeline-optimisation">(Stretch Goal): Pipeline Optimisation</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m9_exercise_gitlab#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In the previous Module you deployed your app to Azure manually.</p>
+
+<p>In this exercise you will expand your CI pipeline to publish build artefacts, and we’ll then extend this pipeline further, practicing <strong>continuous deployment</strong> to Azure, so that by the end you’ll end up with a fully automated pipeline from source code to public deployment.</p>
+
+<h2 id="part-1-build-artefacts">Part 1: Build Artefacts</h2>
+
+<p>First, you’ll expand your CI pipeline to build production images and push them to Docker Hub. A public Docker registry (such as Docker Hub) is a great place to share build artefacts for open-source projects, as it’s extremely easy for anyone running Docker to download, run and integrate with your app.</p>
+
+<h3 id="step-1-add-a-second-job">Step 1: Add a second job</h3>
+
+<p>Keep in mind that your pipeline should only push production images from the main branch. We always want to run tests but do not want to publish build artefacts from in-development feature branches! To achieve this, create a second “job” in your workflow, which will build and publish your Docker image.</p>
+
+<p>The new job should belong to a second “stage”. This second stage only runs after the first stage completes, so we won’t publish an image if the tests fail. The job can be configured to only run under certain conditions.</p>
+
+<p>To add a second stage, add another item to the “stages” list in your <code class="language-plaintext highlighter-rouge">.gitlab-ci.yml</code> file.
+To add a second job, adding a new key with whatever name you want for the new job.</p>
+
+<p>So your file should have a structure like this:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">stages</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">stage-one</span>
+  <span class="pi">-</span> <span class="s">stage-two</span>
+
+<span class="na">job-one</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">stage-one</span>
+  <span class="s">...</span>
+
+<span class="na">job-two</span><span class="pi">:</span>
+  <span class="na">stage</span><span class="pi">:</span> <span class="s">stage-two</span>
+  <span class="s">...</span>
+</code></pre></div></div>
+
+<p>For now, give it a placeholder script such as <code class="language-plaintext highlighter-rouge">echo Publishing!</code></p>
+
+<p>We also want to add <a href="https://docs.gitlab.com/ee/ci/yaml/#rules">a rule</a> for when this second job runs. We only want it to run if the branch name equals a certain value. This can be achieved with an “if” rule. See the <a href="https://docs.gitlab.com/ee/ci/variables/predefined_variables.html">list of available variables</a> for an appropriate one to check.</p>
+
+<p>For now, configure the new job to run only on your module 9 branch. Later, when you have completed the exercise, change it to run only on your main branch.</p>
+
+<h3 id="step-2-docker-login">Step 2: Docker Login</h3>
+
+<p>Before you can push images to Docker Hub, the first step will be to log in. On your local machine you can simply run <code class="language-plaintext highlighter-rouge">docker login</code> and log in interactively, but you’ll need to handle this slightly differently on a CI server - the pipeline has to be totally non-interactive.</p>
+
+<ol>
+  <li>Add your Docker Hub password (or <a href="https://docs.docker.com/docker-hub/access-tokens/">access token</a>) as a secret variable in your GitLab repository. The username can also be added as a variable alongside the password, or just hardcoded in the yaml file.</li>
+  <li>Add a step to your job which runs the <code class="language-plaintext highlighter-rouge">docker login</code> command, including supplying credentials (see <a href="https://docs.docker.com/engine/reference/commandline/login/">https://docs.docker.com/engine/reference/commandline/login/</a>).</li>
+</ol>
+
+<h3 id="step-3-build-and-push">Step 3: Build and Push</h3>
+
+<p>To recap, the basic commands for building and pushing your application to Docker Hub should look like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker build <span class="nt">--target</span> &lt;my_build_phase&gt; <span class="nt">--tag</span> &lt;image_tag&gt; <span class="nb">.</span>
+<span class="nv">$ </span>docker push &lt;image_tag&gt;
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;image_tag&gt;</code> needs the correct format to point to your Docker Hub repository: <code class="language-plaintext highlighter-rouge">&lt;docker_hub_username&gt;/&lt;image_name&gt;:&lt;tag&gt;</code>.</p>
+
+<p>Make sure you set appropriate image tags! Tag the most recent production image with <code class="language-plaintext highlighter-rouge">latest</code>, which is the default tag if you don’t specify one. If you want to keep older images - often good practice - you’ll need to tag each build uniquely. You could set a version number yourself or use a predefined variable for the Git commit hash.</p>
+<h3 id="step-4-release-to-azure">Step 4: Release to Azure</h3>
+
+<p>We now have a pipeline that builds our latest production image and stores it in DockerHub, but our Azure application is still running the older image. We now want to extend our pipeline to automatically trigger Azure to pull the latest image, using the webhook URL we tested in the previous module.</p>
+
+<p>The webhook URL is sensitive because it includes a password for deploying your app. Make sure not to commit it to the codebase and add it to your repository as a secret. Note that you will need to escape the <code class="language-plaintext highlighter-rouge">$</code> in the webhook by adding another, so that you have <code class="language-plaintext highlighter-rouge">$$</code>. <a href="https://docs.gitlab.com/ee/ci/variables/#use-the--character-in-variables">See the GitLab docs for more info.</a></p>
+
+<p>Before you can call the webhook, you need to install curl. Your pipeline is running in a Docker in Docker container, which is based on Alpine Linux. Its package manager is called <code class="language-plaintext highlighter-rouge">apk</code>, and you can use it to install the necessary tools (<code class="language-plaintext highlighter-rouge">curl</code>) like so:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apk add <span class="nt">--update-cache</span> curl
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">--update-cache</code> flag tells the tool to update its cache of packages first.</p>
+
+<p>Run the curl command as a step at the end of your deployment job CD pipeline, referencing the webhook URL.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Merge Request:</p>
+
+<ul>
+  <li>Your image is deployed to DockerHub (and it works if you pull it!)
+    <ul>
+      <li>Please include a link in your README if your pipeline hides your Docker Username</li>
+    </ul>
+  </li>
+  <li>Your GitLab pipeline now has a deployment job, which:
+    <ul>
+      <li>Pushes a production image to Docker Hub</li>
+      <li>Releases the latest image to Azure</li>
+      <li>Doesn’t reveal any secret values</li>
+      <li>Only runs after your tests pass</li>
+      <li>Is configured to only run for updates to the main branch (or another branch while you test it)</li>
+    </ul>
+  </li>
+  <li>Your submission still satisfies the criteria from previous exercises</li>
+</ul>
+
+<h2 id="stretch-goal-pipeline-optimisation">(Stretch Goal): Pipeline Optimisation</h2>
+
+<p>Now your CI/CD pipeline is running, you should review its performance.</p>
+
+<p>A quick configuration change you could make is to <a href="https://docs.gitlab.com/ee/ci/pipelines/settings.html#auto-cancel-redundant-pipelines">automatically cancel redundant builds</a>. This means that if you push to a branch and a previous pipeline for that branch is still running, that old pipeline will be cancelled. This is often preferable in order to free up runners.</p>
+
+<p>Next, consider improving the performance of the pipeline itself. Look at the history of pipeline runs in GitLab and take note of:</p>
+<ul>
+  <li>How long does the CI/CD pipeline take to run?</li>
+  <li>How long does each job in the pipeline take? GitLab also shows you the time taken for different parts of a job.</li>
+  <li>Do all builds take the same time?
+    <ul>
+      <li>Are identical, repeated builds fast?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Depending on how you’ve written your Dockerfile and pipeline, it’s likely that your pipeline takes a few minutes, but is far from instant.</p>
+
+<p>A pipeline that takes a few minutes is not terrible but can you think of any ways to make it faster? Have a go.</p>
+
+<p><strong>Hint:</strong> think about how you can avoid re-building the same Docker layers every time.</p>
+
+<p>Downloading an image will usually be faster than building one from scratch. This applies to building both the test image and the production one. You can use the <code class="language-plaintext highlighter-rouge">--cache-from</code> option of <code class="language-plaintext highlighter-rouge">docker build</code> to specify an image to take cached layers from.</p>
+
+<h2 id="hints">Hints</h2>
+<ul>
+  <li>If you’re hitting an issue not covered, as always it’s worth checking <a href="https://faq.devops.corndel.com/">the FAQs page</a> for this exercise to see if there are any additional hints.</li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

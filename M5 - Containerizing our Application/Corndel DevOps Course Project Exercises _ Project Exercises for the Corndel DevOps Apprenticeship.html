@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m5_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m5_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-5---project-exercise">Module 5 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#module-5---project-exercise" id="markdown-toc-module-5---project-exercise">Module 5 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#setup" id="markdown-toc-setup">Setup</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#step-1-checkout-your-current-code" id="markdown-toc-step-1-checkout-your-current-code">Step 1: Checkout your current code</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#step-2-install-docker" id="markdown-toc-step-2-install-docker">Step 2: Install Docker</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#exercise" id="markdown-toc-exercise">Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-1-create-a-production-container-image" id="markdown-toc-part-1-create-a-production-container-image">Part 1: Create a production container image</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#create-a-minimal-dockerfile" id="markdown-toc-create-a-minimal-dockerfile">Create a minimal Dockerfile</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#basic-application-installation" id="markdown-toc-basic-application-installation">Basic application installation</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#environment-variables" id="markdown-toc-environment-variables">Environment variables</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-2-create-a-local-development-container" id="markdown-toc-part-2-create-a-local-development-container">Part 2: Create a local development container</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-3-optimise-your-dockerfile" id="markdown-toc-part-3-optimise-your-dockerfile">Part 3: Optimise your Dockerfile</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-4-stretch-goal-use-docker-compose" id="markdown-toc-part-4-stretch-goal-use-docker-compose">Part 4 (Stretch Goal): Use Docker Compose</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-5-stretch-goal-debug-code-running-in-a-container" id="markdown-toc-part-5-stretch-goal-debug-code-running-in-a-container">Part 5 (Stretch Goal): Debug Code Running in a Container</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#prerequisites" id="markdown-toc-prerequisites">Prerequisites:</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#part-6-stretch-goal-run-your-tests-in-docker" id="markdown-toc-part-6-stretch-goal-run-your-tests-in-docker">Part 6 (Stretch Goal): Run your tests in Docker</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise, you will containerise your To-Do app using Docker. This is an alternative to running the app directly on a VM, like what you did in the Ansible exercise. You’ll create separate Docker images to develop, test and deploy a production-ready version of the app. We’ll learn about writing custom Dockerfiles, multi-stage docker builds, configuration management and build optimisation.</p>
+
+<h2 id="setup">Setup</h2>
+<h3 id="step-1-checkout-your-current-code">Step 1: Checkout your current code</h3>
+
+<p>Check out your code from the previous exercise; it’ll form the starting point for this exercise.</p>
+
+<h3 id="step-2-install-docker">Step 2: Install Docker</h3>
+
+<p>If you haven’t already, you’ll need to install <a href="https://www.docker.com/products/docker-desktop">Docker Desktop</a>. Installation instructions for Windows can be found <a href="https://docs.docker.com/docker-for-windows/install/">here</a>. If prompted to choose between using Linux or Windows containers during setup, make sure you choose Linux containers.</p>
+
+<h1 id="exercise">Exercise</h1>
+
+<h2 id="part-1-create-a-production-container-image">Part 1: Create a production container image</h2>
+
+<p>The primary goal of this exercise is to produce a Docker image that can be used to create containers that run the To-Do app in a production environment.</p>
+
+<p>Create a new file (called <code class="language-plaintext highlighter-rouge">Dockerfile</code>) in the root of your code repository. We’ll include all the necessary Docker configuration in here. You can read more about dockerfile syntax <a href="https://docs.docker.com/engine/reference/builder/">here</a>.</p>
+
+<h3 id="create-a-minimal-dockerfile">Create a minimal Dockerfile</h3>
+
+<p>The first step in creating a docker image is choosing a base image. We’ll pick one from <a href="https://hub.docker.com/">Docker Hub</a>. A careful choice of base image can save you a lot of difficulty later, by providing many of your dependencies out-of-the-box. In this case, select one of the <a href="https://hub.docker.com/_/python">official Python images</a>. Available tags combine different operating systems (e.g. <code class="language-plaintext highlighter-rouge">buster</code>, <code class="language-plaintext highlighter-rouge">alpine</code>) with different Python versions. Select one that meets your Python version requirements. The operating system is less important: <code class="language-plaintext highlighter-rouge">buster</code> or <code class="language-plaintext highlighter-rouge">slim-buster</code> (Debian 10) will be fine, and most familiar.</p>
+
+<p>When complete, you should have a single line in your Dockerfile:</p>
+
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> &lt;base_image_tag&gt;</span>
+</code></pre></div></div>
+
+<p>You can build and run your Docker image with the following commands, although it won’t do anything yet!</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker build <span class="nt">--tag</span> todo-app <span class="nb">.</span>
+<span class="nv">$ </span>docker run todo-app
+</code></pre></div></div>
+
+<h3 id="basic-application-installation">Basic application installation</h3>
+
+<p>Expand the Dockerfile to include steps to import your application and launch it (this will look quite similar to the steps in your <code class="language-plaintext highlighter-rouge">README.md</code> file).</p>
+
+<p>You’ll need to:</p>
+
+<ol>
+  <li>Install poetry</li>
+  <li>Copy across your application code</li>
+  <li>Install Python dependencies</li>
+  <li>Define an entrypoint / default launch command</li>
+</ol>
+
+<p>Keep in mind a couple Docker best practices:</p>
+
+<ul>
+  <li>Perform the “least changing” steps early, to fully take advantage of Docker’s layer caching.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">COPY</code> to move files into your image. Don’t copy unnecessary files.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">RUN</code> to execute shell commands as part of the build process.</li>
+  <li><code class="language-plaintext highlighter-rouge">ENTRYPOINT</code> and/or <code class="language-plaintext highlighter-rouge">CMD</code> define how your container will launch.</li>
+  <li>Add an <code class="language-plaintext highlighter-rouge">EXPOSE</code> instruction to document which port your application is listening on.</li>
+</ul>
+
+<p>When running <code class="language-plaintext highlighter-rouge">flash run</code> in your entrypoint, you’ll need to tell Flask to accept requests coming in from outside the container. To do this, pass the <code class="language-plaintext highlighter-rouge">--host=0.0.0.0</code> option.</p>
+<ul>
+  <li>Without this option, flask will only accept requests from <code class="language-plaintext highlighter-rouge">localhost</code> <strong>inside the container</strong>, which won’t work here as we’ll be making requests via the browser, which is running outside the container!</li>
+</ul>
+
+<blockquote>
+  <p>If you want to run your app with <a href="https://gunicorn.org/">gunicorn</a> (a true production-ready server), rather than using Flask’s built in development server, you’ll need to set an entrypoint like the following:</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>poetry run gunicorn --bind 0.0.0.0 "todo_app.app:create_app()"
+</code></pre></div>  </div>
+</blockquote>
+
+<p>After updating your Dockerfile, rebuild your image and rerun it. You’ll need two options for your <code class="language-plaintext highlighter-rouge">docker run</code> command:</p>
+<ul>
+  <li>Load your .env file using the <a href="https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file"><code class="language-plaintext highlighter-rouge">--env-file</code> option</a>.</li>
+  <li>Publish the relevant port using the <code class="language-plaintext highlighter-rouge">--publish</code> option. This lets you connect to the container by visiting localhost on your computer (i.e. <strong>outside the container</strong>)</li>
+</ul>
+
+<p><em>Now view the app in your browser, and check it works!</em></p>
+
+<blockquote>
+  <details> <summary style="font-size: 1.1rem">Running a Container in the Background</summary>
+<div>
+      <p>By default, Docker attaches your current terminal to the container. The container will stop when you disconnect. If you want to launch your container in the background, use <code class="language-plaintext highlighter-rouge">docker run -d</code> to detach from the container, however while you’re still changing things it’s arguably easier to see what’s going on without this. You can still view container logs using the <code class="language-plaintext highlighter-rouge">docker logs</code> command if you know the container’s name or ID (if not, use <code class="language-plaintext highlighter-rouge">docker ps</code> to find the container first).</p>
+
+      <div>
+        <p>If you want to stop a container that’s running, you can first identify its name with <code class="language-plaintext highlighter-rouge">docker ps</code> and then use <code class="language-plaintext highlighter-rouge">docker stop &lt;name&gt;</code>.</p>
+      </div>
+    </div></details>
+</blockquote>
+
+<blockquote>
+  <details> <summary style="font-size: 1.1rem">Debugging a container</summary>
+It is possible to launch an interactive terminal (similar to an SSH session) when launching a container. The easiest way to do this is to run:
+<div>
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker -it --entrypoint bash run
+</code></pre></div>      </div>
+      <p>In order for this to work your base image needs to have bash installed and shouldn’t have a CMD statement in your Dockerfile</p>
+    </div></details>
+</blockquote>
+
+<blockquote>
+  <details> <summary style="font-size: 1.1rem">Running/Installing Poetry</summary>
+<div>
+      <p>When installing poetry <a href="https://python-poetry.org/docs/#installing-with-the-official-installer">via the method described in the README.md</a> you may find that it is unavailable on the <code class="language-plaintext highlighter-rouge">PATH</code></p>
+      <div>
+        <p>In this case you can either:</p>
+        <ul>
+          <li>Add poetry to the <code class="language-plaintext highlighter-rouge">PATH</code> with an <code class="language-plaintext highlighter-rouge">ENV</code> command (you may want to try debugging the container to locate where poetry is installed)</li>
+          <li>Run <code class="language-plaintext highlighter-rouge">pip install poetry</code> instead which will install poetry to location available on the <code class="language-plaintext highlighter-rouge">PATH</code> (although please note <a href="https://python-poetry.org/docs/#installing-manually">this install method technically isn’t recommended by <code class="language-plaintext highlighter-rouge">poetry</code></a> but will be fine as we are using a <code class="language-plaintext highlighter-rouge">.venv</code> folder)</li>
+        </ul>
+      </div>
+    </div></details>
+</blockquote>
+
+<p>More tips for getting your first Docker container working can be found <a href="https://project-exercises.devops.corndel.com/exercises/m5_exercise#hints">in the hints section below</a>.</p>
+
+<h3 id="environment-variables">Environment variables</h3>
+
+<p>There is a potential security issue when copying files into the image. The <code class="language-plaintext highlighter-rouge">.env</code> file contains application secrets (API keys), and it is included in the Docker image. This is bad practice. Anyone with access to the image (which you may make public) can discover the embedded content.</p>
+
+<p>It’s good practice for containerised applications to be configured <em>only</em> via environment variables, as they are a standard, cross-platform solution to configuration management. Instead of copying in a configuration file (<code class="language-plaintext highlighter-rouge">.env</code>) at build-time, we pass Docker the relevant environment variables at runtime (e.g. with <code class="language-plaintext highlighter-rouge">--env-file</code>). This will keep your secrets safe, while also keeping your image re-usable - you could spin up multiple containers, each using different credentials. Other settings that are not sensitive can also be varied between environments in this way.</p>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">.dockerignore</code> file, and use to it specify files and directories that should never be copied to Docker images. This can include things like secrets ( <code class="language-plaintext highlighter-rouge">.env</code>) and any other unwanted files/directories (e.g. <code class="language-plaintext highlighter-rouge">.git</code>, <code class="language-plaintext highlighter-rouge">.vscode</code>, <code class="language-plaintext highlighter-rouge">.venv</code> or your Ansible files from the previous module).
+Anything that will never be required to run or test your application should be registered with <code class="language-plaintext highlighter-rouge">.dockerignore</code> to improve your build speed and reduce the size of the resulting images. You can even ignore the Dockerfile itself.</p>
+
+<p>Even if you are being specific with your <code class="language-plaintext highlighter-rouge">COPY</code> commands, create the .dockerignore file anyway, because it’s important ensure no one accidentally copies the .env file over in the future.</p>
+
+<p>Note that any environment variables loaded as part of <code class="language-plaintext highlighter-rouge">docker run</code> will override any defined within the Dockerfile using the <code class="language-plaintext highlighter-rouge">ENV</code>.</p>
+
+<h2 id="part-2-create-a-local-development-container">Part 2: Create a local development container</h2>
+
+<p>Containers are not only useful for production deployment. They can encapsulate the programming languages, libraries and runtimes needed to develop a project, and keep those dependencies separate from the rest of your system.</p>
+
+<p>In Part 1 you created what’s known as a “single-stage” docker image. It starts from a base image, adds some new layers and produces a new image that you can run. The resulting image can run the app in a production manner, but is not ideal for local development. Your local development image should have two key behaviours:</p>
+
+<ol>
+  <li>Enable Flask’s debugging/developer mode to provide detailed logging and feedback.</li>
+  <li>Allow rapid changes to code files without having to rebuild the image each time.</li>
+</ol>
+
+<p>To do this, you will convert your Dockerfile into a “multi-stage” docker file. Multi-stage builds can be used to generate different variants of a container (e.g. a development container, a testing container and a production container) from the same Dockerfile. You can read more about the technique <a href="https://docs.docker.com/develop/develop-images/multistage-build/">here</a>.</p>
+
+<p>Here is an outline for a multi-stage build:</p>
+
+<div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="w"> </span><span class="s">&lt;base-python-image&gt;</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">base</span>
+
+<span class="c"># Perform common operations, dependency installation etc...</span>
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">base</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">production</span>
+
+<span class="c"># Configure for production</span>
+
+<span class="k">FROM</span><span class="w"> </span><span class="s">base</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="s">development</span>
+
+<span class="c"># Configure for local development</span>
+</code></pre></div></div>
+
+<p>Since Flask’s <a href="https://flask.palletsprojects.com/en/1.1.x/server/">development server</a> allows hot reloading of code changes while running as long as we set the <code class="language-plaintext highlighter-rouge">FLASK_DEBUG</code> environment variable, we’ll use that. The only thing we need to consider in order to achieve the second requirement is how to make changes to the code files and have them appear within the container without having to rebuild the image each time we modify the code. The solution is to use a <a href="https://docs.docker.com/storage/bind-mounts/">bind mount</a> when running the container to make the “todo_app” directory on your host machine available as a mounted directory within the container.</p>
+
+<p>The goal is to be able to create either a development or production image from the same Dockerfile, using commands like:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker build <span class="nt">--target</span> development <span class="nt">--tag</span> todo-app:dev <span class="nb">.</span>
+<span class="nv">$ </span>docker build <span class="nt">--target</span> production <span class="nt">--tag</span> todo-app:prod <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>On UNIX shells, you can test the local development setup using a command similar to:</p>
+
+<div class="language-bash wrap-if-needed highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>docker run <span class="nt">--env-file</span> ./.env <span class="nt">-p</span> 5100:80 <span class="nt">--mount</span> <span class="s2">"type=bind,source=</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">/todo_app,target=/app/todo_app"</span> todo-app:dev
+</code></pre></div></div>
+
+<h2 id="part-3-optimise-your-dockerfile">Part 3: Optimise your Dockerfile</h2>
+
+<p>Have a look at your Dockerfile again. Is there any way you could optimise it? Docker optimisation has two main considerations: speed and size. Optimising image size is challenging with an interpreted language like Python, as the application requires a Python interpreter, complete with standard library. You can, however, ensure that you only import what needed to run the application rather than the entire git repository. You can view the size of your docker images using <code class="language-plaintext highlighter-rouge">docker image ls</code>.</p>
+
+<p>For this part, we’ll focus on build speed optimisation.</p>
+
+<p>Docker caches every layer it creates, making subsequent re-builds extremely fast. But that only works if the layers don’t change. For example, Docker should not need to re-install your project dependencies because you apply a small bug fix to your application code.</p>
+
+<p>Docker must rebuild a layer if:</p>
+<ol>
+  <li>The command in the Dockerfile changes</li>
+  <li>Files referenced by a <code class="language-plaintext highlighter-rouge">COPY</code> or <code class="language-plaintext highlighter-rouge">ADD</code> command are changed.</li>
+  <li>Any previous layer in the image is rebuilt.</li>
+</ol>
+
+<p>You should place largely unchanging steps towards the top of your Dockerfile (e.g. installing build tools), and apply the move frequently changing steps towards the end (e.g. copying application code to the container).</p>
+
+<p>With this in mind, review your Dockerfile. Is there any way you could improve it?</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>A single, multi-stage Dockerfile is used to specify development and production containers</li>
+  <li>Your README contains instructions on how to build and run development and production containers
+    <ul>
+      <li>Including how to mount your project in the development container so that flask automatically reloads when you edit your Python files</li>
+    </ul>
+  </li>
+  <li>No secrets are included in the built images</li>
+  <li>Your submission still satisfies the criteria from previous exercises - it should still run outside of Docker!</li>
+</ul>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li>By default, docker runs commands inside the container as <code class="language-plaintext highlighter-rouge">root</code>. This means you should not need to worry about file permissions, nor execute any commands with <code class="language-plaintext highlighter-rouge">sudo</code>.</li>
+  <li>Please note that variables defined in the <code class="language-plaintext highlighter-rouge">.env</code> file should <em>not contain quotes</em>. Flask is fine with this but Docker will treat the quotes as part of the value. Similarly you shouldn’t use any spaces in the variable definitions around the <code class="language-plaintext highlighter-rouge">=</code> sign. <a href="https://docs.docker.com/compose/env-file/#syntax-rules">See here for Docker’s syntax rules for the .env file</a>.</li>
+  <li>You can use the <code class="language-plaintext highlighter-rouge">RUN</code> instruction to your Dockerfile to execute arbitrary shell commands (for example, to install poetry). By default, <code class="language-plaintext highlighter-rouge">RUN</code> uses the Bourne shell (<code class="language-plaintext highlighter-rouge">sh</code>), which may lack some features you want. If that’s the case, use the <a href="https://docs.docker.com/engine/reference/builder/#run"><em>exec</em> form</a> to specify a different shell.</li>
+  <li>Don’t try to modify your shell environment as part of <code class="language-plaintext highlighter-rouge">RUN</code>. The changes won’t persist to layers beyond the current <code class="language-plaintext highlighter-rouge">RUN</code> instruction. Instead, use Docker’s <code class="language-plaintext highlighter-rouge">ENV</code> instruction to set persistent environment variables at build time.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">COPY</code> instruction can load data from the docker build context into the docker image.</li>
+  <li>If Docker can’t find your app code, are you sure you’ve copied it to the image? You may need to modify the <code class="language-plaintext highlighter-rouge">PYTHONPATH</code> environment variable.</li>
+  <li>Think about how to install your dependencies using poetry. In particular, the <code class="language-plaintext highlighter-rouge">--no-root</code> and <code class="language-plaintext highlighter-rouge">-no-dev</code> flags may be of interest.</li>
+  <li>(Hyper-V Backend Only) Folders used for bind mounts must be first added to the whitelist in docker settings under <code class="language-plaintext highlighter-rouge">Resources =&gt; File Sharing</code>.
+<img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/docker_file_sharing.png" alt="File Sharing Screenshot"></li>
+  <li>If you want to run a container without an executable but still want to keep the container running you can run the command <code class="language-plaintext highlighter-rouge">tail -f /dev/null</code>.</li>
+  <li>If you’re hitting an issue not covered, as always it’s worth checking <a href="https://faq.devops.corndel.com/">the FAQs page</a> for this exercise to see if there are any additional hints.</li>
+</ul>
+
+<h2 id="part-4-stretch-goal-use-docker-compose">Part 4 (Stretch Goal): Use Docker Compose</h2>
+
+<p>Launching containers with long <code class="language-plaintext highlighter-rouge">docker run</code> commands can become tedious, and difficult to share with other developers. Here we’ll introduce <strong>docker compose</strong>, a tool bundled with docker that can automate the launch, networking, and lifecycle management of, containers. You can read more about it in <a href="https://docs.docker.com/compose/">the docs</a>. The basic principle is that you write all the configuration necessary to launch your containers in a single YAML file (<code class="language-plaintext highlighter-rouge">docker-compose.yml</code>), and a single command (<code class="language-plaintext highlighter-rouge">docker compose up</code>) can then be used to launch them.</p>
+
+<ol>
+  <li>Create a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> that launches and persists your development container.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">docker compose up</code> to launch your new, containerised local development environment.</li>
+</ol>
+
+<h2 id="part-5-stretch-goal-debug-code-running-in-a-container">Part 5 (Stretch Goal): Debug Code Running in a Container</h2>
+
+<p>What use is a portable development container if you’re unable to debug anything when something goes wrong?</p>
+
+<h3 id="prerequisites">Prerequisites:</h3>
+<ul>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">VSCode Docker Extension</a></li>
+  <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack">VSCode Remote Development Extension</a></li>
+</ul>
+
+<p>Create a new <code class="language-plaintext highlighter-rouge">debug</code> build target and compose file that mimics the development setup but only starts the container and <strong>does not run flask</strong> (see the hints for a clue on how to do this).</p>
+
+<p>Run the container using <code class="language-plaintext highlighter-rouge">docker compose</code> and use the Docker extension to attach to the running container. From here open the container’s project folder in VS Code. You should now be able to debug the flask app as if it was running outside your container.</p>
+
+<p><em>Important Note: You will likely need to install the Python VS Code extension inside the container before you can start debugging.</em></p>
+
+<h2 id="part-6-stretch-goal-run-your-tests-in-docker">Part 6 (Stretch Goal): Run your tests in Docker</h2>
+
+<ol>
+  <li>Add a third build stage that encapsulates a complete test environment. Use the image to run your unit, integration and end-to-end tests with <code class="language-plaintext highlighter-rouge">docker run</code>. If you’re not sure where to start, follow the guide on the <a href="https://faq.devops.corndel.com/Modules/Module_5/Project_Exercise/testing_in_docker.html">FAQs site</a> until you can run all of your tests in a Docker container.</li>
+  <li>Modify your test container to be persistent, and re-run tests whenever it detects a change to the source files. You will need to run it with a bind mount and change your entrypoint to use run a tool that watches for file changes, e.g. <a href="https://pypi.org/project/pytest-watch/">pytest-watch</a>. On Windows, you will need to use the <code class="language-plaintext highlighter-rouge">--poll</code> option of pytest-watch for it to work inside Docker.</li>
+  <li>Expand your <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file to include your persistent test container(s). <code class="language-plaintext highlighter-rouge">docker-compose up</code> should now launch your local development environment and persistent test runners.</li>
+</ol>
+
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

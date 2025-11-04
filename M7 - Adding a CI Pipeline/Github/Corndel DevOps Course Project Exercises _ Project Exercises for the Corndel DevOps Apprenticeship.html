@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://project-exercises.devops.corndel.com/exercises/m7_exercise_github -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m7_exercise_github.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-7---project-exercise">Module 7 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#module-7---project-exercise" id="markdown-toc-module-7---project-exercise">Module 7 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#part-1-testing-in-docker" id="markdown-toc-part-1-testing-in-docker">Part 1: Testing in Docker</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#part-2-set-up-github-actions-for-your-repository" id="markdown-toc-part-2-set-up-github-actions-for-your-repository">Part 2: Set up GitHub Actions for your repository</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#part-3-build-your-code" id="markdown-toc-part-3-build-your-code">Part 3: Build your code</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#part-4-run-the-tests" id="markdown-toc-part-4-run-the-tests">Part 4: Run the tests</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#step-1-run-the-unit-and-integration-tests" id="markdown-toc-step-1-run-the-unit-and-integration-tests">Step 1: Run the unit and integration tests</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#step-2-run-the-end-to-end-tests-optional" id="markdown-toc-step-2-run-the-end-to-end-tests-optional">Step 2: Run the end-to-end tests (optional)</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#part-5-update-the-build-trigger" id="markdown-toc-part-5-update-the-build-trigger">Part 5: Update the build trigger</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#stretch-send-slack-notifications" id="markdown-toc-stretch-send-slack-notifications">(Stretch) Send Slack notifications</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#stretch-security-scan" id="markdown-toc-stretch-security-scan">(Stretch) Security scan</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m7_exercise_github#stretch-scheduled-job" id="markdown-toc-stretch-scheduled-job">(Stretch) Scheduled job</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise, you will set up continuous integration for your app using GitHub Actions. You’ll set up a workflow which will build a Docker image and use it to run your tests.</p>
+
+<h2 id="part-1-testing-in-docker">Part 1: Testing in Docker</h2>
+
+<p>Running your tests in a CI pipeline is going to involve a lot of dependencies. You’ll need a Python binary (of the correct version), the standard library, Poetry, third-party Python packages.</p>
+
+<blockquote>
+  <p>Additionally, if you have any end-to-end tests, you also need a browser and a webdriver that can run in “headless” mode (i.e. without a GUI).</p>
+</blockquote>
+
+<p>That’s a lot, and you shouldn’t rely on a CI/CD tool to provide a complex dependency chain like this. Instead, we’ll use Docker to build, test and deploy our application. GitHub Actions won’t even need to know it’s running Python code! This has a few advantages:</p>
+
+<ul>
+  <li>Our CI configuration will be much simpler</li>
+  <li>It’s easier to move to a different CI/CD tool in future</li>
+  <li>We have total control over the build and test environment via our Dockerfile</li>
+</ul>
+
+<p>Conveniently we’ve already containerised our application in module 5 and so all we need to do is add another build stage to the Dockerfile for testing:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">FROM</span> <span class="n">base</span> <span class="k">as</span> <span class="n">test</span>
+
+<span class="n">ENTRYPOINT</span> <span class="n">poetry</span> <span class="n">run</span> <span class="n">pytest</span>
+</code></pre></div></div>
+<p>This assumes that you only have unit and integration tests and all your test-related files have been copied in the <code class="language-plaintext highlighter-rouge">base</code> build stage (if not you’ll need to add an extra <code class="language-plaintext highlighter-rouge">COPY</code> command).</p>
+<ul>
+  <li>For more detailed instructions (including how to containerise end to end tests) please checkout <a href="https://faq.devops.corndel.com/Modules/Module_5/Project_Exercise/testing_in_docker.html">the FAQs site</a></li>
+</ul>
+
+<h2 id="part-2-set-up-github-actions-for-your-repository">Part 2: Set up GitHub Actions for your repository</h2>
+
+<p>GitHub Actions is totally free for public repositories. For private repositories, you can either host your own runner or you get some amount of free time using GitHub-hosted runners. This is broken down in detail <a href="https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions">in their documentation</a> but even if your repository is private, the free tier for should be plenty for this exercise.</p>
+
+<p>Switching on GitHub Actions is just a matter of including a valid workflow file. At the root of your project, you should already have a <code class="language-plaintext highlighter-rouge">.github</code> folder. Inside there, create a <code class="language-plaintext highlighter-rouge">workflows</code> folder. Inside <em>that</em>, create a file with any name you want as long as it ends in <code class="language-plaintext highlighter-rouge">.yml</code>. For example <code class="language-plaintext highlighter-rouge">my-ci-pipeline.yml</code>. This file will contain a “workflow” and a project could contain multiple workflow files, but we just want a single one for the To-Do app.</p>
+
+<p>Here is a very simple workflow file, followed by an explanation:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">Continuous Integration</span>
+<span class="na">on</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">push</span><span class="pi">]</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Build and test</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">steps</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+    <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">echo Hello World</span>
+</code></pre></div></div>
+
+<p>The top level object specifies:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code> - a display name for the workflow</li>
+  <li><code class="language-plaintext highlighter-rouge">on</code> - when the workflow is triggered</li>
+  <li><code class="language-plaintext highlighter-rouge">jobs</code> - a collection of “jobs”. For now there is a single job called <code class="language-plaintext highlighter-rouge">build</code>.</li>
+</ul>
+
+<p>That “job” specifies:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code> - a display name for the job</li>
+  <li><code class="language-plaintext highlighter-rouge">runs-on</code> - which GitHub-hosted runner the job should use</li>
+  <li><code class="language-plaintext highlighter-rouge">steps</code> - a list of “steps” that will execute in order. Each step either <strong>uses</strong> an action or <strong>run</strong>s a shell command. An “action” is a reusable chunk of functionality that has been defined elsewhere. See the Slack notification stretch goal for an example. Other details can optionally be configured for a step - <a href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idsteps">see here</a></li>
+</ul>
+
+<p>All this example does is checkout the code and then print “Hello World”.</p>
+
+<p>Try using the example config above in your own yaml file. Commit and push the code, then check that the build ran successfully. To check the output of your build, go to your repository on the GitHub website and open up the Actions tab. The URL should be of the form <code class="language-plaintext highlighter-rouge">https://github.com/&lt;your_username&gt;/&lt;your_repository&gt;/actions</code>. Click on a run for details. Within a run, you can view a job. Within a job, you can expand the logs of each step.</p>
+
+<h2 id="part-3-build-your-code">Part 3: Build your code</h2>
+
+<p>Replace the “echo” command with the correct command to build your project’s test Docker image (target the test stage).</p>
+
+<blockquote>
+  <p>Note that the GitHub runner already has the Docker CLI installed. If you are curious, look at <a href="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners">the documentation</a> for details about what GitHub-hosted runners are available and what software each one has installed. But all we need from <a href="https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md">ubuntu-latest</a> is Docker.</p>
+</blockquote>
+
+<h2 id="part-4-run-the-tests">Part 4: Run the tests</h2>
+
+<p>In exercise 3 you should have added some unit and integration tests to your project, and possibly some end-to-end tests too. You should by now have them running successfully in Docker (see the appendix if not). You will now update the CI pipeline to run those tests.</p>
+
+<h3 id="step-1-run-the-unit-and-integration-tests">Step 1: Run the unit and integration tests</h3>
+
+<p>Add one or more steps to your workflow file in order to run the unit and integration tests. You should run the tests via Docker (i.e. <code class="language-plaintext highlighter-rouge">docker run ...</code> commands). Don’t try to install your project dependencies or execute pytest directly on the GitHub runner itself.</p>
+
+<h3 id="step-2-run-the-end-to-end-tests-optional">Step 2: Run the end-to-end tests (optional)</h3>
+
+<p>If you do not have end-to-end tests, you can skip this step. Or you could go back to the Module 3 project exercise and attempt that stretch goal!</p>
+
+<p>Unlike your integration tests, end-to-end tests will need real Trello credentials. Make sure you handle the secrets properly! Locally you set these in the .env file, however for the CI job there is no .env file. To avoid committing credentials in the source code, <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">add them to the repository’s secrets</a> through the GitHub website. You can then access these from your CI job with <code class="language-plaintext highlighter-rouge">$</code> where <code class="language-plaintext highlighter-rouge">YOUR_SECRET</code> is whatever name you picked for the secret.</p>
+
+<p>In your <code class="language-plaintext highlighter-rouge">docker run</code> command, include a <code class="language-plaintext highlighter-rouge">-e</code> option for each environment variable instead of using <code class="language-plaintext highlighter-rouge">--env-file</code>. E.g. <code class="language-plaintext highlighter-rouge">docker run -e TRELLO_KEY=foo -e TRELLO_TOKEN=bar ...</code>. Make sure the environment variable names match what your app actually expects and replace foo/bar with the correct expressions to use your secret values. Only add the variables that your end-to-end tests need, and only pass in these sensitive values when running end-to-end tests. Other tests should still use the .env.test file.</p>
+
+<h2 id="part-5-update-the-build-trigger">Part 5: Update the build trigger</h2>
+
+<p>The <a href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#on">“on” section of the workflow</a> defines when job will run. Currently we are only building “on push”, which means whenever any branch is updated. Another option is “on pull request” which runs for open pull requests, using a version of the codebase where merge has already completed. Try changing the settings for your job so that it runs on both push and pull requests.</p>
+
+<p>In general, building both branches and pull requests is useful, as it tells you both if something is wrong with the branch and if something would be wrong with the target branch once a pull request has been merged.</p>
+
+<p>Try adding a <a href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#onpushpull_requestpaths">“paths-ignore” setting</a> (to both the <code class="language-plaintext highlighter-rouge">push</code> and <code class="language-plaintext highlighter-rouge">pull_request</code> options) to avoid running the build when no relevant files have changed. For example, if the <code class="language-plaintext highlighter-rouge">README.md</code> is updated, there’s no need to run the workflow.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>You can run all your tests inside Docker following instructions in your README</li>
+  <li>You have a passing GitHub Actions workflow that
+    <ul>
+      <li>triggers on pushes and pull requests</li>
+      <li>runs all your tests (and the pipeline would fail if your tests fail)</li>
+      <li>doesn’t reveal any secret values</li>
+    </ul>
+  </li>
+  <li>Your submission still satisfies the criteria from previous exercises</li>
+</ul>
+
+<h2 id="stretch-send-slack-notifications">(Stretch) Send Slack notifications</h2>
+
+<p>Email notifications are controlled via your GitHub <a href="https://github.com/settings/notifications">profile settings</a>. But you can also add a custom notification step to the workflow, such as sending a Slack message whenever the job runs or at least whenever it fails. Update your yaml file so that it will send Slack notifications with the build status. Rather than integrate with the Slack API directly, find a suitable Action from <a href="https://github.com/marketplace?category=&amp;query=&amp;type=actions&amp;verification=">the Marketplace</a>.</p>
+
+<h2 id="stretch-security-scan">(Stretch) Security scan</h2>
+
+<p>Security/dependency scans are a common feature of CI pipelines. Add the <a href="https://github.com/marketplace/actions/snyk">Snyk Action</a> as a step in your workflow. You will need a Snyk account to get an API key but a free account will provide enough runs for this exercise. The default behaviour of the action is to scan your dependencies for any known vulnerabilities and whether they would be resolved by an update.</p>
+
+<p>You should find the job fails if Snyk finds a vulnerability. For example:</p>
+
+<div class="language-plaintext wrap-if-needed highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Pin jinja2@2.11.2 to jinja2@2.11.3 to fix
+  ✗ Regular Expression Denial of Service (ReDoS) [Medium Severity][https://snyk.io/vuln/SNYK-PYTHON-JINJA2-1012994] in jinja2@2.11.2
+    introduced by flask@1.1.2 &gt; jinja2@2.11.2
+</code></pre></div></div>
+
+<p>To fix the above error, you would run <code class="language-plaintext highlighter-rouge">poetry update flask jinja2</code> to update both the Flask and Jinja2 dependencies to the latest compatible versions.</p>
+
+<blockquote>
+  <p>You could also customise the action to run static analysis on your code.</p>
+</blockquote>
+
+<h2 id="stretch-scheduled-job">(Stretch) Scheduled job</h2>
+
+<p>You may want to run the CI pipeline <a href="https://docs.github.com/en/actions/learn-github-actions/events-that-trigger-workflows#schedule">on a schedule</a> rather than when there is a code change. Possible reasons could be performance testing once each night, or detecting when you should update dependencies (like the Snyk action).</p>
+
+<p>Update your pipeline to run the dependency scan once a day even if there hasn’t been a code change.</p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

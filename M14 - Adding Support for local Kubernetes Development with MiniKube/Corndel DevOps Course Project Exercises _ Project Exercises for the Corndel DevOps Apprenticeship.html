@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://project-exercises.devops.corndel.com/exercises/m14_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m14_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://project-exercises.devops.corndel.com/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="https://project-exercises.devops.corndel.com/assets/images/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="https://project-exercises.devops.corndel.com/assets/images/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-14---project-exercise">Module 14 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#module-14---project-exercise" id="markdown-toc-module-14---project-exercise">Module 14 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#whats-minikube" id="markdown-toc-whats-minikube">What’s minikube?</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#prerequisites" id="markdown-toc-prerequisites">Prerequisites</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#spinning-up-a-minikube-cluster" id="markdown-toc-spinning-up-a-minikube-cluster">Spinning up a minikube cluster</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#building-a-docker-image" id="markdown-toc-building-a-docker-image">Building a Docker image</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#setting-up-a-database" id="markdown-toc-setting-up-a-database">Setting up a database</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#using-our-docker-image-in-minikube" id="markdown-toc-using-our-docker-image-in-minikube">Using our Docker image in minikube</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#viewing-logs-in-loggly" id="markdown-toc-viewing-logs-in-loggly">Viewing logs in Loggly</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#moving-sensitive-information-to-secrets" id="markdown-toc-moving-sensitive-information-to-secrets">Moving sensitive information to Secrets</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#stretch-goals" id="markdown-toc-stretch-goals">Stretch goals</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#setting-up-a-local-database" id="markdown-toc-setting-up-a-local-database">Setting up a local database</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#connecting-to-a-local-database-from-minikube" id="markdown-toc-connecting-to-a-local-database-from-minikube">Connecting to a local database from minikube</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m14_exercise#moving-the-host-ip-address-into-hostaliases" id="markdown-toc-moving-the-host-ip-address-into-hostaliases">Moving the host IP address into hostAliases</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise we will set up our To-Do app on a local <strong>minikube</strong> cluster.
+We’ll start with a simple Nginx app, then replace it with the To-Do app.</p>
+
+<h2 id="whats-minikube">What’s minikube?</h2>
+
+<p>Minikube is a version of Kubernetes that you can run locally on a development machine.
+It can be a great way to learn about Kubernetes and test changes locally without having to set up and pay for hosting.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>We’ll need these tools during the exercise.</p>
+
+<ol>
+  <li>Docker
+    <ol>
+      <li><a href="https://docs.docker.com/docker-for-windows/install/">Docker Desktop (Windows)</a></li>
+      <li><a href="https://docs.docker.com/docker-for-mac/install/">Docker Desktop (Mac)</a></li>
+      <li><a href="https://docs.docker.com/engine/install/#server">Docker Engine (Linux)</a></li>
+    </ol>
+  </li>
+  <li><a href="https://kubernetes.io/docs/tasks/tools/">Kubectl</a></li>
+  <li><a href="https://minikube.sigs.k8s.io/docs/start/">minikube</a></li>
+</ol>
+
+<h2 id="spinning-up-a-minikube-cluster">Spinning up a minikube cluster</h2>
+
+<p>Let’s spin up a minikube cluster running a simple Nginx server.</p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">minikube start</code> in an admin terminal to spin up your minikube cluster.</p>
+
+<blockquote>
+  <p>If you get an error like <code class="language-plaintext highlighter-rouge">minikube command not found</code>, then make sure that <code class="language-plaintext highlighter-rouge">minikube</code> is on your <code class="language-plaintext highlighter-rouge">PATH</code> and restart your terminal.</p>
+</blockquote>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">deployment.yaml</code> file based on the <code class="language-plaintext highlighter-rouge">nginx</code> image.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># deployment.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">module-14</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">matchLabels</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">module-14</span>
+  <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">template</span><span class="pi">:</span>
+    <span class="na">metadata</span><span class="pi">:</span>
+      <span class="na">labels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">module-14</span>
+    <span class="na">spec</span><span class="pi">:</span>
+      <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">nginx</span>
+          <span class="na">ports</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">80</span>
+</code></pre></div></div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">kubectl apply -f deployment.yaml</code> to deploy a Pod running the <code class="language-plaintext highlighter-rouge">nginx</code> image.</p>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">service.yaml</code> file defining a Service that will provide access to the Pod.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># service.yaml</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">module-14</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">NodePort</span>
+  <span class="na">selector</span><span class="pi">:</span>
+    <span class="na">app</span><span class="pi">:</span> <span class="s">module-14</span>
+  <span class="na">ports</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+    <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+    <span class="na">targetPort</span><span class="pi">:</span> <span class="m">80</span>
+</code></pre></div></div>
+
+<p>Run <code class="language-plaintext highlighter-rouge">kubectl apply -f service.yaml</code> to deploy the Service.</p>
+
+<p>After each deployment, we need to run <code class="language-plaintext highlighter-rouge">kubectl port-forward service/module-14 7080:80</code> to link up our minikube Service with a port on <code class="language-plaintext highlighter-rouge">localhost</code>.</p>
+
+<p>Open http://localhost:7080/ in a browser to view the Nginx app.</p>
+
+<blockquote>
+  <p>If you run into any issues then you might find these commands helpful:</p>
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">kubectl get pods</code> - List out the cluster’s Pods, along with their names</li>
+    <li><code class="language-plaintext highlighter-rouge">kubectl logs my-pod</code> - Retrieve the logs for a Pod called <code class="language-plaintext highlighter-rouge">my-pod</code></li>
+    <li><code class="language-plaintext highlighter-rouge">kubectl describe pod my-pod</code> - Retrieve a description, including an error history, for <code class="language-plaintext highlighter-rouge">my-pod</code>. This is useful where the pod has failed to start at all, as opposed to when the Python has started running but then crashed (for which logs are more useful).</li>
+  </ul>
+</blockquote>
+
+<h2 id="building-a-docker-image">Building a Docker image</h2>
+
+<p>Before we can get our To-Do app running on minikube, we’ll need to create a Docker image for our Pod.
+Navigate to the folder containing your Module 13 application and run <code class="language-plaintext highlighter-rouge">docker build --target production --tag todo-app:prod .</code> to build the image.</p>
+
+<blockquote>
+  <p>On Windows, Docker Desktop has to be run by a user with administrator privileges.
+If you’re on Windows then you’ll need to open Docker Desktop and your terminal using the same administrator account.</p>
+</blockquote>
+
+<h2 id="setting-up-a-database">Setting up a database</h2>
+
+<p>Our application will also need a MongoDB database, you can either reuse your cluster from earlier or set MongoDB up locally - see the stretch goals at the end of this exercise.</p>
+
+<h2 id="using-our-docker-image-in-minikube">Using our Docker image in minikube</h2>
+
+<p>Before we can swap over our Pod to use the new To-Do app image, we’ll need to load it into minikube’s local image store using the <code class="language-plaintext highlighter-rouge">minikube image load &lt;image_name&gt;</code> command.</p>
+
+<p>We can then update the <code class="language-plaintext highlighter-rouge">deployment.yaml</code> manifest to use our new image, along with the required environment variables.
+We also need to set the <code class="language-plaintext highlighter-rouge">imagePullPolicy</code> to <code class="language-plaintext highlighter-rouge">Never</code> so minikube doesn’t try to pull the image from a registry.</p>
+
+<blockquote>
+  <p>We’ll move the sensitive environment variables into Secrets later in the exercise.</p>
+</blockquote>
+
+<p>Now we can run <code class="language-plaintext highlighter-rouge">kubectl apply -f deployment.yaml</code> to deploy our To-Do app.</p>
+
+<h2 id="viewing-logs-in-loggly">Viewing logs in Loggly</h2>
+
+<p>We’ve deployed our To-Do app and provided it with a Loggly token, so you should be able to see logs coming through in Loggly as you use the application.</p>
+
+<h2 id="moving-sensitive-information-to-secrets">Moving sensitive information to Secrets</h2>
+
+<p>At this point we have a fully functional To-Do app running on minikube.
+However, we’re using environment variables to store sensitive information:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">LOGGLY_TOKEN</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SECRET_KEY</code></li>
+  <li><code class="language-plaintext highlighter-rouge">MONGODB_CONNECTION_STRING</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GITHUB_CLIENT_ID</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GITHUB_CLIENT_SECRET</code></li>
+</ul>
+
+<p>We should move these into Secrets instead.</p>
+
+<p>For each sensitive environment variable, create a Secret and reference it in <code class="language-plaintext highlighter-rouge">deployment.yaml</code>. Redeploy the Deployment to swap out the environment variables with Secrets.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>You can run your app locally in Minikube following instructions in your README</li>
+  <li>Secret values are accessed using Kubernetes secrets and not committed to source control</li>
+</ul>
+
+<h2 id="stretch-goals">Stretch goals</h2>
+
+<p>Using a local MongoDB database instead provides some interesting challenges, so let’s try that too!</p>
+
+<p>Start out by installing <a href="https://docs.mongodb.com/manual/installation/">MongoDB Community Edition</a>.</p>
+
+<blockquote>
+  <p>If you don’t already have a MongoDB client, then include <code class="language-plaintext highlighter-rouge">MongoDB Compass</code> during the installation.</p>
+</blockquote>
+
+<h3 id="setting-up-a-local-database">Setting up a local database</h3>
+
+<p>If you installed MongoDB as a Windows Service, then you should already have a running MongoDB server on <code class="language-plaintext highlighter-rouge">localhost</code>.
+Otherwise, you can run <code class="language-plaintext highlighter-rouge">mongod</code> in an admin terminal to start up the server.</p>
+
+<blockquote>
+  <p>If you get an error like <code class="language-plaintext highlighter-rouge">mongod command not found</code>, then make sure that <code class="language-plaintext highlighter-rouge">mongod</code> is on your <code class="language-plaintext highlighter-rouge">PATH</code> and restart your terminal.</p>
+
+  <p>If you get an error like <code class="language-plaintext highlighter-rouge">Data directory C:\data\db\ not found</code>, then manually create those directories and run <code class="language-plaintext highlighter-rouge">mongod</code> again.
+Alternatively, create those directories in a different location and use the <code class="language-plaintext highlighter-rouge">--dbpath</code> argument, e.g. <code class="language-plaintext highlighter-rouge">mongod --dbpath="C:\Program Files\MongoDB\Server\4.4\data\db"</code>.</p>
+</blockquote>
+
+<p>Use MongoDB Compass, or an alternative MongoDB client, to connect to the MongoDB server on <code class="language-plaintext highlighter-rouge">localhost</code> and create a database.
+Note down the connection string for later.</p>
+
+<h3 id="connecting-to-a-local-database-from-minikube">Connecting to a local database from minikube</h3>
+
+<p>Update the <code class="language-plaintext highlighter-rouge">MONGODB_CONNECTION_STRING</code> Secret with your new connection string.
+Run <code class="language-plaintext highlighter-rouge">kubectl rollout restart</code> to restart the Pod so it uses the updated secret.</p>
+
+<p>If you used <code class="language-plaintext highlighter-rouge">localhost</code> in your connection string, then you should see a database timeout when you open the To-Do app. This is because the Pod is using its own internal <code class="language-plaintext highlighter-rouge">localhost</code>, rather than the host machine’s <code class="language-plaintext highlighter-rouge">localhost</code> (i.e. your laptop’s <code class="language-plaintext highlighter-rouge">localhost</code>).</p>
+
+<p>We’ll need to find out the host machine’s IP address and use that instead. You should be able to find this IP mapped to <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> in the minikube VM’s <code class="language-plaintext highlighter-rouge">/etc/hosts</code> file.</p>
+
+<blockquote>
+  <p>You can run <code class="language-plaintext highlighter-rouge">minikube ssh</code> to access the VM.</p>
+
+  <p>If you’re using Docker as your <a href="https://minikube.sigs.k8s.io/docs/drivers/">minikube driver</a>, then you should be able to use <code class="language-plaintext highlighter-rouge">host.docker.internal</code> too.</p>
+</blockquote>
+
+<p>After replacing <code class="language-plaintext highlighter-rouge">localhost</code> with the host machine’s IP address, redeploy the Deployment to swap over to the local database.</p>
+
+<h3 id="moving-the-host-ip-address-into-hostaliases">Moving the host IP address into hostAliases</h3>
+
+<p>Ideally, we would use <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> in the MongoDB connection string, keeping the IP address logic separate.
+However, Pods don’t have <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> entries in their <code class="language-plaintext highlighter-rouge">/etc/hosts</code> files.
+This means that Pods don’t resolve <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> to the host machine’s IP address by default.</p>
+
+<p>We can solve this by using <a href="https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/">hostAliases</a>) to add a <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> entry in each Pod’s <code class="language-plaintext highlighter-rouge">/etc/hosts</code> file.</p>
+
+<p>Add a <code class="language-plaintext highlighter-rouge">hostAliases</code> section to the Deployment, mapping <code class="language-plaintext highlighter-rouge">host.minikube.internal</code> to the host machine’s IP address.
+Update the connection string to use <code class="language-plaintext highlighter-rouge">host.minikube.internal</code>, then redeploy the Deployment to finish setting up.</p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

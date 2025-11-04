@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m8_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m8_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprentic_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprentic_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprentic_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprentic_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-8---project-exercise">Module 8 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#module-8---project-exercise" id="markdown-toc-module-8---project-exercise">Module 8 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#part-1-getting-ready" id="markdown-toc-part-1-getting-ready">Part 1: Getting Ready</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-1-set-up-azure-account" id="markdown-toc-step-1-set-up-azure-account">Step 1: Set up Azure Account</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-2-locate-your-resource-group" id="markdown-toc-step-2-locate-your-resource-group">Step 2: Locate Your Resource Group</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-3-install-the-azure-cli" id="markdown-toc-step-3-install-the-azure-cli">Step 3: Install the Azure CLI</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#part-2-host-the-frontend-on-azure-web-app" id="markdown-toc-part-2-host-the-frontend-on-azure-web-app">Part 2: Host the frontend on Azure Web App</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-1-put-container-image-on-docker-hub-registry" id="markdown-toc-step-1-put-container-image-on-docker-hub-registry">Step 1: Put Container Image on Docker Hub registry</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-2-create-an-azure-app-service-web-app" id="markdown-toc-step-2-create-an-azure-app-service-web-app">Step 2: Create an Azure App Service (Web App)</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-3-set-up-environment-variables" id="markdown-toc-step-3-set-up-environment-variables">Step 3: Set up environment variables</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#step-4-confirm-the-live-site-works" id="markdown-toc-step-4-confirm-the-live-site-works">Step 4: Confirm the live site works</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#part-3-update-the-container" id="markdown-toc-part-3-update-the-container">Part 3: Update the container</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#stretch-goal-part-4-add-restrictions-and-security" id="markdown-toc-stretch-goal-part-4-add-restrictions-and-security">(Stretch Goal) Part 4: Add restrictions and security</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#add-access-restrictions-to-the-web-app" id="markdown-toc-add-access-restrictions-to-the-web-app">Add access restrictions to the web app</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#stretch-goal-part-5-use-azure-key-vault-for-storing-secrets" id="markdown-toc-stretch-goal-part-5-use-azure-key-vault-for-storing-secrets">(Stretch Goal): Part 5: Use Azure Key Vault for storing secrets</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#stretch-goal-iaas-vs-paassaas" id="markdown-toc-stretch-goal-iaas-vs-paassaas">(Stretch Goal): IaaS vs PaaS/SaaS</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m8_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise we are going to migrate our application into a cloud platform, Microsoft Azure. This will set us up for the final modules of the course, allowing us to take advantage of Azure’s other services.</p>
+
+<p>Azure has an offering for almost everything - hosting, Databases, DevOps pipelines with CI/CD, and even private docker-container registries that can be securely linked into specific projects.</p>
+
+<p>We are going to focus on moving our Flask App to Azure. We’ll be hosting our production application, in a docker container, as an Azure App Service.</p>
+
+<p>We’re going to keep our existing CI/CD pipeline, and Docker Hub as our container registry. While we could move these to Azure it is simpler and cheaper not to do so.</p>
+
+<hr>
+
+<p>Using Azure means we have to do some additional work to set-up the infrastructure we need. There are multiple ways of doing this:</p>
+
+<ul>
+  <li>through the <a href="https://portal.azure.com/">Azure Portal</a></li>
+  <li>through the <a href="https://docs.microsoft.com/en-us/cli/azure/">Azure CLI</a></li>
+  <li>by using Visual Studio’s GUI.</li>
+</ul>
+
+<p>We’re going to be using a mix of the first two, which is the most common method for setting things up. The Azure Portal gives a nice overview of all the available options, however it is a very manual process. While the CLI is easier to automate, it can be significantly more complicated than the Portal. Using both should help give you the best of both worlds. In this exercise we give instructions for both Portal and CLI for each step, you should vary which you use to gain familiarity with both approaches and their drawbacks.</p>
+
+<h2 id="part-1-getting-ready">Part 1: Getting Ready</h2>
+
+<h3 id="step-1-set-up-azure-account">Step 1: Set up Azure Account</h3>
+
+<p><strong>You should already have an Azure Account set up for you for this course.</strong>
+You should have received an email for this, and it will have been the account you used in the workshop for this module.</p>
+
+<p><strong>If you do not have such an account, please contact a trainer.</strong></p>
+
+<blockquote>
+  <details> <summary style="font-size: rem">(Optional) Setting up your own Azure Account/Tenant</summary>
+<div>
+      <p>We recommend you <strong>use the account we provide</strong> for the Project Exercise, but if you would like to set your own account up follow the instructions below.
+You may already have a Microsoft Account created for you by your work, but we suggest not using such an account - using your own account will ensure you a) have all the permissions you need by default; and b) don’t inadvertently set-up resources in a place they’re not supposed to be.</p>
+      <div>
+        <ul>
+          <li>Go to portal.azure.com and create an account.</li>
+          <li>When prompted selected the “Start with an Azure free trial”
+            <ul>
+              <li>This gives 12 months of access to some resources, and $150 credit for 30 days, along with “always free” tiers for most common resources.</li>
+              <li>We’ll be sticking with the Free Tier for these exercises, ensure you select the “FREE Tier” or “SKU F1” when creating resources, as the default is usually the cheapest paid option.</li>
+              <li>The Free Tier and Free Subscription have some downsides: the size, scalability and some functionality of resources is limited, and you can only have one or two of each resource type taking advantage of the Free Subscription.</li>
+              <li>If you see an error like “The subscription you have selected already has an app with free tier enabled” then you should either delete the existing resource in the Portal, or opt for the cheap-but-paid Basic Tier for your new resource.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div></details>
+</blockquote>
+
+<h3 id="step-2-locate-your-resource-group">Step 2: Locate Your Resource Group</h3>
+
+<blockquote>
+  <p>A resource group is a logical container into which Azure resources, such as web apps, databases, and storage accounts, are deployed and managed. More Azure Terminology <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#terminology">here</a>.</p>
+</blockquote>
+
+<p>Your tutors should have already created resource groups for you when setting up your user account.</p>
+
+<p>For this exercise you’ll want to use your project exercise resource group (ending in “_ProjectExercise”).</p>
+
+<blockquote>
+  <p>Please locate your project exercise resource group in the Azure portal and keep a note of its name; you’ll need it for the steps below.</p>
+</blockquote>
+
+<h3 id="step-3-install-the-azure-cli">Step 3: Install the Azure CLI</h3>
+
+<ul>
+  <li>Follow the instructions at: <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">https://docs.microsoft.com/en-us/cli/azure/install-azure-cli</a> to install the CLI on your machine if you haven’t already.</li>
+  <li>Open up new terminal window and enter <code class="language-plaintext highlighter-rouge">az login</code>, which will launch a browser window to allow you to log in.</li>
+</ul>
+
+<h2 id="part-2-host-the-frontend-on-azure-web-app">Part 2: Host the frontend on Azure Web App</h2>
+
+<h3 id="step-1-put-container-image-on-docker-hub-registry">Step 1: Put Container Image on Docker Hub registry</h3>
+
+<p>Azure Container Registry costs money, so we will be using Docker Hub as the registry to store our production container images. Your CI pipeline will do this later, but for now do so manually &amp; make sure you record the steps as part of your Readme.</p>
+
+<p>This will involve:</p>
+<ul>
+  <li>Logging into DockerHub locally, with <code class="language-plaintext highlighter-rouge">docker login</code></li>
+  <li>Building the image, with <code class="language-plaintext highlighter-rouge">docker build --target &lt;my_build_phase&gt; --tag &lt;image_tag&gt; .</code></li>
+  <li>Pushing the image, with <code class="language-plaintext highlighter-rouge">docker push &lt;image_tag&gt;</code></li>
+</ul>
+
+<p>where <code class="language-plaintext highlighter-rouge">&lt;image_tag&gt;</code> has the format <code class="language-plaintext highlighter-rouge">&lt;user_name&gt;/&lt;image_name&gt;:&lt;tag&gt;</code>.</p>
+
+<blockquote>
+  <p><strong>Hint</strong> If you see permission errors when pushing the image, first check that you’re logged in (with <code class="language-plaintext highlighter-rouge">docker login</code>) and if you are check your image tag is correctly formatted. Trying to push e.g. <code class="language-plaintext highlighter-rouge">my-todo-app:prod</code> will error because it’s not namespaced to your user, and you won’t have permission for the global tag!</p>
+</blockquote>
+
+<h3 id="step-2-create-an-azure-app-service-web-app">Step 2: Create an Azure App Service (Web App)</h3>
+
+<blockquote>
+  <details> <summary style="font-size: rem">"Azure App Service with Containers" vs "Azure Container Instances" vs "Azure Container Apps"</summary>
+<div>
+      <ul>
+        <li><a href="https://azure.microsoft.com/en-gb/products/app-service/">Azure App Services</a> are set up for hosting long-running web applications, with nice setup for front-facing web applications, with SSL and domain names built in, and allows either raw-code or a Container Image to be uploaded. “Azure Web Apps” are hosted as App Services.
+          <ul>
+            <li>One Basic tier App Service is part of the “<a href="https://azure.microsoft.com/en-gb/free/#always-free">Always Free</a>” offering from Azure</li>
+          </ul>
+        </li>
+        <li><a href="https://azure.microsoft.com/en-gb/products/container-instances/">Azure Container Instances</a> are for lightweight short-run “compute” containers and quickly releasing local Docker compose based apps. They are faster to deploy and billed per-second, with better orchestration for multiple containers. However they are more expensive than App Services to run for extended periods and aren’t as suited to production web applications.</li>
+        <li><a href="https://azure.microsoft.com/en-us/products/container-apps/">Azure Container Apps</a> are a relatively new (General Availability Q2 2022) way of running containers on Azure, with built in autoscaling support and a focus on microservices.</li>
+      </ul>
+    </div></details>
+</blockquote>
+
+<hr>
+
+<p>Using the Azure CLI:</p>
+<ul>
+  <li>First create an App Service Plan: <code class="language-plaintext highlighter-rouge">az appservice plan create --resource-group &lt;resource_group_name&gt; -n &lt;appservice_plan_name&gt; --sku B1 --is-linux</code></li>
+  <li>Then create the Web App: <code class="language-plaintext highlighter-rouge">az webapp create --resource-group &lt;resource_group_name&gt; --plan &lt;appservice_plan_name&gt; --name &lt;webapp_name&gt; --deployment-container-image-name docker.io/&lt;dockerhub_username&gt;/&lt;container-image-name&gt;:latest</code></li>
+</ul>
+
+<blockquote>
+  <p>Note: your <code class="language-plaintext highlighter-rouge">&lt;webapp_name&gt;</code> needs to be <em>globally</em> unique, and will form part of the URL of your deployed app: <code class="language-plaintext highlighter-rouge">https://&lt;webapp_name&gt;.azurewebsites.net</code>.</p>
+</blockquote>
+
+<p><strong>While it is also possible to create an App Service via the portal the default configuration is slightly different and will require the use of the Azure CLI later in the exercise</strong></p>
+
+<p>Using the Azure Portal:</p>
+<ul>
+  <li>Create a Resource -&gt; Web App</li>
+  <li>Select your Project Exercise resource group.</li>
+  <li>In the “Publish” field, select “Docker Container”</li>
+  <li>Under “App Service Plan”, it should default to creating a new one, which is correct. Just change the “Sku and size” to “B1”.</li>
+  <li>On the next screen, select Docker Hub in the “Image Source” field, and enter the details of your image.</li>
+</ul>
+
+<h3 id="step-3-set-up-environment-variables">Step 3: Set up environment variables</h3>
+
+<ul>
+  <li>Portal:
+    <ul>
+      <li>Settings -&gt; Configuration in the Portal</li>
+      <li>Add all the environment variables as “New application setting”</li>
+    </ul>
+  </li>
+  <li>CLI
+    <ul>
+      <li>Enter them individually via <code class="language-plaintext highlighter-rouge">az webapp config appsettings set -g &lt;resource_group_name&gt; -n &lt;webapp_name&gt; --settings FLASK_APP=todo_app/app</code>.</li>
+      <li>Or you can pass in a JSON file containing all variables by using <code class="language-plaintext highlighter-rouge">--settings @foo.json</code>, see <a href="https://docs.microsoft.com/en-us/cli/azure/webapp/config/appsettings?view=azure-cli-latest#az_webapp_config_appsettings_set">here</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="step-4-confirm-the-live-site-works">Step 4: Confirm the live site works</h3>
+
+<ul>
+  <li>Browse to <code class="language-plaintext highlighter-rouge">http://&lt;webapp_name&gt;.azurewebsites.net/</code> and confirm no functionality has been lost.</li>
+</ul>
+
+<p>If you have issues, consider:</p>
+<ol>
+  <li>By default, <a href="https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux#configure-port-number">App Services assume your app is listening on either port 80 or 8080</a> so ensure this is true, or set the <code class="language-plaintext highlighter-rouge">WEBSITES_PORT</code> app setting to match your container’s behaviour.</li>
+  <li>Have you set all the necessary environment variables, such as your Trello API key, API token and board ID?</li>
+  <li>You may encounter issues with Python virtual environments in containers on Azure. Adjust your Dockerfile to run Poetry without a virtualenv: use <code class="language-plaintext highlighter-rouge">RUN poetry config virtualenvs.create false --local &amp;&amp; poetry install</code> instead of just <code class="language-plaintext highlighter-rouge">RUN poetry install</code>. There’s no need to create a virtualenv in your image anyway, as the container itself is an isolated environment.</li>
+  <li>Check the logs!
+    <ul>
+      <li>See if the image has successfully been pulled from the Deployment Center’s “Logs” tab</li>
+      <li>See if the application “Log Stream” (<em>not</em> the “Logs”) shows any hints on what might be going wrong</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="part-3-update-the-container">Part 3: Update the container</h2>
+
+<p>When creating an app service, Azure sets up a webhook URL. Post requests to this endpoint cause your app to restart and pull the latest version of the container image from the configured registry.</p>
+<ul>
+  <li>Find your webhook URL
+    <ul>
+      <li>This can located under <em>Deployment Center</em> on the app service’s page in the Azure portal.</li>
+      <li>If you see the phrase “REDACTED” in the webhook URL see the hints at the bottom of this page</li>
+    </ul>
+  </li>
+  <li>Test your webhook from the previous step and either:
+    <ol>
+      <li>Run  <code class="language-plaintext highlighter-rouge">curl -v -X POST '&lt;webhook&gt;'</code> in a Linux/Mac shell (or Git Bash on Windows)</li>
+      <li>Make a POST request to the webhook in Thunder Client in VSCode
+        <ul>
+          <li>This should return a link to a log-stream relating to the re-pulling of the image and restarting the app.</li>
+          <li>If you receive a 401 error then check the hints below</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p>Later we will add a step to our pipeline to do this automatically.</p>
+
+<blockquote>
+  <p>Warning: When using the webhook in the terminal you should wrap it in single quotes as double quotes will treat “$” as a special character.</p>
+</blockquote>
+
+<hr>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>Your image is deployed to DockerHub (and it works if you pull it!)
+    <ul>
+      <li>Please include a link in your README</li>
+    </ul>
+  </li>
+  <li>Your app is hosted on Azure with no loss of functionality</li>
+  <li>Your tests still work</li>
+  <li>Your Readme documents your manual deployment process, including the steps to release the Docker image, but <em>doesn’t</em> expose the webhook itself!</li>
+</ul>
+
+<h2 id="stretch-goal-part-4-add-restrictions-and-security">(Stretch Goal) Part 4: Add restrictions and security</h2>
+
+<h3 id="add-access-restrictions-to-the-web-app">Add access restrictions to the web app</h3>
+
+<ul>
+  <li>IP-based restrictions are a common feature to restrict access to a bespoke app for only employees accessing it via a company’s VPN.</li>
+  <li>It is also possible to restrict usage from a particular location or service for legal or other reasons.</li>
+  <li>See <a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-ip-restrictions">App Service access restrictions</a> docs for more information.</li>
+</ul>
+
+<h2 id="stretch-goal-part-5-use-azure-key-vault-for-storing-secrets">(Stretch Goal): Part 5: Use Azure Key Vault for storing secrets</h2>
+<p>While you could also add secrets directly as Application Settings the recommended approach is to store them in an Azure Key Vault, using a <a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-key-vault-references?tabs=azure-cli#reference-syntax">reference to a key vault secret</a> as the value of the application setting.</p>
+<ul>
+  <li>You will need to <a href="https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=portal%2Chttp">assign an identity to the App Service</a> so that you can grant access to the Key Vault via <a href="https://learn.microsoft.com/en-gb/azure/key-vault/general/rbac-guide?tabs=azure-cli#azure-built-in-roles-for-key-vault-data-plane-operations">an Azure built-in Role</a> or <a href="https://learn.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal">an access policy</a></li>
+</ul>
+
+<h2 id="stretch-goal-iaas-vs-paassaas">(Stretch Goal): IaaS vs PaaS/SaaS</h2>
+
+<p>In this exercise you have used GitHub/GitLab to deliver a functional, and free, CI/CD pipeline. These are kinds of Software as a Service (SaaS), while we are using Azure’s Web Apps as an example of Platform as a Service (PaaS). They are relatively high-level kinds of cloud DevOps tools that make it quick and easy to get up and running, provided you are happy with decisions these providers have made to build their platforms.</p>
+
+<p>Sometimes teams and businesses have particular requirements that make SaaS and PaaS solutions unsuitable or overly costly. They will instead look to IaaS (Infrastructure as a Service) companies, who can provide cloud-based virtual machines on which a team can deploy whatever software they like. IaaS solutions are far more flexible and have typically have a smaller price-tag than SaaS/PaaS solutions, but are much more time-intensive to set up, and might require long-term effort to maintain and update.</p>
+
+<p>For this stretch goal we don’t want you to code anything, but consider how you would implement the equivalent CI/CD functionality using IaaS only - i.e. you are provided with some cloud-based virtual machines and networking infrastructure only.</p>
+
+<ul>
+  <li>What software would you need?</li>
+  <li>How would you maintain it?</li>
+  <li>Are there convenient off-the-shelf packages you can deploy, or would you need to write custom applications to mimic PaaS/IaaS offerings?</li>
+</ul>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li>If you’re finding that there’s an issue with the Webhook (e.g. it says “REDACTED” or you’re getting a 401 error when making a POST request) you may need to enable basic authentication for the App Service’s FTP &amp; SCM sites:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az resource update --resource-group &lt;RESOURCE GROUP&gt; --name ftp --namespace Microsoft.Web --resource-type basicPublishingCredentialsPolicies --parent sites/&lt;APP SERVICE&gt;  --set properties.allow=true
+
+az resource update --resource-group &lt;RESOURCE GROUP&gt; --name scm --namespace Microsoft.Web --resource-type basicPublishingCredentialsPolicies --parent sites/&lt;APP SERVICE&gt;  --set properties.allow=true
+</code></pre></div></div>
+
+<ul>
+  <li>If you’re hitting an issue, as always it’s worth checking <a href="https://faq.devops.corndel.com/">the FAQs page</a> for this exercise to see if there are any additional hints that might help.</li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

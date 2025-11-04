@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://project-exercises.devops.corndel.com/exercises/m11_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m11_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-11---project-exercise">Module 11 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#module-11---project-exercise" id="markdown-toc-module-11---project-exercise">Module 11 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#part-1-verify-our-applications-encryption" id="markdown-toc-part-1-verify-our-applications-encryption">Part 1: Verify our application’s encryption</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#step-1-verify-our-encryption-at-rest" id="markdown-toc-step-1-verify-our-encryption-at-rest">Step 1: Verify our Encryption-at-rest</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#what-is-encryption-at-rest" id="markdown-toc-what-is-encryption-at-rest">What is Encryption-at-rest?</a></li>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#check-its-enforced" id="markdown-toc-check-its-enforced">Check it’s enforced</a></li>
+            </ul>
+          </li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#step-2-verify-our-encryption-in-transit" id="markdown-toc-step-2-verify-our-encryption-in-transit">Step 2: Verify our Encryption-in-transit</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#what-is-encryption-in-tranit" id="markdown-toc-what-is-encryption-in-tranit">What is Encryption-in-tranit?</a></li>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#check-its-enforced-1" id="markdown-toc-check-its-enforced-1">Check it’s enforced</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#part-2-extend-our-security" id="markdown-toc-part-2-extend-our-security">Part 2: Extend our security</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission Checklist</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise we will check &amp; extend our application’s security, by verifying the encryption status of data in our system, and then by <em>either</em>:</p>
+
+<ol>
+  <li>Adding an automated dependency scan to our CI pipeline</li>
+  <li>Handling authentication of our users with OAuth</li>
+</ol>
+
+<h2 id="part-1-verify-our-applications-encryption">Part 1: Verify our application’s encryption</h2>
+
+<p>It’s important that any data our system has access to or control over is encrypted so that if (or when!) it falls into the wrong hands, they’re not able to access or use that data. This is of particular importance whenever the data itself might be sensitive, such as containing personal or financial details.</p>
+
+<p>This is a good opportunity to review our application’s encryption.</p>
+
+<h3 id="step-1-verify-our-encryption-at-rest">Step 1: Verify our Encryption-at-rest</h3>
+
+<h4 id="what-is-encryption-at-rest">What is Encryption-at-rest?</h4>
+
+<p>Encryption-at-rest is a concept wherein <em>persisted</em> data (e.g. written to a hard drive or SSD) is encrypted. This can be done at various levels, but is often done transparently at the disk level so that the user of that drive isn’t even aware, but someone without the necessary passwords can’t decode that data. For example, your work laptop might be encrypted (with a tool <a href="https://learn.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-overview">such as BitLocker</a>) so that if it were lost, the data on it wouldn’t be accessible without the relevant credentials.</p>
+
+<h4 id="check-its-enforced">Check it’s enforced</h4>
+
+<p>We’re not storing anything too sensitive right now, but we should understand whether we have encryption-at-rest for our database before we go any further. Take a look at <a href="https://learn.microsoft.com/en-us/azure/cosmos-db/database-encryption-at-rest">the relevant Microsoft Docs for CosmosDB</a>, and add a note to your Readme to discuss the status of your encryption.</p>
+
+<h3 id="step-2-verify-our-encryption-in-transit">Step 2: Verify our Encryption-in-transit</h3>
+
+<h4 id="what-is-encryption-in-tranit">What is Encryption-in-tranit?</h4>
+
+<p>All the access control in the world for our application is of limited use if our responses (e.g. web pages full of data) are travelling over the internet in plain text, allowing attackers to potentially listen in to those messages. Encryption-in-transit is all about ensuring that all sensitive communication is only exchanged in an encrypted format between the parties involved. For internet communications, this is typically implemented with Transport Layer Security (TLS) which can be used to encrypt higher layer communications; for our application, we can leverage standard infrastructure by ensuring our application is only accessible over HTTPS (and <em>not</em> over basic HTTP) which use TLS to encrypt our HTTP communications and handles all traffic in an encrypted manner.</p>
+
+<h4 id="check-its-enforced-1">Check it’s enforced</h4>
+
+<p>Azure provides a domain name and handles certificates for encrypting traffic to that address automatically with an App Service, in fact you’ve probably already been accessing your application over HTTPS (you can see that the address in your browser starts with <code class="language-plaintext highlighter-rouge">https://</code> not <code class="language-plaintext highlighter-rouge">http://</code>).</p>
+
+<p>However, it’s important to acknowledge that having encryption <em>available</em> isn’t sufficient - we want to force everyone trying to use HTTP to switch over. Verify that’s the case now by both:</p>
+<ol>
+  <li>Checking that the setting is turned on in the Azure Portal - you can find that under your app’s “Configuration -&gt; General Settings” page.</li>
+  <li>Testing it directly - try visiting <code class="language-plaintext highlighter-rouge">http://&lt;your_website&gt;</code> and check that it redirects you to HTTPS.</li>
+</ol>
+
+<p>As a bonus - you should be able to see that the <code class="language-plaintext highlighter-rouge">ssl=true</code> query parameter is included in your CosmosDB connection string, ensuring that traffic between your application and the DB is also encrypted-in-transit by default.</p>
+
+<h2 id="part-2-extend-our-security">Part 2: Extend our security</h2>
+
+<p>For this part of the exercise there is a choice of what you want to implement; choose <strong>one</strong> of the below options according to what would be most interesting or valuable to you. They are approximately listed in order from shortest to longest.</p>
+
+<ul>
+  <li>
+    <p><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise_dependency_checking">Dependency Checking</a>: add a dependency checker to our CI pipeline to get regular feedback if security concerns are flagged in any of our libraries.</p>
+  </li>
+  <li>OAuth with <a href="https://flask-dance.readthedocs.io/en/latest/index.html">Flask-Dance</a>: implement authentication of users to our site using the OAuth code flow with the Flask Dance library
+    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise_github_flask_dance">With GitHub</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise_gitlab_flask_dance">With GitLab</a></li>
+    </ul>
+  </li>
+  <li>OAuth: implement authentication of users using the OAuth code flow, handled largely by you with the <a href="https://flask-login.readthedocs.io/en/stable/">Flask-Login</a> library to handle sessions - this is typically a more involved exercise
+    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise_github">With GitHub</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m11_exercise_gitlab">With GitLab</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="submission-checklist">Submission Checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+<ul>
+  <li>Your app forces the use of HTTPS on Azure</li>
+  <li>Your Readme discusses the current status of your encryption-at-rest</li>
+  <li><em>One</em> of the subtasks has had the submission criteria met:
+    <ul>
+      <li>Dependency Checking</li>
+      <li>OAuth (GitHub/GitLab, with or without Flask Dance)</li>
+    </ul>
+  </li>
+  <li>The app still satisfies the criteria from the previous exercises
+    <ul>
+      <li>Don’t forget to update the README and tests</li>
+    </ul>
+  </li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

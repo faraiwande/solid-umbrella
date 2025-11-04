@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m6_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m6_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-6---project-exercise">Module 6 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#module-6---project-exercise" id="markdown-toc-module-6---project-exercise">Module 6 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#architecture-diagrams" id="markdown-toc-architecture-diagrams">Architecture Diagrams</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#the-c4-model" id="markdown-toc-the-c4-model">The C4 Model</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#part-1-context-diagram" id="markdown-toc-part-1-context-diagram">Part 1: Context Diagram</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#part-2-container-diagram" id="markdown-toc-part-2-container-diagram">Part 2 Container Diagram</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#part-3-component-diagram" id="markdown-toc-part-3-component-diagram">Part 3: Component Diagram</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m6_exercise#stretch-goal-code-diagram" id="markdown-toc-stretch-goal-code-diagram">(Stretch Goal): Code Diagram</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise, you’ll create architecture diagrams to describe your todo application. You’ll explore the C4 model for creating diagrams at different levels of abstraction, and learn how these diagrams form part of software documentation.</p>
+
+<p>Your diagrams should describe your ToDo app as configured in your production docker container. In later modules we’ll revisit and expand these diagrams, keeping them up-to-date as you continue to add functionality.</p>
+
+<h2 id="architecture-diagrams">Architecture Diagrams</h2>
+
+<p>Architecture diagrams are a popular way of communicating software architecture. By looking at a diagram, a new developer can quickly understand how the system works, without getting bogged down in implementation details. Architecture diagrams are central to good technical documentation. They’re also important when designing new systems and applications.</p>
+
+<p>There are many ways to draw architecture diagrams. Diagrams may differ in their style and notation, and in their level of abstraction. Have a look online and you’ll quickly find a diversity of diagram styles. Despite the variation, architecture diagrams all aim to answer two key questions:</p>
+<ol>
+  <li>What components is the system built from?</li>
+  <li>How do these components interact with each other?</li>
+</ol>
+
+<h3 id="the-c4-model">The C4 Model</h3>
+
+<p>The C4 Model is one approach to creating useful architecture diagrams. It encourages you to create diagrams at four levels of abstraction:</p>
+
+<ol>
+  <li>Context</li>
+  <li>Container</li>
+  <li>Component</li>
+  <li>Code (optional)</li>
+</ol>
+
+<p><strong>Take a few minutes to read about the C4 Model at <a href="https://c4model.com/">https://c4model.com/</a></strong>. There’s no need to concern yourself with “Supplementary Diagrams” at this stage - stick with the core four.</p>
+
+<p>The C4 Model, diagram is defined by its <em>level of abstraction</em>, rather than any specific style or notation. The highest level of abstraction (Context) shows how the software fits into a larger architecture, and each subsequent diagram zooms in to your app, providing more detail on a specific part.</p>
+
+<h2 id="part-1-context-diagram">Part 1: Context Diagram</h2>
+
+<p>It’s normal to start with a high-level diagram of your system. High-level diagrams are simple to create and understand. They also provide useful context for more detailed low-level diagrams.</p>
+
+<p><strong>Create a Context diagram for your todo app</strong>. A context diagram simplifies your application into a single box, and focuses on its <em>context</em> - the relationships between the application, users, and external systems. You can draw the diagram using whatever notation you find useful - boxes and arrows are conventional.</p>
+
+<p>Be sure to annotate your diagram. It should be clear what each box and arrow represents.</p>
+
+<p>Use a digital drawing tool to create the diagram. The tool itself doesn’t matter too much: <a href="https://app.diagrams.net/">https://app.diagrams.net/</a> is one good option.</p>
+
+<p>Hints:</p>
+<ul>
+  <li>The context diagram should show your application’s <em>context</em>, not any internal details.</li>
+  <li>Your app’s context should include the user!</li>
+  <li>Is Trello part of the context, or an internal detail?</li>
+</ul>
+
+<h2 id="part-2-container-diagram">Part 2 Container Diagram</h2>
+
+<p><strong>Add a second diagram, this time focusing on the Container level.</strong> A container diagram illustrates the key internal components of your app, and how they interact with the user. Your container diagram should include, for example, the relationships between Flask and your application code (including Gunicorn if you’ve been working on the stretch goals).</p>
+
+<h2 id="part-3-component-diagram">Part 3: Component Diagram</h2>
+
+<p><strong>Add a Component diagram</strong>. The component diagram should zoom in on a specific component of the container diagram. In this case, it should focus on your own application code.</p>
+
+<p>Component diagrams are detailed. In a well-structured source code repository, the blocks of your component diagram may reflect different Python sub-packages, and illustrate how they are used.</p>
+
+<blockquote>
+  <p><strong>Beware:</strong> When looking at examples online you may see the term “single page application” and mistakenly think that’s what you have. “Single page application” refers to a web app architecture where the server (e.g. your Flask app) serves a page with JavaScript. The JavaScript runs in the user’s browser and sends requests to the server when you submit forms for example, without reloading the page. It even makes it look like the user is navigating between pages while never actually fetching new HTML from the server, hence the term “single page”. In contrast, assuming you have just been following to the exercise instructions, you have a “multi-page app” where the server does everything and serves templated HTML. It just happens to have only one page for simplicity’s sake.</p>
+</blockquote>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>That you have context, container &amp; component diagrams (and optionally a code diagram)</li>
+  <li>The exported diagrams are checked into source control</li>
+  <li>(Optional) The files necessary to edit and maintain the diagrams are also checked in source control</li>
+</ul>
+
+<h2 id="stretch-goal-code-diagram">(Stretch Goal): Code Diagram</h2>
+
+<p>The final layer of the C4 model is the code diagram. This is very low-level, and documents the interactions between different functions and classes. You shouldn’t try to draw this yourself!</p>
+
+<p>IDEs and code editors can generate code diagrams for existing systems for you. Because they are highly-technical and deterministic, code diagrams usually use a more strict modelling language than our “arrows and boxes” sketches. <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language">Unified Modelling Language (UML)</a> is popular for these types of diagramming tasks.</p>
+
+<p>For this stretch goal, explore ways to generate code diagrams from VSCode. Can you create one for your todo app?</p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

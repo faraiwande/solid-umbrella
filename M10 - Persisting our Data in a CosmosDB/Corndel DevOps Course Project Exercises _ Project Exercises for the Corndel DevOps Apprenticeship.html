@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://project-exercises.devops.corndel.com/exercises/m10_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m10_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-10---project-exercise">Module 10 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#module-10---project-exercise" id="markdown-toc-module-10---project-exercise">Module 10 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#part-1-create-a-mongodb-database" id="markdown-toc-part-1-create-a-mongodb-database">Part 1: Create a MongoDB database</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#step-1-azure-cosmosdb" id="markdown-toc-step-1-azure-cosmosdb">Step 1: Azure CosmosDB</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#clusters-databases-and-collections" id="markdown-toc-clusters-databases-and-collections">Clusters, databases and collections</a></li>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#getting-connected" id="markdown-toc-getting-connected">Getting Connected</a></li>
+            </ul>
+          </li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#step-2-working-with-pymongo" id="markdown-toc-step-2-working-with-pymongo">Step 2: Working with PyMongo</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#connecting-to-cosmosdb" id="markdown-toc-connecting-to-cosmosdb">Connecting to CosmosDB</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#part-2-replacing-trello" id="markdown-toc-part-2-replacing-trello">Part 2: Replacing Trello</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#step-1-updating-the-code" id="markdown-toc-step-1-updating-the-code">Step 1: Updating the code</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#integration-tests" id="markdown-toc-integration-tests">Integration tests</a></li>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#end-to-end-tests" id="markdown-toc-end-to-end-tests">End-to-end tests</a></li>
+            </ul>
+          </li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#step-2-update-cicd" id="markdown-toc-step-2-update-cicd">Step 2: Update CI/CD</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#step-3-tidy-up" id="markdown-toc-step-3-tidy-up">Step 3: Tidy up</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#stretch-goal-part-3-use-docker-for-local-dev" id="markdown-toc-stretch-goal-part-3-use-docker-for-local-dev">(Stretch goal) Part 3: Use docker for local dev</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#stretch-goal-part-4-migrate-your-existing-data" id="markdown-toc-stretch-goal-part-4-migrate-your-existing-data">(Stretch goal) Part 4: Migrate your existing data</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#stretch-goal-part-5-ip-restrictions" id="markdown-toc-stretch-goal-part-5-ip-restrictions">(Stretch goal) Part 5: IP Restrictions</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m10_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise we will finally say farewell to Trello. While it has been a useful tool so far, it is limiting: we have to follow Trello’s data model; use their API and generally be restricted to what they make available. It is time for us to remove Trello and replace it with something more under our control.</p>
+
+<p>You will create a MongoDB-compatible database using Azure’s CosmosDB and configure your application to use it instead of Trello. <a href="https://www.mongodb.com/">MongoDB</a> is a schemaless document store, which should make development quicker as you experiment and decide how to store to-do items. It also allows us to easily create new databases on the fly, especially useful for running selenium tests against a temporary database.</p>
+
+<h2 id="part-1-create-a-mongodb-database">Part 1: Create a MongoDB database</h2>
+
+<h3 id="step-1-azure-cosmosdb">Step 1: Azure CosmosDB</h3>
+
+<p>For this exercise we are going create an <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/introduction">Azure CosmosDB</a> database to go alongside our existing App Service.</p>
+
+<p>Log into Azure and create a new CosmosDB instance in your Project Exercise resource group:</p>
+
+<ul>
+  <li>With the Portal:
+    <ul>
+      <li>New -&gt; CosmosDB Database</li>
+      <li>Select “Azure Cosmos DB API for MongoDB”</li>
+      <li>Choose “Serverless” for Capacity mode</li>
+      <li>You can also configure secure firewall connections here, but for now you should permit access from “All Networks” to enable easier testing of the integration with the app.</li>
+    </ul>
+  </li>
+  <li>With the CLI:
+    <ul>
+      <li>Create new CosmosDB Account <code class="language-plaintext highlighter-rouge">az cosmosdb create --name &lt;cosmos_account_name&gt; --resource-group &lt;resource_group_name&gt; --kind MongoDB --capabilities EnableServerless --server-version 4.2</code></li>
+      <li>Create new MongoDB database under that account <code class="language-plaintext highlighter-rouge">az cosmosdb mongodb database create --account-name &lt;cosmos_account_name&gt; --name &lt;database_name&gt; --resource-group &lt;resource_group_name&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<blockquote>
+  <p>It can take a few minutes for your cluster to spin up, you’ll need to wait for it to finish deploying.</p>
+</blockquote>
+
+<h4 id="clusters-databases-and-collections">Clusters, databases and collections</h4>
+
+<p>The <strong>cluster</strong>, or CosmosDB account in our case, is your MongoDB instance. Mongo can scale across multiple machines, hence “cluster”.</p>
+
+<p>A cluster can have multiple <strong>databases</strong>. If you try and write to a database that doesn’t exist yet it is created automatically.</p>
+
+<p>Each database in turn can have multiple <strong>collections</strong>, which are similarly created when first written to.</p>
+
+<p>Individual documents, called <strong>items</strong>, can be inserted into a collection, updated and queried. Unlike a relational database, individual items are not restricted to having specific columns and instead can contain arbitrary JSON, included nested objects and lists.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>MongoDB term</th>
+      <th>Relational equivalent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cluster</td>
+      <td>Server</td>
+    </tr>
+    <tr>
+      <td>Database</td>
+      <td>Database/Schema</td>
+    </tr>
+    <tr>
+      <td>Collection</td>
+      <td>Table</td>
+    </tr>
+    <tr>
+      <td>Item</td>
+      <td>Row</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="getting-connected">Getting Connected</h4>
+
+<p>You can access the data in your Mongo database by opening up the CosmosDB account in the Azure portal and clicking on “Data Explorer”.
+From there you can create a new database and collection (unsharded is fine), as well as adding and viewing items.</p>
+
+<p>Next up we’ll connect to the cluster from Python. The “Quick start” section in the Azure portal provides sample code for this, but we’ll go through it step by step.</p>
+
+<h3 id="step-2-working-with-pymongo">Step 2: Working with PyMongo</h3>
+
+<p>Python support for MongoDB comes in the form of <a href="https://pymongo.readthedocs.io/en/stable/">PyMongo</a>. You can add this dependency to your project with <code class="language-plaintext highlighter-rouge">poetry add pymongo</code>.</p>
+
+<p>Once installed you should be able to interact with MongoDB from the Python shell in Visual Studio Code.</p>
+
+<ol>
+  <li>Open the VSC terminal.</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">poetry run python</code> to open the Python shell</li>
+  <li>Type <code class="language-plaintext highlighter-rouge">import pymongo</code></li>
+</ol>
+
+<p>If this does not produce an error then you have successfully installed PyMongo.</p>
+
+<h4 id="connecting-to-cosmosdb">Connecting to CosmosDB</h4>
+
+<p>Assuming you’ve completed steps 1 and 2 (and allowed sufficient time for your cluster to spin up) you are now ready to try connecting to your CosmosDB cluster.</p>
+
+<p>First copy the PRIMARY CONNECTION STRING for your CosmosDB cluster, available under Settings -&gt; Connection String from your CosmosDB account page in the Azure portal, or via the CLI: <code class="language-plaintext highlighter-rouge">az cosmosdb keys list -n &lt;cosmos_account_name&gt; -g &lt;resource_group_name&gt; --type connection-strings</code></p>
+
+<p>From the terminal you opened in step 2, run the following, substituting in your connection string:</p>
+
+<div class="language-python wrap-if-needed highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">pymongo</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">pymongo</span><span class="p">.</span><span class="nc">MongoClient</span><span class="p">(</span><span class="sh">"</span><span class="s">mongodb://your-cosmos-cluster:abcpassword123==@your-cosmos-cluster.mongo.cosmos.azure.com:10255</span><span class="sh">"</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">client</span><span class="p">.</span><span class="nf">list_database_names</span><span class="p">()</span>
+<span class="p">[]</span>
+</code></pre></div></div>
+
+<p>Assuming you’ve connected successfully you should take some time to explore the functionality of MongoDB. The <a href="https://pymongo.readthedocs.io/en/stable/tutorial.html">PyMongo tutorial</a> is a good place to start (hint: by this point, you’ve already done “Prerequisites” and “Making a Connection with MongoClient”). Try out the commands in the tutorial to build up your understanding of MongoDB and PyMongo.</p>
+
+<p>The examples are all shown running in a Python terminal along with their expected output, which you can do as well, or create a standalone Python file in your repo for experimenting with the pymongo library (be careful not to commit any credentials!).</p>
+<ul>
+  <li>The pymongo examples tend to use a built-in Python module, <code class="language-plaintext highlighter-rouge">pprint</code>, to “pretty print” the results - it’s like <code class="language-plaintext highlighter-rouge">print</code> but more nicely formatted.</li>
+</ul>
+
+<p>Note:</p>
+<ul>
+  <li>When <a href="https://pymongo.readthedocs.io/en/stable/tutorial.html#getting-a-database">getting a database</a> you can connect to a database that does not exist yet. It will automatically be created if necessary.</li>
+  <li>Similarly, when selecting a collection, it will automatically be created if it does not exist yet.</li>
+</ul>
+
+<blockquote>
+  <p>You may also want to refer to the (non-Python specific) <a href="https://www.mongodb.com/docs/manual/">MongoDB manual here</a> as much of the documentation (<a href="https://www.mongodb.com/docs/manual/tutorial/insert-documents/">such as for CRUD operations</a>) allows you to select a target language.</p>
+</blockquote>
+
+<p><strong>Make sure you are able to do the following:</strong></p>
+
+<ol>
+  <li>Add an item to a collection (<code class="language-plaintext highlighter-rouge">collection.insert_one(...)</code>)
+    <ul>
+      <li>Note that when adding items, you do not need to specify an ID as MongoDB will automatically create the <code class="language-plaintext highlighter-rouge">_id</code> property for the item</li>
+      <li>After adding the item, you should be able to see it appear in the Azure portal if you go to “Data Explorer” under your CosmosDB account.</li>
+    </ul>
+  </li>
+  <li>Read the contents of a collection (<code class="language-plaintext highlighter-rouge">collection.find()</code> for multiple documents)</li>
+  <li>Update an item in a collection (<code class="language-plaintext highlighter-rouge">collection.update_one(...)</code>)
+    <ul>
+      <li>Two parameters are needed: a “filter” dictionary to select the correct item, and an “update” dictionary saying what to do with it.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="part-2-replacing-trello">Part 2: Replacing Trello</h2>
+
+<p>Now that you’ve done the above, we:</p>
+<ul>
+  <li>know we have a working MongoDB cluster</li>
+  <li>know how to talk to it from Python (i.e. add items, read items, etc).</li>
+</ul>
+
+<p>It is time to tell our application how to use MongoDB instead of Trello.</p>
+
+<h3 id="step-1-updating-the-code">Step 1: Updating the code</h3>
+
+<p>You should be able to copy the data access code you’ve written for Trello and rewrite it to target MongoDB instead. You will need an environment variable for the connection string, and we suggest adding one for the database name as well.</p>
+
+<p>Not everything is totally like for like; you will have to make some changes. For example:</p>
+
+<ul>
+  <li>Instead of maintaining statuses with “lists” and an <code class="language-plaintext highlighter-rouge">idList</code> value on each item, you can store a status directly on the to-do item.</li>
+  <li>MongoDB doesn’t automatically set a <code class="language-plaintext highlighter-rouge">dateLastActivity</code> property like Trello does; if you relied on that property you’ll have to keep track of it separately.</li>
+</ul>
+
+<p>This will likely be the longest part of the exercise. Make small, incremental changes and test often. Good luck.</p>
+
+<blockquote>
+  <details> <summary style="font-size: 1.1rem"> Hints for Updating Items</summary>
+<div>
+      <ul>
+        <li>Your app route for updating items will likely receive the item ID as a string in the HTTP request. When querying the database, such as with the <code class="language-plaintext highlighter-rouge">update_one</code> or <code class="language-plaintext highlighter-rouge">delete_one</code> functions, you may need to convert the ID from a string to a BSON ObjectId (if you’re autogenerating IDs with the pymongo client)
+          <ul>
+            <li><a href="https://pymongo.readthedocs.io/en/stable/tutorial.html#querying-by-objectid">See here</a> for an example of finding an item by ID. The filter dictionary will look the same for updating or deleting items</li>
+            <li>Alternatively you can specify the <code class="language-plaintext highlighter-rouge">_id</code> property manually when inserting if you don’t want to work with the autogenerated <a href="https://www.mongodb.com/docs/manual/reference/bson-types/#std-label-objectid">BSON ObjectId data type</a> objects</li>
+          </ul>
+        </li>
+      </ul>
+    </div></details>
+</blockquote>
+
+<p>View model tests should not need any changes, but here is some advice on updating the integration and end-to-end tests:</p>
+
+<h4 id="integration-tests">Integration tests</h4>
+
+<p>You will need to update how the integration tests are providing fake data. We suggest installing the <a href="https://github.com/mongomock/mongomock">mongomock</a> library. You can use it to provide a fake Mongo database. First, set the connection string environment variable in .env.test equal to <code class="language-plaintext highlighter-rouge">mongodb://fakemongo.com</code>. Next, update your test setup as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">mongomock</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">client</span><span class="p">():</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="nf">find_dotenv</span><span class="p">(</span><span class="sh">'</span><span class="s">.env.test</span><span class="sh">'</span><span class="p">)</span>
+    <span class="nf">load_dotenv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="k">with</span> <span class="n">mongomock</span><span class="p">.</span><span class="nf">patch</span><span class="p">(</span><span class="n">servers</span><span class="o">=</span><span class="p">((</span><span class="sh">'</span><span class="s">fakemongo.com</span><span class="sh">'</span><span class="p">,</span> <span class="mi">27017</span><span class="p">),)):</span>
+        <span class="n">test_app</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">create_app</span><span class="p">()</span>
+        <span class="k">with</span> <span class="n">test_app</span><span class="p">.</span><span class="nf">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">client</span>
+</code></pre></div></div>
+
+<p>Your integration test can now use <code class="language-plaintext highlighter-rouge">pymongo.MongoClient</code> to connect and insert dummy data as if it were interacting with a real database. Delete all of the code related to mocking <code class="language-plaintext highlighter-rouge">requests.get</code>.</p>
+
+<blockquote>
+  <p>Note: mongomock specifically state that for their patching to work “you should use pymongo.MongoClient(…) rather than from pymongo import MongoClient”.</p>
+
+  <p>That is, your imports in your application code <strong>must be</strong> <code class="language-plaintext highlighter-rouge">import pymongo</code> rather than <code class="language-plaintext highlighter-rouge">from pymongo import MongoClient</code></p>
+</blockquote>
+
+<h4 id="end-to-end-tests">End-to-end tests</h4>
+
+<p>If you have end-to-end tests, ensure they pass too. The test functions will not need updating, but the setup fixture does. Instead of creating a temporary Trello board, you should now set the database name environment variable to something specific to the test. And instead of deleting the temporary Trello board at the end of the test, <a href="https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html#pymongo.collection.Collection.drop">drop the test database’s collection</a> or you could even drop the whole database.</p>
+
+<h3 id="step-2-update-cicd">Step 2: Update CI/CD</h3>
+
+<p>Once you’ve finished the code changes you’ll need to check your CI/CD pipeline and deployed application both work. At the very least, you need to provide your App Service with any new environment variables required to connect to CosmosDB.</p>
+
+<p>If you have end-to-end tests, you need to securely provide your pipeline with the new database credentials to run those e2e tests successfully.</p>
+
+<p>It is fine to use the same CosmosDB cluster for local development, the pipeline (if applicable), and the deployed environment. We wouldn’t usually do this, but don’t worry, we’ll be fixing this in a future module.</p>
+
+<h3 id="step-3-tidy-up">Step 3: Tidy up</h3>
+
+<p>Last of all we need to tidy up. The code relating to Trello is no longer needed so it should be removed. It’ll still be present in the Git history if we ever need to go back to it.</p>
+
+<p>Go over your new data access code to make sure it is <strong>clean</strong>.</p>
+
+<p>Before you finish make sure your local build is still working; the CI/CD pipeline is still green; and that deployed environment is still available.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>Your app has been adapted to use MongoDB instead of Trello</li>
+  <li>The app still satisfies the criteria from the previous exercises, in particular
+    <ul>
+      <li>it hasn’t lost any core functionality</li>
+      <li>you can setup and run the app and tests following the instructions in the README</li>
+      <li>your CI pipeline runs all your tests and deploys your app to Azure, which is up to date</li>
+      <li>there are no secrets committed to source control, or in the CI/CD logs</li>
+    </ul>
+  </li>
+  <li>You have removed all references to Trello (except for the migration stretch goal below)</li>
+</ul>
+
+<h2 id="stretch-goal-part-3-use-docker-for-local-dev">(Stretch goal) Part 3: Use docker for local dev</h2>
+
+<p>In Part 2, Step 2 we acknowledged we’d be using the same cluster in both of our environments. This isn’t great.</p>
+
+<p>One way around this is to use docker to run an instance of MongoDB for local dev. There are MongoDB images available on <a href="https://hub.docker.com/_/mongo">Docker Hub</a>.</p>
+
+<p>You can tell docker compose to create a MongoDB container using the <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#image"><code class="language-plaintext highlighter-rouge">image</code></a> keyword. (If you haven’t set up docker compose yet, this is a good opportunity to do so.)</p>
+
+<p>You can also set up your end-to-end tests to use a MongoDB docker container both for running locally and in your CI pipeline.</p>
+
+<h2 id="stretch-goal-part-4-migrate-your-existing-data">(Stretch goal) Part 4: Migrate your existing data</h2>
+
+<p>While you now have a nice, new, shiny MongoDB database it doesn’t have any of your old To-dos in it. Write some code to automate the migration of your data from Trello to MongoDB. You could either write this as a separate script or include it in your application code.</p>
+
+<p>However you decide to approach the problem your solution should be <a href="https://stackoverflow.com/questions/1077412/what-is-an-idempotent-operation">idempotent</a> and robust.</p>
+
+<h2 id="stretch-goal-part-5-ip-restrictions">(Stretch goal) Part 5: IP Restrictions</h2>
+
+<p>In Part 1 we turned off the networking restrictions on the CosmosDB Cluster so we could access it from our App Service.
+For a production deployment we don’t want to allow any connections to the database other than via the web app.</p>
+
+<p>You can either:</p>
+
+<ol>
+  <li>Find the <a href="https://docs.microsoft.com/en-us/azure/app-service/overview-inbound-outbound-ips#find-outbound-ips">IP address for your web app</a>, and restrict the Cosmos DB to only allowing access from that IP via by using a <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-configure-firewall">firewall</a>.</li>
+  <li>Set up an <a href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview#communicate-between-azure-resources">Azure Virtual Network</a> to <a href="https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet?toc=/azure/virtual-network/toc.json">connect your webapp</a> and <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/how-to-configure-vnet-service-endpoint">only allow access to your CosmosDB</a> through that VNet.</li>
+</ol>
+
+<h2 id="hints">Hints</h2>
+<ul>
+  <li>If you’re hitting an issue not covered, as always it’s worth checking <a href="https://faq.devops.corndel.com/">the FAQs page</a> for this exercise to see if there are any additional hints.</li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

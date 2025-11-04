@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m4_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m4_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-4---project-exercise">Module 4 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#module-4---project-exercise" id="markdown-toc-module-4---project-exercise">Module 4 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#recap-on-ansible" id="markdown-toc-recap-on-ansible">Recap on Ansible</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#part-1-take-a-look-at-your-control-node" id="markdown-toc-part-1-take-a-look-at-your-control-node">Part 1: Take a look at your Control Node</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#part-2-set-up-ssh-to-the-managed-node" id="markdown-toc-part-2-set-up-ssh-to-the-managed-node">Part 2: Set up SSH to the Managed Node.</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#part-3-ansible-inventory" id="markdown-toc-part-3-ansible-inventory">Part 3: Ansible Inventory</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#part-4-run-a-simple-ansible-playbook" id="markdown-toc-part-4-run-a-simple-ansible-playbook">Part 4: Run a simple Ansible playbook</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#part-5-add-tasks-to-your-playbook" id="markdown-toc-part-5-add-tasks-to-your-playbook">Part 5: Add tasks to your playbook</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#test-it-works" id="markdown-toc-test-it-works">Test it Works!</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#stretch-goal-production-configuration" id="markdown-toc-stretch-goal-production-configuration">Stretch Goal: Production Configuration</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#production-configuration" id="markdown-toc-production-configuration">Production configuration</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#limiting-permissions" id="markdown-toc-limiting-permissions">Limiting permissions</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m4_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise, you’ll use Ansible to provision a new virtual machine to host your To-Do app.</p>
+
+<p>Ansible makes running tasks like this easy and repeatable.
+Your VM’s configuration will be defined in source-controlled text files so you know what state they’re in.
+So, if your To-Do app VM crashes and you need to set up a new one, that will be easy.<br>
+Or, when your To-Do app becomes as popular as Netflix and you need hundreds of VMs to run it, you can easily provision those VMs without having to type the same commands over and over again!</p>
+
+<h2 id="recap-on-ansible">Recap on Ansible</h2>
+
+<p>Ansible generally involves two or more machines (either physical machines or VMs). These are:</p>
+<ul>
+  <li>
+    <p><strong>Control Node</strong><br>
+Any machine with Ansible installed. You can run Ansible commands and playbooks by invoking the <code class="language-plaintext highlighter-rouge">ansible</code> or <code class="language-plaintext highlighter-rouge">ansible-playbook</code> commands from any control node. You can use any computer that has a Python installation as a control node - laptops, shared desktops, and servers can all run Ansible.<br>
+<strong>Note:</strong> However, you cannot use a Windows machine as a control node.</p>
+  </li>
+  <li>
+    <p><strong>Managed Nodes</strong><br>
+The servers you manage with Ansible. Managed nodes are also sometimes called “hosts”. Ansible is not installed on managed nodes.</p>
+  </li>
+</ul>
+
+<p>We’ve given you 2 VMs:</p>
+<ul>
+  <li>1 Control Node</li>
+  <li>1 Managed Node (aka host)</li>
+</ul>
+
+<p>Contact a trainer if you have not been provided any connection details yet.</p>
+
+<p>If you use Mac or Linux, you can choose to use your own computer as the Control Node instead, but you’ll need to install Ansible on it first and this exercise will assume you are working on the provided VM.
+If you use Windows, you can try running Ansible in WSL but note that it is <a href="https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows">not officially supported</a>.</p>
+
+<p>The aim of this exercise is to enable the control node to deploy your app to the managed node. You or anyone else in the world will then be able to view your app in their browser by using the managed node’s address. And the process will be automated to the extent that you don’t need to manually run any commands on the managed node, just run the Ansible playbook.</p>
+
+<h2 id="part-1-take-a-look-at-your-control-node">Part 1: Take a look at your Control Node</h2>
+
+<p>The username is <code class="language-plaintext highlighter-rouge">ec2-user</code> and the password is <code class="language-plaintext highlighter-rouge">Mod4Project</code>. Trainers should provide you with the IP address/hostname.</p>
+
+<p>Use the <code class="language-plaintext highlighter-rouge">ssh</code> command in a terminal to connect to the Control Node. The command should be of this form:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh USERNAME@IP-ADDRESS
+</code></pre></div></div>
+
+<p>This will prompt you for a password each time you want to connect. Simplify the login process by adding a public SSH key to the VM:</p>
+<ul>
+  <li>End the SSH session by running the command <code class="language-plaintext highlighter-rouge">exit</code>. Your terminal should end up on your own machine again.</li>
+  <li>If you don’t have one already, create an SSH key pair with the <code class="language-plaintext highlighter-rouge">ssh-keygen</code> command line tool. This will generate the key pair in an <code class="language-plaintext highlighter-rouge">.ssh</code> directory in your home directory.</li>
+  <li>Keep the private part private but copy the public part onto the VM to declare that the owner of the private key is allowed access. The easiest way is to do this is running a <a href="https://www.ssh.com/academy/ssh/copy-id">ssh-copy-id</a> command from your local shell. E.g. <code class="language-plaintext highlighter-rouge">ssh-copy-id ec2-user@18.130.135.229</code>. This will require the password one last time.</li>
+  <li>You can now SSH to the VM without a password</li>
+</ul>
+
+<p>Check that Ansible is installed by connecting to the control node and running the command <code class="language-plaintext highlighter-rouge">ansible --version</code>. If this prints out some info including a version number, then Ansible is installed.
+Don’t worry if it says messages that include “[DEPRECATION WARNING]” etc.</p>
+
+<p>If Ansible isn’t installed, then install it with <code class="language-plaintext highlighter-rouge">sudo pip install ansible</code>.
+This might take a minute to run and might show a warning/error message at the end.<br>
+Even if it does, run <code class="language-plaintext highlighter-rouge">ansible --version</code> to check if installation succeeded.</p>
+
+<h2 id="part-2-set-up-ssh-to-the-managed-node">Part 2: Set up SSH to the Managed Node.</h2>
+
+<p>You are currently SSH’d from your laptop onto the Control Node.<br>
+You are now going to SSH from the Control Node into the Managed Node.</p>
+
+<p>SSH from your computer onto the Control Node (if you aren’t already connected). Then, from within that SSH session, check you can connect to the managed node.</p>
+
+<p>Remember you can end an SSH session with the command “exit”. So run this twice if you want to return all the way back to your own computer.</p>
+
+<p>For Ansible to manage the second VM, it needs to connect via SSH. So set up an SSH key pair like you did before, but this time, run the commands on the Control Node and use the Managed Node’s address for the copy command.</p>
+<ul>
+  <li>Run <code class="language-plaintext highlighter-rouge">ssh-keygen</code> to generate an SSH key pair. This will generate it in the ec2-user’s <code class="language-plaintext highlighter-rouge">.ssh</code> directory.</li>
+  <li>Use the <a href="https://www.ssh.com/academy/ssh/copy-id">ssh-copy-id</a> tool as before, but specifying the second VM’s address this time</li>
+</ul>
+
+<h2 id="part-3-ansible-inventory">Part 3: Ansible Inventory</h2>
+
+<p>Ansible can work against multiple Managed Nodes or “hosts” in your infrastructure at the same time, using a list known as an <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#intro-inventory">Inventory</a>.</p>
+
+<p>Create an Inventory file (on the Control Node) listing your Ansible Managed Node(s):
+You should have a single group and within that group, the address of a single managed node (either IP address or domain name).</p>
+
+<p>Even with a single managed node, it is nice to put it in a group in order to label its function and to make it more straightforward to build on it later.</p>
+
+<p>You have a few options for how to add a file to a remote machine:</p>
+<ul>
+  <li>The most convenient way to work on the control node will be through VS Code. Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh">Remote SSH</a> extension. With this, you can work on a remote machine from the comfort of a VS Code window - browsing/writing files and also running commands in a terminal.</li>
+  <li>Or from your SSH session in your terminal, you can use command line text editors like <code class="language-plaintext highlighter-rouge">vim</code> or <code class="language-plaintext highlighter-rouge">nano</code> to write/edit files. Refer to the reading material for a quick run down on <code class="language-plaintext highlighter-rouge">vim</code> or you can find tutorials online.</li>
+  <li>Or you can write files locally and then copy them to the remote machine with <code class="language-plaintext highlighter-rouge">scp</code>. On your local machine (not the SSH session on the remote VM), copy a file with: <code class="language-plaintext highlighter-rouge">scp /file/path username@REMOTE-SERVER:/destination/path</code>.</li>
+</ul>
+
+<h2 id="part-4-run-a-simple-ansible-playbook">Part 4: Run a simple Ansible playbook</h2>
+
+<p>We give Ansible instructions by creating a <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html#about-playbooks">Playbook</a>.</p>
+
+<p>If you need to execute a task with Ansible more than once, write a playbook and put it under source control. Then you can use the playbook to push out new configuration or confirm the configuration of remote systems. Since it’s source controlled you can review changes and easily revert to previous versions.</p>
+
+<p>So remember to commit your playbook and inventory file to your Git repository regularly.</p>
+
+<p>Put some basic content in the playbook - a single play with an empty “tasks” list. You need to specify:</p>
+<ul>
+  <li><strong>name</strong>: The name of the play</li>
+  <li><strong>hosts</strong>: Which hosts to run the play on (use the group name you chose in your Inventory file)</li>
+  <li><strong>remote_user</strong>: The user that Ansible should use when connecting to the hosts (Ansible connects to the hosts through SSH). You want to connect as the ec2-user, not root.</li>
+  <li><strong>tasks</strong>: The tasks to run as part of this play. This can be an empty list for now.</li>
+</ul>
+
+<p>Test it out by running <code class="language-plaintext highlighter-rouge">ansible-playbook YOUR_PLAYBOOK_FILE -i YOUR_INVENTORY_FILE</code>. The output should look a bit like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PLAY [Install To-Do App on new web server] ********************
+TASK [Gathering Facts] ********************
+ok: [3.10.179.156]
+</code></pre></div></div>
+
+<h3 id="part-5-add-tasks-to-your-playbook">Part 5: Add tasks to your playbook</h3>
+
+<p>This is the main exercise - fill out the Ansible playbook so that it will run your To-Do app on the managed VM. We will provide a list of tasks but you have to implement them.</p>
+
+<p>For each task, you’ll need to:</p>
+<ul>
+  <li>Work out which Module you need</li>
+  <li>Work out which options you need for the module. You can look this up on the Ansible docs</li>
+  <li>Decide whether to run the module as the root user (i.e. whether to set the option <code class="language-plaintext highlighter-rouge">become: yes</code>). Resist the temptation to set this option for the whole playbook - we want to minimise performing actions with root permissions.
+You will need this option for <code class="language-plaintext highlighter-rouge">dnf</code> or <code class="language-plaintext highlighter-rouge">systemd</code> tasks, as well as <code class="language-plaintext highlighter-rouge">copy</code> or <code class="language-plaintext highlighter-rouge">file</code> tasks that involve protected directories (such as <code class="language-plaintext highlighter-rouge">/opt</code> or <code class="language-plaintext highlighter-rouge">/etc</code>).</li>
+</ul>
+
+<p>For reference, here are the Ansible Modules that we’ll be using:</p>
+<ul>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html">ansible.builtin.command</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html">ansible.builtin.shell</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/copy_module.html">ansible.builtin.copy</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html">ansible.builtin.file</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html">ansible.builtin.git</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/systemd_module.html">ansible.builtin.systemd</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/dnf_module.html">ansible.builtin.dnf</a></li>
+  <li><a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html">ansible.builtin.template</a></li>
+</ul>
+
+<p>Each page has examples at the bottom that you may find useful.</p>
+
+<p>Write your playbook one task at a time. After each new task, run the playbook! This confirms whether it works and you should be able to see Ansible making the changes.</p>
+
+<p>Notice how each task shows “changed” the first time and “ok” subsequently.</p>
+
+<p>What follows is the series of steps you’ll need to get the application running on the VM. Each step is not necessarily a single Ansible “task”.</p>
+
+<p><strong>Install Git</strong><br>
+You can use the DNF package manager to install Git.<br>
+We want to make sure Git is installed, but we don’t always need to keep it up to date.</p>
+
+<p><strong>Install Python 3</strong>
+The VM comes with Python 3 already installed - but it’s still worth us adding a task to ensure it’s at the latest easily available version on the managed node.</p>
+
+<p>If that version of python is sufficient for you (and it usually is) then add <code class="language-plaintext highlighter-rouge">python3</code> to your previous DNF task, or install it in a second DNF task.</p>
+
+<p>To check that it installed correctly, connect to the managed node and run <code class="language-plaintext highlighter-rouge">python3 --version</code>. Note that the <code class="language-plaintext highlighter-rouge">python</code> command often refers to Python 2 to avoid breaking any programs that depend on it.</p>
+
+<p>If you want to install a later version of Python for newer language features, then the latest easily available is 3.11, which you can install through the <code class="language-plaintext highlighter-rouge">python311</code> package. You can test this is accessible on the managed node by running <code class="language-plaintext highlighter-rouge">python3.11 --version</code>.</p>
+
+<p><strong>Install Poetry</strong></p>
+
+<p>The <a href="https://python-poetry.org/docs/#installing-with-the-official-installer">recommended installation method</a> for Poetry is running a curl command and piping the result into Python. Add a task for this. Note that you need a “shell” task rather than “command” in order to use operators like <code class="language-plaintext highlighter-rouge">|</code>.</p>
+
+<p>The default behaviour of “command” or “shell” tasks is to run every time. This Poetry installation command is idempotent - meaning it’s safe to run it multiple times with no further effect - so there’s no major problem. But you should make your playbook smarter and only run this task when necessary. This will make the playbook slightly faster, plus it’s nice if Ansible’s output is accurate when it says “changed” or “ok”. Use the <code class="language-plaintext highlighter-rouge">creates</code> option of the task to achieve this.</p>
+
+<p>You can run the command “which poetry” on the host (managed node) to check where Poetry gets installed.</p>
+
+<p><strong>Create directory for the To-Do App code</strong></p>
+
+<p>Add a task to create a directory <code class="language-plaintext highlighter-rouge">/opt/todoapp</code>. Make sure the “ec2-user” has access to this directory even if you create it as root.</p>
+
+<p><strong>Hint:</strong> the simplest way to achieve the correct permissions is to set the “owner” to “ec2-user”.</p>
+
+<p><strong>Get the latest version of your code with Git</strong></p>
+
+<p>We want to checkout the latest version of your To-Do App code into the folder, <code class="language-plaintext highlighter-rouge">/opt/todoapp</code>. Add a Git task that does this.</p>
+
+<p>You should be working on a branch, so set the “version” option to the name of the branch you want to checkout.</p>
+
+<p>If your repository is public, then this should be straightforward.</p>
+
+<p>If your repository is private, you will need some extra steps to grant the host VM access. You are welcome to try setting this up correctly but feel free to take a simpler approach for the purposes of this project exercise: instead of using a “git” task, manually put your repo onto the Control Node and use a “copy” task to copy it onto the host VM.</p>
+
+<p><strong>Install project dependencies</strong></p>
+
+<p>Add a task that will use Poetry to install your project’s dependencies (such as Flask and requests) onto the host VM. You normally do this by running <code class="language-plaintext highlighter-rouge">poetry install</code> from your project folder. It needs to be run from the correct folder to see your Poetry files such as pyproject.toml. However, there is an added complication when running the command through Ansible: it will not recognise the command “poetry”.</p>
+
+<p>To resolve this, first ssh onto the host and confirm that Poetry installed successfully by running <code class="language-plaintext highlighter-rouge">poetry --version</code>. Next, check where exactly the file is kept by running <code class="language-plaintext highlighter-rouge">whereis poetry</code>.</p>
+
+<p>Return to your control node and add a command or shell task to run Poetry. Instead of just referencing “poetry”, use the full filepath, so the command looks like <code class="language-plaintext highlighter-rouge">/full/path/to/poetry install</code></p>
+
+<p>See the FAQs site for an explanation of why you can’t just run <code class="language-plaintext highlighter-rouge">poetry install</code>.</p>
+
+<blockquote>
+  <p>If you installed a specific version of Python earlier, then <em>before</em> running this step, you will want to tell poetry to use that version, with a command like: <code class="language-plaintext highlighter-rouge">poetry env use python3.11</code>. The caveats about referencing poetry above will still apply!</p>
+</blockquote>
+
+<p><strong>Create a .env file on the host</strong></p>
+
+<p>As part of the setup of the To-Do App, you set various environment variables in a file called <code class="language-plaintext highlighter-rouge">.env</code>. This is not included in the Git repository for two reasons - some of these values should vary between environments, and some of them are sensitive.</p>
+
+<p>The <a href="https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html">ansible.builtin.template</a> module will let you create a file on the host based on a template. The templating language is Jinja2 - the same one you used for your app’s HTML files!</p>
+
+<p>Create a <code class="language-plaintext highlighter-rouge">.env.j2</code> template file that you will commit to source control. Your Ansible task will use this template to generate a .env file. Note that your template needs to exist on the Controller VM. Since it is a Jinja2 template, you use e.g. <code class="language-plaintext highlighter-rouge">TRELLO_API_TOKEN=</code> to take an Ansible variable “trello_token” and insert it into the resulting .env file.</p>
+
+<p>The aim is a template file that can generate a .env file nearly identical to the one you use locally.</p>
+<ul>
+  <li>FLASK_ENV can be set to “production” rather than “development”.</li>
+  <li>Sensitive values should be provided via variables. Others, such as a board ID, would ideally be variables to make them easy to vary but can be set directly in the template file for convenience during this exercise.</li>
+</ul>
+
+<p>Add a <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_prompts.html">“vars_prompt”</a> section to your play. Ansible will prompt you to enter each of these variables when you run the playbook. Variables support having a “default” value, but remember not to commit sensitive values to Git.</p>
+
+<p>Add an Ansible task to your playbook that uses the .env.j2 file to generate a suitable .env file. The next time you run your playbook, you should see prompts to enter values for each of your variables.</p>
+
+<p>Stretch goal: use <a href="https://docs.ansible.com/ansible/latest/user_guide/vault.html">Ansible vault</a> so you do not need to provide all the variables every time you run the playbook</p>
+
+<p><strong>Start the app</strong></p>
+
+<p>If all the previous Ansible tasks ran successfully, you should be able to manually start up the app and visit the site in your browser. Try it out:</p>
+<ul>
+  <li>Connect to the host</li>
+  <li>Navigate to the project folder by running <code class="language-plaintext highlighter-rouge">cd /opt/todoapp</code></li>
+  <li>Run <code class="language-plaintext highlighter-rouge">poetry run flask run --host 0.0.0.0</code></li>
+  <li>Open up a browser on your own computer and navigate to <code class="language-plaintext highlighter-rouge">http://host.ip.address:5000/</code>. If you encounter any errors, try to resolve them.</li>
+</ul>
+
+<blockquote>
+  <p>You use <code class="language-plaintext highlighter-rouge">poetry run flask run</code> when running the app locally, but on the VM we include an extra option - setting the “host” to “0.0.0.0”. This means the server will accept external requests. Use <code class="language-plaintext highlighter-rouge">poetry run flask run --help</code> for documentation of the different Flask options, or find their documentation online.</p>
+</blockquote>
+
+<p>To run the app via Ansible will be a bit more complicated. We will not run that command directly. First of all, it needs to be run as a background process that doesn’t stop when Ansible closes its connection. Secondly, we need to be able to stop and start the process in the future, for example restarting it when we have a new version to run.</p>
+
+<p>The correct way to run it is via a tool called <strong>systemd</strong>, which is built into Linux.</p>
+
+<p>Create a file called <code class="language-plaintext highlighter-rouge">todoapp.service</code>, to define your app as a systemd service. It should look like the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Unit]
+Description=My To-Do App
+
+[Service]
+User=ec2-user
+WorkingDirectory=/opt/todoapp
+ExecStart=/home/ec2-user/.local/bin/poetry run flask run --host 0.0.0.0
+</code></pre></div></div>
+
+<p>This specifies what command to run, which folder to run it from, and what user to run it as. You may need to modify Poetry’s filepath if you installed it in a different location; compare it to the filepath you used for the “poetry install” task.</p>
+
+<p>Add, commit and push this file to your Git repository.</p>
+
+<p>You need two Ansible tasks:</p>
+<ul>
+  <li>Add a “copy” task to copy the “todoapp.service” file to “/etc/systemd/system/todoapp.service” on the host.</li>
+  <li>Add a “systemd” task to start your To-Do app.
+    <ul>
+      <li>Set the <strong>name</strong> to that of your service (either “todoapp.service” or “todoapp” will work for file called “todoapp.service”)</li>
+      <li>Set <strong>daemon_reload</strong> to true in order to pick up changes to your todoapp.service file when you run your playbook again.</li>
+      <li>Set <strong>state</strong> to “restarted” to ensure that the service picks up changes to the app each time Ansible is run</li>
+    </ul>
+  </li>
+</ul>
+
+<p>For both of these tasks, remember to set <code class="language-plaintext highlighter-rouge">become: yes</code>. To view the logs for your systemd task, SSH onto the managed node and run “journalctl -u todoapp”.</p>
+
+<h2 id="test-it-works">Test it Works!</h2>
+
+<p>At this stage, you should check the VM can run your app! If your playbook successfully ran all of the above steps, you should be able to view your application in your browser. Just enter the IP address of the host into your address bar, followed by <code class="language-plaintext highlighter-rouge">:5000</code>.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A list of things to check before submitting your work for review:</p>
+
+<ul>
+  <li>Your playbook is able to run your to-do app on a host without you manually SSHing to the host at any point.</li>
+  <li>Your README documents the command to provision a VM from an Ansible Control Node</li>
+  <li>You have committed relevant files to Git and pushed them to your repository:
+    <ul>
+      <li>Inventory file</li>
+      <li>Playbook file</li>
+      <li>.env.j2</li>
+      <li>todoapp.service</li>
+    </ul>
+  </li>
+  <li>No sensitive values are contained in those files. Sensitive values should instead be passed to Ansible when you run the playbook.</li>
+  <li>Your submission still satisfies the criteria from all previous exercises</li>
+</ul>
+
+<h2 id="stretch-goal-production-configuration">Stretch Goal: Production Configuration</h2>
+
+<h3 id="production-configuration">Production configuration</h3>
+
+<p>In a production environment you would never use <code class="language-plaintext highlighter-rouge">flask run</code>. Instead, Flask needs a WSGI application to sit between it and a production-ready web server (e.g. apache or nginx). A popular option here is <a href="https://gunicorn.org/">gunicorn</a>.</p>
+<ol>
+  <li>Install gunicorn via Poetry</li>
+  <li>Edit your systemd file to use a gunicorn startup command instead of Flask’s development server command, “flask run”.
+  You need to tell systemd to read the .env file because gunicorn does not automatically load it up in the way “flask run” does. Set the “EnvironmentFile” for your systemd service to achieve this.</li>
+  <li>You can use the “bind” option of gunicorn to specify a host and port number.</li>
+  <li>Write log events from gunicorn to a file on the host machine, so you can easily view them.</li>
+</ol>
+
+<p>Note that you currently need to run the app on a high port number like Flask’s default of 5000 or gunicorn’s default of 8000. It would be nicer to use port 80, the default HTTP port, but ports below 1024 are “protected” meaning that only root processes can bind to them. If you are interested, you can try running the app on port 80 using a systemd “socket”:</p>
+<ul>
+  <li>Create a second systemd file, “todoapp.socket”. In that file, you want “[Socket]” instead of “[Service]” and the only setting you need in there is <code class="language-plaintext highlighter-rouge">ListenStream=80</code>.</li>
+  <li>Set it so that todoapp.service “requires” todoapp.socket</li>
+</ul>
+
+<h3 id="limiting-permissions">Limiting permissions</h3>
+
+<p>It is good practice to run applications with the minimum permissions they require to work. This can prevent, or limit the impact of, certain attacks.
+For example, programs should not be able to modify themselves if they don’t need to. This limits the impact of exploits that allow an attacker to upload arbitrary files, potentially preventing remote code execution.</p>
+
+<p>To that aim, modify your Ansible config to run your to do app as a user with limited permissions.</p>
+
+<ul>
+  <li>Use Ansible to create a new “todoapp” user
+    <ul>
+      <li>Can you find a standard module that will help with that?</li>
+    </ul>
+  </li>
+  <li>Make sure that user can use Poetry
+    <ul>
+      <li>set the <code class="language-plaintext highlighter-rouge">POETRY_HOME</code> environment variable before running the Poetry installer to change the installation directory</li>
+    </ul>
+  </li>
+  <li>Update your systemd service file to run your service as the new user</li>
+</ul>
+
+<p>Make sure your “todoapp” user cannot write to the <code class="language-plaintext highlighter-rouge">/opt/todoapp</code> directory (they will still need to be able to read from it!) and does not have any other unnecessary permissions - unlike <code class="language-plaintext highlighter-rouge">ec2-user</code> they should not be able to use <code class="language-plaintext highlighter-rouge">sudo</code>.</p>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li><a href="https://faq.devops.corndel.com/">Don’t forget to check the FAQs repo for more detailed hints</a></li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

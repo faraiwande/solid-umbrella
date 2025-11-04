@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m3_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m3_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-3---project-exercise">Module 3 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#module-3---project-exercise" id="markdown-toc-module-3---project-exercise">Module 3 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#part-1-adding-unit-tests" id="markdown-toc-part-1-adding-unit-tests">Part 1: Adding Unit Tests</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-1-making-a-view-model" id="markdown-toc-step-1-making-a-view-model">Step 1: Making a view model</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-2-writing-our-first-test-using-tdd" id="markdown-toc-step-2-writing-our-first-test-using-tdd">Step 2: Writing our First Test using TDD</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-3-document-how-to-run-the-tests" id="markdown-toc-step-3-document-how-to-run-the-tests">Step 3: Document how to run the tests</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#part-2-adding-integration-tests" id="markdown-toc-part-2-adding-integration-tests">Part 2: Adding Integration Tests</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-1-starting-our-test-app" id="markdown-toc-step-1-starting-our-test-app">Step 1: Starting our Test App</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-2-create-the-test-client" id="markdown-toc-step-2-create-the-test-client">Step 2: Create the Test Client</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-3-patch-the-call-to-the-trello-api" id="markdown-toc-step-3-patch-the-call-to-the-trello-api">Step 3: Patch the call to the Trello API</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-4-add-some-assertions" id="markdown-toc-step-4-add-some-assertions">Step 4: Add some assertions!</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#stretch-goals" id="markdown-toc-stretch-goals">Stretch Goals</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#stretch-goal-more-integration-tests" id="markdown-toc-stretch-goal-more-integration-tests">Stretch Goal: More integration tests</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#stretch-goal-selenium" id="markdown-toc-stretch-goal-selenium">Stretch Goal: Selenium</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-1-create-functions-to-create-and-delete-a-trello-board" id="markdown-toc-step-1-create-functions-to-create-and-delete-a-trello-board">Step 1: Create functions to create and delete a Trello board</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-2-creating-the-test-app" id="markdown-toc-step-2-creating-the-test-app">Step 2: Creating the test app.</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-3-add-a-fixture-for-the-selenium-driver" id="markdown-toc-step-3-add-a-fixture-for-the-selenium-driver">Step 3: Add a fixture for the selenium driver</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#step-4-write-the-tests" id="markdown-toc-step-4-write-the-tests">Step 4: Write the tests!</a>            <ul>
+              <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#troubleshooting" id="markdown-toc-troubleshooting">Troubleshooting!</a></li>
+            </ul>
+          </li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#stretch-goal-hiding-old-completed-tasks" id="markdown-toc-stretch-goal-hiding-old-completed-tasks">Stretch Goal: Hiding old completed tasks</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#stretch-goal-vcr" id="markdown-toc-stretch-goal-vcr">Stretch Goal: VCR</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m3_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Up to this point, we have focused on adding functionality, but not thought about testing. Because our app is small and simple enough that manually testing all of the functionality is feasible, we have gotten away with this so far. However it would be better if we added some robust automated test coverage.</p>
+
+<p>In this exercise, we will add up to 3 sets of tests to our project</p>
+
+<ul>
+  <li>Unit Tests: to check our logic and work through edge cases</li>
+  <li>Integration Tests: to check that our classes work together</li>
+  <li>End to End Tests: to check that user journeys through our app work, and that we integrate correctly with Trello</li>
+</ul>
+
+<h2 id="part-1-adding-unit-tests">Part 1: Adding Unit Tests</h2>
+<p>In this part we’ll be adding unit tests by following Test Driven Development (TDD). In order to follow TDD we will need a new feature to implement…</p>
+
+<h3 id="step-1-making-a-view-model">Step 1: Making a view model</h3>
+
+<p>At the moment, we include all of our tasks in a single list of things to do. Let’s try to reduce the clutter by:</p>
+<ul>
+  <li>organising them by their status (eg have a section for ‘To Do’ and ‘Done’)</li>
+  <li>optionally, hiding tasks that were completed before today</li>
+</ul>
+
+<blockquote>
+  <p>These instructions and code snippets assume you have a single variable “items” holding all of the items in your to-do list, and that your items have three possible statuses. If that’s not the case, you will need to adapt the examples to fit your codebase and possibly write different unit tests in step 2.</p>
+  <ul>
+    <li>If you only have 2 statuses (“To Do” &amp; “Done”), that’s perfectly fine; please ignore references to “Doing” in the below.</li>
+    <li>If you are unsure what tests to write, you are welcome to reach out to a trainer.</li>
+  </ul>
+</blockquote>
+
+<p>So far, your app probably does something like this to pass the tasks directly to the HTML template.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">items</span><span class="o">=</span><span class="n">items</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>That’s fine for simple cases, but it has a couple of disadvantages:</p>
+<ul>
+  <li>It gets messy if there are many parameters to pass to the template</li>
+  <li>There isn’t anywhere to place python logic that helps the display (e.g. filtering/sorting our items)</li>
+</ul>
+
+<p>So we are going to collect together all of the information/logic that our HTML template (often called a ‘view’) needs into a single class. This new class (often called a ‘view model’) is a nice neat container that makes it really simple for the template to access all of the values it needs.</p>
+
+<p>Define a <code class="language-plaintext highlighter-rouge">ViewModel</code> class <em>in a new file</em>. For a template that only needs a list of items, our view model might look like:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ViewModel</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">items</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">_items</span> <span class="o">=</span> <span class="n">items</span>
+ 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">_items</span>
+</code></pre></div></div>
+
+<p>In <code class="language-plaintext highlighter-rouge">app.py</code>, import the ViewModel class and then use it to render the template:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">item_view_model</span> <span class="o">=</span> <span class="nc">ViewModel</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+<span class="k">return</span> <span class="nf">render_template</span><span class="p">(</span><span class="sh">'</span><span class="s">index.html</span><span class="sh">'</span><span class="p">,</span> <span class="n">view_model</span><span class="o">=</span><span class="n">item_view_model</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Finally, we can update our template to use our new view model:</p>
+
+<pre><code class="language-jinja2">{% for item in view_model.items %}
+    # do stuff
+{% endfor %}
+</code></pre>
+
+<p>Note that we write <code class="language-plaintext highlighter-rouge">view_model.items</code> rather than <code class="language-plaintext highlighter-rouge">view_model.items()</code> because of the <code class="language-plaintext highlighter-rouge">@property</code> decorator attached to the <code class="language-plaintext highlighter-rouge">items</code> function. Accessing <code class="language-plaintext highlighter-rouge">view_model.items</code> does in fact run the function.</p>
+
+<blockquote>
+  <p>There’s nothing special about our choice of names here. Our template references an object called <code class="language-plaintext highlighter-rouge">view_model</code>, so in our render_template call we pass in a matching keyword argument <code class="language-plaintext highlighter-rouge">view_model=</code>, but you can change this to whatever makes sense for your application.</p>
+</blockquote>
+
+<p>Try implementing this now and make sure that everything still works.
+At first this might not look like a improvement, but as we add functionality we will begin to see how this help us.</p>
+
+<h3 id="step-2-writing-our-first-test-using-tdd">Step 2: Writing our First Test using TDD</h3>
+<p>Before we start, let’s add <code class="language-plaintext highlighter-rouge">pytest</code> as a dependency of our project by running <code class="language-plaintext highlighter-rouge">poetry add pytest</code>. This should download <code class="language-plaintext highlighter-rouge">pytest</code> and also update pyproject.toml for you.</p>
+
+<p>We can now use TDD to add functionality to our view model!</p>
+
+<p><strong>The goal is to add properties to the ViewModel class that return filtered lists of items, e.g. just the items with a status of “Done”</strong></p>
+<ul>
+  <li>This will later enable us to split our list of items on the homepage into 3 separate lists</li>
+</ul>
+
+<p>To start, add a placeholder to the <code class="language-plaintext highlighter-rouge">ViewModel</code> class that just returns an empty list, like the following:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">done_items</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[]</span>
+</code></pre></div></div>
+<p><strong>Do not implement the function yet</strong> - the TDD flow is to write a failing test first and then write code to make the test pass.</p>
+
+<p>Next we need to decide <em>where</em> to put our tests.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pytest</code> will pickup tests in files with a name of the form <code class="language-plaintext highlighter-rouge">test_*.py</code> or <code class="language-plaintext highlighter-rouge">*_test.py</code> (the exact location of the file is less important but should be in the project folder).</li>
+  <li>If you are unsure of how to name/place the test file, call it <code class="language-plaintext highlighter-rouge">test_view_model.py</code> and put it alongside your <code class="language-plaintext highlighter-rouge">ViewModel</code> class file.</li>
+</ul>
+
+<p>Tests will be defined as <em>functions</em> in a test file and should start with the letters <code class="language-plaintext highlighter-rouge">test</code> e.g. <code class="language-plaintext highlighter-rouge">test_view_model_done_property</code></p>
+<ul>
+  <li>Don’t be afraid of giving tests long descriptive names; this will only make things easier to understand what’s happening when a test inevitably fails! Can you think of a more descriptive name than the one suggested above?</li>
+  <li>For a complete description of <code class="language-plaintext highlighter-rouge">pytest</code>’s test discovery rules please see <a href="https://docs.pytest.org/en/stable/explanation/goodpractices.html#conventions-for-python-test-discovery">this link</a></li>
+</ul>
+
+<p>Write a unit test that does the following:</p>
+<ul>
+  <li><strong>Arrange</strong>: Create an instance of ViewModel containing some example Item objects with various statuses.</li>
+  <li><strong>Act</strong>: Get the result of the view model’s new <code class="language-plaintext highlighter-rouge">done_items</code> property (though this will actually be an empty list for now).</li>
+  <li><strong>Assert</strong>: Write one or more <code class="language-plaintext highlighter-rouge">assert</code> statements checking the result of the “Act” step equals what you want.</li>
+</ul>
+
+<blockquote>
+  <p>Note that the scope of the unit test is just the <code class="language-plaintext highlighter-rouge">ViewModel</code> class. This means that you should only need to reference/import the class and anything that it uses (e.g. your todo item class that you created previously). In particular you <strong>should not</strong> be referencing:</p>
+  <ul>
+    <li>Your Flask app (i.e. anything from <code class="language-plaintext highlighter-rouge">app.py</code>)</li>
+    <li>Anything that refers to Trello (except possibly your item class)</li>
+  </ul>
+</blockquote>
+
+<p>Run the test and check that it fails because of an assertion and not an earlier error.</p>
+
+<p>Once you have a test that fails for the correct reason, implement the <code class="language-plaintext highlighter-rouge">done_items</code> property in the <code class="language-plaintext highlighter-rouge">ViewModel</code> class such that the test passes.</p>
+
+<p>When the test is passing, repeat the process for properties that return:</p>
+<ul>
+  <li>Just the ‘To Do’ items</li>
+  <li>Just the ‘Doing’ items</li>
+</ul>
+
+<p>Once we’ve got that working and tested we can start using these new properties in our template! Edit your template so that the ‘To Do’, ‘Doing’ and ‘Done’ items are all shown in separate lists.</p>
+
+<h3 id="step-3-document-how-to-run-the-tests">Step 3: Document how to run the tests</h3>
+
+<p>Now that you have added some tests this is a good opportunity to document them so that any new developers will know how to run them.</p>
+
+<blockquote>
+  <p>As a DevOps engineer it is crucial that you streamline the setup process for future developers of your app. Keeping the README up to date will be an implicit requirement of future modules’ exercises!</p>
+</blockquote>
+
+<p>Add a testing section to the <code class="language-plaintext highlighter-rouge">README.md</code> file documenting how to run your tests - this should include running them from a terminal, as this will be important when setting up a pipeline to run the tests automatically. You may also want to mention how to run the tests individually and as a whole.</p>
+
+<h2 id="part-2-adding-integration-tests">Part 2: Adding Integration Tests</h2>
+<p>Our unit tests are a good start, but we aren’t done yet! It would be great to add some integration tests to check that all of our classes work together as we expect them too. For this set of tests, we are going to mock our interactions with the Trello API, but test all of the rest of our code to check that each of our endpoints work.</p>
+
+<h3 id="step-1-starting-our-test-app">Step 1: Starting our Test App</h3>
+<p>For our integration tests, we are going to need to be able to programmatically start our application. This ‘test app’ should be as close as possible to the real thing, except that we are going to want to tweak some of the configuration (e.g. it won’t need a real <code class="language-plaintext highlighter-rouge">API_KEY</code> for Trello, because we are planning on mocking that interaction).</p>
+
+<p>To do this, we are going to make 2 changes to our application:</p>
+<ul>
+  <li>Move the code that constructs the application to a <code class="language-plaintext highlighter-rouge">create_app</code> function in <code class="language-plaintext highlighter-rouge">app.py</code> (assuming you haven’t done so already). This makes it easy for our test code to spin up a new application whenever it needs</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># imports here
+</span>
+<span class="k">def</span> <span class="nf">create_app</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="nc">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">config</span><span class="p">.</span><span class="nf">from_object</span><span class="p">(</span><span class="nc">Config</span><span class="p">())</span>
+    
+    <span class="c1"># All the routes and setup code etc
+</span>    <span class="c1"># e.g.
+</span>    <span class="c1"># @app.route('/')
+</span>    <span class="c1"># def index():
+</span>    <span class="c1">#     ...
+</span>    
+    <span class="k">return</span> <span class="n">app</span>
+</code></pre></div></div>
+<ul>
+  <li>Create a new <code class="language-plaintext highlighter-rouge">.env.test</code> file to contain all of the environment variables for our integration tests. This will need all the same variables as the development <code class="language-plaintext highlighter-rouge">.env</code> file, but with two differences:
+    <ul>
+      <li>fake, non-private values for our API Keys etc.</li>
+      <li>this one <em>should</em> be included in source control</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="step-2-create-the-test-client">Step 2: Create the Test Client</h3>
+<p>Flask provides an inbuilt ‘test_client’ that we can use to test our application. It lets us pretend to make HTTP requests to our app without actually starting a server. To use it in our tests, we need to load up the <code class="language-plaintext highlighter-rouge">.env.test</code> file, and then call <code class="language-plaintext highlighter-rouge">create_app()</code> and then use the returned app object to create a test client. We will do this in a <em>fixture</em>, which means this can be reused by each test in this file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+<span class="kn">from</span> <span class="n">todo_app</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">client</span><span class="p">():</span>
+    <span class="c1"># Use our test integration config instead of the 'real' version
+</span>    <span class="n">file_path</span> <span class="o">=</span> <span class="nf">find_dotenv</span><span class="p">(</span><span class="sh">'</span><span class="s">.env.test</span><span class="sh">'</span><span class="p">)</span>
+    <span class="nf">load_dotenv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># Create the new app.
+</span>    <span class="n">test_app</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">create_app</span><span class="p">()</span>
+
+    <span class="c1"># Use the app to create a test_client that can be used in our tests.
+</span>    <span class="k">with</span> <span class="n">test_app</span><span class="p">.</span><span class="nf">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">client</span>
+</code></pre></div></div>
+
+<h3 id="step-3-patch-the-call-to-the-trello-api">Step 3: Patch the call to the Trello API</h3>
+<p>Let’s start by testing our homepage endpoint.</p>
+
+<p>We can use the test client to make a call to the homepage. Adding a function parameter called “client” means that it will use the fixture we defined earlier to get the test_client object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_index_page</span><span class="p">(</span><span class="n">client</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>But… this will fail. Our app will try to make an HTTP request to Trello, but isn’t correctly configured to do that. In this test we don’t want to actually make a request to the Trello API (as we’d like our tests to be fast, work offline and have no external dependencies).</p>
+
+<p>Therefore we are going to ‘patch’ the code so that instead of making real requests to Trello, we just return a pre-defined response. We want to include as much of our code in the test as possible though, so we should try to patch the smallest thing we can. In this case, it means that we probably want to patch the call to <code class="language-plaintext highlighter-rouge">requests.get</code> (or <code class="language-plaintext highlighter-rouge">requests.request</code> depending on which function you used in your <code class="language-plaintext highlighter-rouge">trello_items.py</code> file):</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_index_page</span><span class="p">(</span><span class="n">monkeypatch</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+    <span class="c1"># This replaces any call to requests.get with our own function
+</span>    <span class="n">monkeypatch</span><span class="p">.</span><span class="nf">setattr</span><span class="p">(</span><span class="n">requests</span><span class="p">,</span> <span class="sh">'</span><span class="s">get</span><span class="sh">'</span><span class="p">,</span> <span class="n">stub</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">StubResponse</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fake_response_data</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">fake_response_data</span> <span class="o">=</span> <span class="n">fake_response_data</span>
+
+    <span class="k">def</span> <span class="nf">json</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">fake_response_data</span>
+
+<span class="k">def</span> <span class="nf">stub</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">test_board_id</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">TRELLO_BOARD_ID</span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="sa">f</span><span class="sh">'</span><span class="s">https://api.trello.com/1/boards/</span><span class="si">{</span><span class="n">test_board_id</span><span class="si">}</span><span class="s">/lists</span><span class="sh">'</span><span class="p">:</span>
+        <span class="n">fake_response_data</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">123abc</span><span class="sh">'</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">To Do</span><span class="sh">'</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">cards</span><span class="sh">'</span><span class="p">:</span> <span class="p">[{</span><span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">456</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">Test card</span><span class="sh">'</span><span class="p">}]</span>
+        <span class="p">}]</span>
+        <span class="k">return</span> <span class="nc">StubResponse</span><span class="p">(</span><span class="n">fake_response_data</span><span class="p">)</span>
+
+    <span class="k">raise</span> <span class="nc">Exception</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">Integration test did not expect URL </span><span class="sh">"</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="sh">"'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Try this now so that your tests no longer break. Depending on your solution to Module 2, you may need to patch more/different URLs (like <code class="language-plaintext highlighter-rouge">.../boards/&lt;board_id&gt;/cards</code>). You can support more URLs by including more “if” clauses in <code class="language-plaintext highlighter-rouge">stub</code>, that return appropriate data for each.</p>
+
+<p>Tip: It’s really important that the mocked response is realistic, i.e. that it has the same format as the real response. If you aren’t certain what the response data should look like, try making the request in postman and checking what data is returned.</p>
+
+<p>If you’ve followed the above, you should end up with a test structure that looks similar to the below.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">pytest</span>
+<span class="kn">import</span> <span class="n">requests</span>
+<span class="kn">from</span> <span class="n">todo_app</span> <span class="kn">import</span> <span class="n">app</span>
+<span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">client</span><span class="p">():</span>
+    <span class="c1"># Use our test integration config instead of the 'real' version
+</span>    <span class="n">file_path</span> <span class="o">=</span> <span class="nf">find_dotenv</span><span class="p">(</span><span class="sh">'</span><span class="s">.env.test</span><span class="sh">'</span><span class="p">)</span>
+    <span class="nf">load_dotenv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># Create the new app.
+</span>    <span class="n">test_app</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">create_app</span><span class="p">()</span>
+
+    <span class="c1"># Use the app to create a test_client that can be used in our tests.
+</span>    <span class="k">with</span> <span class="n">test_app</span><span class="p">.</span><span class="nf">test_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">client</span>
+
+<span class="k">class</span> <span class="nc">StubResponse</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fake_response_data</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">fake_response_data</span> <span class="o">=</span> <span class="n">fake_response_data</span>
+
+    <span class="k">def</span> <span class="nf">json</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="n">fake_response_data</span>
+
+<span class="c1"># Stub replacement for requests.get(url)
+</span><span class="k">def</span> <span class="nf">stub</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{}):</span>
+    <span class="n">test_board_id</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">TRELLO_BOARD_ID</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">fake_response_data</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="k">if</span> <span class="n">url</span> <span class="o">==</span> <span class="sa">f</span><span class="sh">'</span><span class="s">https://api.trello.com/1/boards/</span><span class="si">{</span><span class="n">test_board_id</span><span class="si">}</span><span class="s">/lists</span><span class="sh">'</span><span class="p">:</span>
+        <span class="n">fake_response_data</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">123abc</span><span class="sh">'</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">To Do</span><span class="sh">'</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">cards</span><span class="sh">'</span><span class="p">:</span> <span class="p">[{</span><span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">456</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">Test card</span><span class="sh">'</span><span class="p">}]</span>
+        <span class="p">}]</span>
+        <span class="k">return</span> <span class="nc">StubResponse</span><span class="p">(</span><span class="n">fake_response_data</span><span class="p">)</span>
+
+    <span class="k">raise</span> <span class="nc">Exception</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">Integration test did not expect URL </span><span class="sh">"</span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="sh">"'</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">test_index_page</span><span class="p">(</span><span class="n">monkeypatch</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+    <span class="c1"># Replace requests.get(url) with our own function
+</span>    <span class="n">monkeypatch</span><span class="p">.</span><span class="nf">setattr</span><span class="p">(</span><span class="n">requests</span><span class="p">,</span> <span class="sh">'</span><span class="s">get</span><span class="sh">'</span><span class="p">,</span> <span class="n">stub</span><span class="p">)</span>
+
+    <span class="c1"># Make a request to our app's index page
+</span>    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">/</span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+    <span class="k">assert</span> <span class="sh">'</span><span class="s">Test card</span><span class="sh">'</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="nf">decode</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>If you’re struggling to get that working, see the <a href="https://faq.devops.corndel.com/Modules/Module_3/Project_Exercise/hints.html">relevant hints page</a> of the FAQs site.</p>
+
+<h3 id="step-4-add-some-assertions">Step 4: Add some assertions!</h3>
+<p>The last thing to do is assert that the response we get in the test looks correct.
+This is a little tricky as the response is quite a complex object, let’s just write some simple assertions to sanity check it, not parse the whole HTML response. For example, if your mock Trello response contains a card with name equal to “Test card”, you could assert the following:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span>
+<span class="k">assert</span> <span class="sh">'</span><span class="s">Test card</span><span class="sh">'</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">data</span><span class="p">.</span><span class="nf">decode</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>You have at least one unit test and at least one integration test and the tests are true to their archetype:
+    <ul>
+      <li>The unit tests each test one file/class</li>
+      <li>The integration tests use mocking to avoid making external requests, and don’t have access to real credentials</li>
+      <li>If you have an End to End test, the test loads real credentials and performs some browser interaction resulting in requests to Trello</li>
+    </ul>
+  </li>
+  <li>All your tests test something meaningful - they should probably all contain at least one <code class="language-plaintext highlighter-rouge">assert</code></li>
+  <li>Your README documents any set up steps required, as well as how to run your tests</li>
+  <li>When running <code class="language-plaintext highlighter-rouge">poetry run pytest</code> or <code class="language-plaintext highlighter-rouge">poetry run pytest path/to/test_file</code> from a terminal (outside of any IDE) your tests run and pass</li>
+  <li>Your submission still satisfies the criteria from all previous exercises</li>
+</ul>
+
+<h2 id="stretch-goals">Stretch Goals</h2>
+
+<h3 id="stretch-goal-more-integration-tests">Stretch Goal: More integration tests</h3>
+<p>If you have time, try testing the other endpoints too.</p>
+
+<p>Remember to think about what’s most important in each case. For example, we may want to assert that the correct call was made to the Trello API.</p>
+
+<h2 id="stretch-goal-selenium">Stretch Goal: Selenium</h2>
+<p>The final thing to check is that with our whole system working together, our user is able to perform the actions we would like them to make.</p>
+
+<p>For this section we will also need to install the selenium python package.</p>
+
+<h3 id="step-1-create-functions-to-create-and-delete-a-trello-board">Step 1: Create functions to create and delete a Trello board</h3>
+<p>For this test, we are going to want to make real calls to Trello, but that presents another issue. If we run this test against our normal board, then the content that is already on that board might affect our tests, and running our tests might also mess up all the tasks we have on our board. Instead, we would rather run our tests against a new board, created just for that test.</p>
+
+<p>Let’s start by creating 2 functions, one to create a new Trello board and one to delete it.</p>
+
+<p><em><strong>Tip:</strong> Load in environment variables from the <code class="language-plaintext highlighter-rouge">.env</code> file using the <code class="language-plaintext highlighter-rouge">load_dotenv</code> function, just like the integration test but this time specifying “.env”, not “.env.test”</em></p>
+
+<p><em><strong>Tip:</strong> Use a separate directory for your Selenium Tests to your other tests. Selenium tests are much slower, so it helps to be able to run them separately. By putting them in separate directories we can eg run <code class="language-plaintext highlighter-rouge">poetry run pytest tests</code> to run the unit and integration tests in the ‘tests’ directory, or <code class="language-plaintext highlighter-rouge">poetry run pytest tests_e2e</code> to run the selenium tests in the ‘tests_e2e’ directory.</em></p>
+
+<h3 id="step-2-creating-the-test-app">Step 2: Creating the test app.</h3>
+<p>We can now create a pytest fixture that will run before and after each test. It’s job is to create the new Trello board, and then build and start our app in a background thread. After the test is completed, we can then stop that background thread and delete the Trello board. It should look something like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="n">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="n">todo_app</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="sh">'</span><span class="s">module</span><span class="sh">'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">app_with_temp_board</span><span class="p">():</span>
+    <span class="c1"># Create the new board &amp; update the board id environment variable
+</span>    <span class="n">board_id</span> <span class="o">=</span> <span class="nf">create_trello_board</span><span class="p">()</span>
+    <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">'</span><span class="s">TRELLO_BOARD_ID</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">board_id</span>
+
+    <span class="c1"># Construct the new application
+</span>    <span class="n">application</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">create_app</span><span class="p">()</span>
+
+    <span class="c1"># Start the app in its own thread.
+</span>    <span class="n">thread</span> <span class="o">=</span> <span class="nc">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">application</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">use_reloader</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+    <span class="n">thread</span><span class="p">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">thread</span><span class="p">.</span><span class="nf">start</span><span class="p">()</span>
+    <span class="c1"># Give the app a moment to start
+</span>    <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">yield</span> <span class="n">application</span>
+
+    <span class="c1"># Tear Down
+</span>    <span class="n">thread</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nf">delete_trello_board</span><span class="p">(</span><span class="n">board_id</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="step-3-add-a-fixture-for-the-selenium-driver">Step 3: Add a fixture for the selenium driver</h3>
+<p>The selenium driver is how we control the browser that is going to load our app. You will find that there are Selenium driver’s for most major browsers, but the example below uses Firefox, because it’s quite easy to get working. To use Firefox, you will need the geckodriver executable - Selenium should attempt to install this for you when you run the code, but if it fails then you can download it yourself and place it in the root of your project - selenium will then use this under the hood.</p>
+
+<p>You can then create a fixture for your driver as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+
+<span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="sh">"</span><span class="s">module</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">driver</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Firefox</span><span class="p">()</span> <span class="k">as</span> <span class="n">driver</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">driver</span>
+</code></pre></div></div>
+
+<h3 id="step-4-write-the-tests">Step 4: Write the tests!</h3>
+<p>We are now ready to write our tests! Check everything is working with a test similar to this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_task_journey</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">app_with_temp_board</span><span class="p">):</span>
+    <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">http://localhost:5000/</span><span class="sh">'</span><span class="p">)</span>
+ 
+    <span class="k">assert</span> <span class="n">driver</span><span class="p">.</span><span class="n">title</span> <span class="o">==</span> <span class="sh">'</span><span class="s">To-Do App</span><span class="sh">'</span>
+</code></pre></div></div>
+
+<p><strong>And then extend your test</strong> to check that you can create a new item, and check that it appears on the page.
+You could extend this to also complete the item and mark it as incomplete, or verify any other behaviour you have added.</p>
+
+<p>You should end up with a structure that looks something like that below:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">pytest</span>
+<span class="kn">from</span> <span class="n">threading</span> <span class="kn">import</span> <span class="n">Thread</span>
+<span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="n">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="n">todo_app</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="sh">'</span><span class="s">module</span><span class="sh">'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">app_with_temp_board</span><span class="p">():</span>
+    <span class="c1"># Load our real environment variables
+</span>    <span class="nf">load_dotenv</span><span class="p">(</span><span class="n">override</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c1"># Create the new board &amp; update the board id environment variable
+</span>    <span class="n">board_id</span> <span class="o">=</span> <span class="nf">create_trello_board</span><span class="p">()</span>
+    <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">'</span><span class="s">TRELLO_BOARD_ID</span><span class="sh">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">board_id</span>
+
+    <span class="c1"># Construct the new application
+</span>    <span class="n">application</span> <span class="o">=</span> <span class="n">app</span><span class="p">.</span><span class="nf">create_app</span><span class="p">()</span>
+
+    <span class="c1"># Start the app in its own thread.
+</span>    <span class="n">thread</span> <span class="o">=</span> <span class="nc">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="n">application</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span><span class="n">use_reloader</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+    <span class="n">thread</span><span class="p">.</span><span class="n">daemon</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">thread</span><span class="p">.</span><span class="nf">start</span><span class="p">()</span>
+    
+    <span class="c1"># Give the app a moment to start
+</span>    <span class="nf">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Return the application object as the result of the fixture
+</span>    <span class="k">yield</span> <span class="n">application</span>
+
+    <span class="c1"># Tear down
+</span>    <span class="n">thread</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nf">delete_trello_board</span><span class="p">(</span><span class="n">board_id</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">create_trello_board</span><span class="p">():</span>
+    <span class="c1"># TODO Create a new board in Trello and return the id
+</span>    <span class="k">pass</span>
+
+<span class="k">def</span> <span class="nf">delete_trello_board</span><span class="p">(</span><span class="n">board_id</span><span class="p">):</span>
+    <span class="c1"># TODO Delete the Trello board with id board_id
+</span>    <span class="k">pass</span>
+
+<span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">scope</span><span class="o">=</span><span class="sh">"</span><span class="s">module</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">driver</span><span class="p">():</span>
+    <span class="k">with</span> <span class="n">webdriver</span><span class="p">.</span><span class="nc">Firefox</span><span class="p">()</span> <span class="k">as</span> <span class="n">driver</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">driver</span>
+
+<span class="k">def</span> <span class="nf">test_task_journey</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span> <span class="n">app_with_temp_board</span><span class="p">):</span>
+    <span class="n">driver</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="sh">'</span><span class="s">http://localhost:5000/</span><span class="sh">'</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">driver</span><span class="p">.</span><span class="n">title</span> <span class="o">==</span> <span class="sh">'</span><span class="s">To-Do App</span><span class="sh">'</span>
+</code></pre></div></div>
+
+<h4 id="troubleshooting">Troubleshooting!</h4>
+<p>Getting the driver to work can be a bit of a pain! If it isn’t working, try these things:</p>
+<ul>
+  <li>you’ll need the browser (Firefox in this case) installed as well as the driver.</li>
+  <li>the browser and the driver will need to be compatible versions</li>
+  <li>the driver should be picked up from your project folder, but you can also try adding it to your <code class="language-plaintext highlighter-rouge">$PATH</code> environment variable</li>
+  <li>on Mac, you may get a permissions error. If you do, try the steps explained here: https://stackoverflow.com/questions/60362018/macos-catalinav-10-15-3-error-chromedriver-cannot-be-opened-because-the-de</li>
+</ul>
+
+<h3 id="stretch-goal-hiding-old-completed-tasks">Stretch Goal: Hiding old completed tasks</h3>
+
+<p>This stretch goal is an opportunity to practise some more TDD. The Trello API tells us when each card was last modified. For completed tasks in our app the last modification will always be marking it as done, so we can use this time to tell how long ago the task was completed.</p>
+
+<p>We are now going to split up our ‘Done’ section as follows.</p>
+<ul>
+  <li>If there are fewer than 5 completed tasks, you should show all of them</li>
+  <li>Otherwise:
+    <ul>
+      <li>Initially only show tasks that have been completed today</li>
+      <li>Allow users to display items completed before today.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>To achieve this, use TDD to add some new properties to your view model along with appropriate tests:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">should_show_all_done_items</code>: returns <code class="language-plaintext highlighter-rouge">True</code> if we should show all the completed items or <code class="language-plaintext highlighter-rouge">False</code> for just the most recent ones.</li>
+  <li><code class="language-plaintext highlighter-rouge">recent_done_items</code>: returns all of the items that have been completed today.</li>
+  <li><code class="language-plaintext highlighter-rouge">older_done_items</code>: returns all of the items that were completed before today.</li>
+</ul>
+
+<p>Once that logic in the <code class="language-plaintext highlighter-rouge">ViewModel</code> is complete, edit the index.html template to add in our new feature. You can let the user  reveal/hide older done items if you put them inside a [“</p><details>” tag](https://www.w3schools.com/tags/tag_details.asp).</details><p></p>
+
+<h3 id="stretch-goal-vcr">Stretch Goal: VCR</h3>
+<p>One of the tricks with our integration test was making sure our mock response matched the real response from the Trello API. It is really important to get this right and to ensure that it remains up to date, as otherwise our integration test is meaningless.</p>
+
+<p>To help with this we could choose to use a library like VCR (https://pypi.org/project/vcrpy/). The idea is to allow you to record real responses from the API, and then reuse these responses for future tests. Here’s how it works</p>
+<ul>
+  <li>The first time you run a test, the actual calls to the API are made, just like they would if running the full application.</li>
+  <li>The response for each of those requests is recorded and saved to a file.</li>
+  <li>In future runs of the test, all HTTP requests are intercepted.</li>
+  <li>And instead of making the ‘real’ request, VCR will just look up the saved response and use that.</li>
+  <li>(You can trigger re-recording the responses just by deleting the currently stored ones)</li>
+</ul>
+
+<p>This allows us to have really high quality test data, but retain our quick, reliable and consistent tests.</p>
+
+<p>Have a go at changing your integration tests to implement this - don’t forget to ensure any stored requests do not expose your API Key/Token.</p>
+
+<h2 id="hints">Hints</h2>
+<ul>
+  <li><a href="https://faq.devops.corndel.com/">Don’t forget to check the FAQs repo for more detailed hints</a></li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

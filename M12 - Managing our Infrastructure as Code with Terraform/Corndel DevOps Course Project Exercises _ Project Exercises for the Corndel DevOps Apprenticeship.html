@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://project-exercises.devops.corndel.com/exercises/m12_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m12_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-hom.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-cor.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-12---project-exercise">Module 12 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#module-12---project-exercise" id="markdown-toc-module-12---project-exercise">Module 12 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#part-1---terraform-running-locally" id="markdown-toc-part-1---terraform-running-locally">Part 1 - Terraform running locally</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-1---link-terraform-to-your-project-exercise-resource-group" id="markdown-toc-step-1---link-terraform-to-your-project-exercise-resource-group">Step 1 - Link Terraform to your project exercise resource group</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-2---add-an-app-service-and-web-app" id="markdown-toc-step-2---add-an-app-service-and-web-app">Step 2 - Add an App Service and Web App</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-3---check-state" id="markdown-toc-step-3---check-state">Step 3 - Check state</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-4---add-the-cosmosdb-resource" id="markdown-toc-step-4---add-the-cosmosdb-resource">Step 4 - Add the CosmosDB resource</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-5---check-local-terraform-is-working" id="markdown-toc-step-5---check-local-terraform-is-working">Step 5 - Check local Terraform is working</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-6---prevent-database-destruction" id="markdown-toc-step-6---prevent-database-destruction">Step 6 - Prevent database destruction</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#part-2---parametrise-to-enable-different-environments" id="markdown-toc-part-2---parametrise-to-enable-different-environments">Part 2 - Parametrise to enable different environments</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-1---input-variables" id="markdown-toc-step-1---input-variables">Step 1 - Input Variables</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-2---output-variables" id="markdown-toc-step-2---output-variables">Step 2 - Output variables</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#part-3---use-azure-blob-storage-as-remote-state" id="markdown-toc-part-3---use-azure-blob-storage-as-remote-state">Part 3 - Use Azure Blob Storage as Remote State</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#guide" id="markdown-toc-guide">Guide</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#part-4---link-in-with-cicd" id="markdown-toc-part-4---link-in-with-cicd">Part 4 - Link in with CI/CD</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-1---service-principal-authentication" id="markdown-toc-step-1---service-principal-authentication">Step 1 - Service Principal Authentication</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-2---set-up-terraform" id="markdown-toc-step-2---set-up-terraform">Step 2 - Set up Terraform</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#step-3---deploy-changes" id="markdown-toc-step-3---deploy-changes">Step 3 - Deploy changes</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m12_exercise#part-5-stretch---run-e2e-tests-on-terraformed-infrastructure" id="markdown-toc-part-5-stretch---run-e2e-tests-on-terraformed-infrastructure">Part 5 (Stretch) - Run e2e tests on Terraformed Infrastructure</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>In this exercise we will look into using Infrastructure-as-Code (IaC) to declaratively describe our desired Azure infrastructure, and use that to deploy our todo-app with the same arrangement of Azure resources we have built up over the previous few modules.</p>
+
+<p>There are various different IaC tools and languages, for this we’ll be using <a href="https://www.terraform.io/intro/">Terraform</a>, which is a platform agnostic industry standard, so applicable to a wider variety of scenarios than a cloud-specific alternative. Also it is capable of not only configuring, but also provisioning services, and the declarative over procedural style lends itself well to immutable infrastructure.</p>
+
+<h2 id="part-1---terraform-running-locally">Part 1 - Terraform running locally</h2>
+
+<p><a href="https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/azure-get-started">Install it</a></p>
+
+<p>You also need to be logged into the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli">Azure CLI</a> locally, so if you didn’t do that in a previous exercise then install &amp; log into that now.</p>
+
+<h3 id="step-1---link-terraform-to-your-project-exercise-resource-group">Step 1 - Link Terraform to your project exercise resource group</h3>
+
+<ul>
+  <li>Make a new file called <code class="language-plaintext highlighter-rouge">main.tf</code> in the root of your Git repo.
+    <ul>
+      <li>You can store your terraform configuration files in sub-directories if you wish, they will form a <a href="https://www.terraform.io/docs/language/files/index.html#directories-and-modules">module</a> per directory.</li>
+      <li>You would need to <code class="language-plaintext highlighter-rouge">cd</code> into the applicable sub-folder to run terraform commands, so it is simplest for now to just keep them in the project root.</li>
+    </ul>
+  </li>
+  <li>Add the <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs">azurerm</a> provider to allow linking with Azure, along with a basic <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs">resource group</a>:</li>
+</ul>
+
+<div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">terraform</span> <span class="p">{</span>
+  <span class="nx">required_providers</span> <span class="p">{</span>
+    <span class="nx">azurerm</span> <span class="p">=</span> <span class="p">{</span>
+      <span class="nx">source</span> <span class="p">=</span> <span class="s2">"hashicorp/azurerm"</span>
+      <span class="nx">version</span> <span class="p">=</span> <span class="s2">"&gt;= 3.8"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">provider</span> <span class="s2">"azurerm"</span> <span class="p">{</span>
+  <span class="nx">features</span> <span class="p">{}</span>
+  <span class="nx">subscription_id</span> <span class="p">=</span> <span class="s2">"&lt;SUBSCRIPTION_ID&gt;"</span>
+<span class="p">}</span>
+
+<span class="k">data</span> <span class="s2">"azurerm_resource_group"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">name</span>     <span class="p">=</span> <span class="s2">"&lt;RESOURCE_GROUP_NAME&gt;"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>By using the <a href="https://www.terraform.io/docs/language/data-sources/index.html"><code class="language-plaintext highlighter-rouge">data</code></a> command here instead of <a href="https://www.terraform.io/docs/language/resources/syntax.html"><code class="language-plaintext highlighter-rouge">resource</code></a>, we tell Terraform that the resource group is a pre-existing component that we can get read-only access to. Replace <code class="language-plaintext highlighter-rouge">&lt;RESOURCE_GROUP_NAME&gt;</code> with the actual name of your project exercise resource group.</p>
+  <ul>
+    <li>You can find the relevant subscription ID on the Resource Group’s page in Azure (or by running <code class="language-plaintext highlighter-rouge">az group show --name &lt;RESOURCE GROUP NAME&gt;</code> and looking at the ID)</li>
+  </ul>
+</blockquote>
+
+<ul>
+  <li>First run <code class="language-plaintext highlighter-rouge">terraform init</code> to initialise the directory, set up the backend and link the <code class="language-plaintext highlighter-rouge">azurerm</code>.
+    <blockquote>
+      <p>You should add any files and directories generated to <code class="language-plaintext highlighter-rouge">.gitignore</code>, see recommended patterns <a href="https://github.com/github/gitignore/blob/master/Terraform.gitignore">here</a>.
+It is also worth adding them to your <code class="language-plaintext highlighter-rouge">.dockerignore</code> file so they don’t get used in your docker <code class="language-plaintext highlighter-rouge">COPY</code> step.</p>
+    </blockquote>
+  </li>
+  <li>Running <code class="language-plaintext highlighter-rouge">terraform plan</code> shows what actions would be performed to make reality match your desired configuration. For now this will say “no changes” because main.tf does not add any resources yet.</li>
+  <li>Once we start adding resources you can run <code class="language-plaintext highlighter-rouge">terraform apply</code>, which will make a new plan, ask for approval, then provision the resources. But again, this will also say “no changes” for now.</li>
+  <li>Running <code class="language-plaintext highlighter-rouge">terraform destroy</code> will remove any resources you’ve created.</li>
+</ul>
+
+<blockquote>
+  <p>You can save the output of the <code class="language-plaintext highlighter-rouge">plan</code> command to a file. If you pass that file into the <code class="language-plaintext highlighter-rouge">apply</code> command, you ensure it does the same thing and can skip approval.</p>
+</blockquote>
+
+<h3 id="step-2---add-an-app-service-and-web-app">Step 2 - Add an App Service and Web App</h3>
+
+<p>Describing resources in Terraform requires similar parameters to the <code class="language-plaintext highlighter-rouge">az</code> CLI commands we used previously, however you can refer to resources provisioned elsewhere in the file, allowing the easy re-use of attributes such as name, location and id.</p>
+
+<p>Add the below declarations, to add a Linux <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_web_app">app service</a> resource to your terraform configuration.</p>
+
+<div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">resource</span> <span class="s2">"azurerm_service_plan"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">name</span>                <span class="p">=</span> <span class="s2">"terraformed-asp"</span>
+  <span class="nx">location</span>            <span class="p">=</span> <span class="k">data</span><span class="p">.</span><span class="nx">azurerm_resource_group</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">location</span>
+  <span class="nx">resource_group_name</span> <span class="p">=</span> <span class="k">data</span><span class="p">.</span><span class="nx">azurerm_resource_group</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">os_type</span>             <span class="p">=</span> <span class="s2">"Linux"</span>
+  <span class="nx">sku_name</span>            <span class="p">=</span> <span class="s2">"B1"</span>
+<span class="p">}</span>
+
+<span class="k">resource</span> <span class="s2">"azurerm_linux_web_app"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">name</span>                <span class="p">=</span> <span class="s2">"&lt;APP_NAME&gt;"</span>
+  <span class="nx">location</span>            <span class="p">=</span> <span class="k">data</span><span class="p">.</span><span class="nx">azurerm_resource_group</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">location</span>
+  <span class="nx">resource_group_name</span> <span class="p">=</span> <span class="k">data</span><span class="p">.</span><span class="nx">azurerm_resource_group</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">name</span>
+  <span class="nx">service_plan_id</span>     <span class="p">=</span> <span class="nx">azurerm_service_plan</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">id</span>
+
+  <span class="nx">site_config</span> <span class="p">{</span>
+    <span class="nx">application_stack</span> <span class="p">{</span>
+      <span class="nx">docker_image_name</span>     <span class="p">=</span> <span class="s2">"appsvcsample/python-helloworld:latest"</span>
+      <span class="nx">docker_registry_url</span>   <span class="p">=</span> <span class="s2">"https://index.docker.io"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>You will need to update <code class="language-plaintext highlighter-rouge">&lt;APP_NAME&gt;</code> to a globally-unique name as this forms part of the app’s URL, as in the previous exercise.</p>
+</blockquote>
+
+<blockquote>
+  <p>Make sure you use different names for the resources in this exercise, so you don’t accidentally destroy or mis-configure any resources you used in your solution to the previous exercises.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Run <code class="language-plaintext highlighter-rouge">terraform apply</code></p>
+  </li>
+  <li>
+    <p>Browse to <code class="language-plaintext highlighter-rouge">https://&lt;app-name&gt;.azurewebsites.net/</code> and check to see the HelloWorld page is visible.</p>
+  </li>
+</ul>
+
+<h3 id="step-3---check-state">Step 3 - Check state</h3>
+
+<ul>
+  <li>When you <code class="language-plaintext highlighter-rouge">apply</code> your configuration, Terraform stores the IDs and properties of the resources created so that it can manage or destroy those resources going forward.</li>
+  <li>The default is a local file called <code class="language-plaintext highlighter-rouge">terraform.tfstate</code>, and as it could also contain sensitive values in plaintext, make sure to <code class="language-plaintext highlighter-rouge">gitignore</code> it, along with the <code class="language-plaintext highlighter-rouge">.terraform/</code> directory.</li>
+  <li>We will look at alternatives to this local state in Step 3.</li>
+  <li>You can run <code class="language-plaintext highlighter-rouge">terraform show</code> and <code class="language-plaintext highlighter-rouge">terraform state list</code> to view the current state and confirm it is as expected.</li>
+</ul>
+
+<h3 id="step-4---add-the-cosmosdb-resource">Step 4 - Add the CosmosDB resource</h3>
+
+<p>Now go through and add into <code class="language-plaintext highlighter-rouge">main.tf</code> all the other resources we provisioned manually over the last few modules.</p>
+
+<ul>
+  <li>You will need a Cosmos DB “account” - <code class="language-plaintext highlighter-rouge">azurerm_cosmosdb_account</code> <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_account">docs</a>
+    <blockquote>
+      <p>To save costs, you should enable the Serverless capability:</p>
+      <div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nx">capabilities</span> <span class="p">{</span>
+      <span class="nx">name</span> <span class="p">=</span> <span class="s2">"EnableServerless"</span>
+  <span class="p">}</span>
+</code></pre></div>      </div>
+    </blockquote>
+  </li>
+  <li>And then you will need the Cosmos database itself - <code class="language-plaintext highlighter-rouge">azurerm_cosmosdb_mongo_database</code> <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_mongo_database">docs</a></li>
+</ul>
+
+<p>With your database defined, you should be able to deploy your to-do app. Edit the app service configuration:</p>
+<ul>
+  <li>Use the correct Docker image in the <code class="language-plaintext highlighter-rouge">site_config</code></li>
+  <li>Specify all the necessary <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service#app_settings"><code class="language-plaintext highlighter-rouge">app_settings</code></a> (i.e. environment variables) for your application to run. For the database connection string, use the <code class="language-plaintext highlighter-rouge">primary_mongodb_connection_string</code> output <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cosmosdb_account#attributes-reference">attribute</a> from your new <code class="language-plaintext highlighter-rouge">azurerm_cosmosdb_account</code> resource. This might look something like:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">"MONGODB_CONNECTION_STRING" = azurerm_cosmosdb_account.main.primary_mongodb_connection_string </code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="step-5---check-local-terraform-is-working">Step 5 - Check local Terraform is working</h3>
+
+<ul>
+  <li>Run <code class="language-plaintext highlighter-rouge">terraform apply</code> and browse to your app to check the functionality.</li>
+</ul>
+
+<h3 id="step-6---prevent-database-destruction">Step 6 - Prevent database destruction</h3>
+
+<ul>
+  <li>Run <code class="language-plaintext highlighter-rouge">terraform apply</code> a few more times, if you check the output you will notice that using the configuration suggested by the documentation will cause the CosmosDB database to be destroyed and recreated each time.</li>
+  <li>In the outputted plan, it states that a “EnableMongo” capability change is what “forces replacement”, so add <code class="language-plaintext highlighter-rouge">capabilities { name = "EnableMongo" }</code> to prevent this.</li>
+  <li>Add the <code class="language-plaintext highlighter-rouge">lifecycle { prevent_destroy = true }</code> meta-argument to the CosmosDB configuration to make Terraform error when it detects a plan that would cause the database to be destroyed.</li>
+</ul>
+
+<h2 id="part-2---parametrise-to-enable-different-environments">Part 2 - Parametrise to enable different environments</h2>
+
+<p>We now have a working Terraform configuration, however much of our configuration is hard-coded, and we don’t have support for different environments.</p>
+
+<p>To solve both of these issues we are now going to add <a href="https://www.terraform.io/docs/language/values/variables.html">Variables</a> to our Terraform setup.</p>
+
+<h3 id="step-1---input-variables">Step 1 - Input Variables</h3>
+
+<ul>
+  <li>Create a new file called <code class="language-plaintext highlighter-rouge">variables.tf</code>, with the following content:</li>
+</ul>
+
+<div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">variable</span> <span class="s2">"prefix"</span> <span class="p">{</span>
+  <span class="nx">description</span> <span class="p">=</span> <span class="s2">"The prefix used for all resources in this environment"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Also add terraform variables for each of your environment variables that are sensitive or vary between environments, such as your OAuth Client ID and secret
+    <ul>
+      <li>Secret values should be marked as <code class="language-plaintext highlighter-rouge">sensitive = true</code> in your configuration to make sure they do not appear in Terraform’s output.</li>
+    </ul>
+  </li>
+  <li>Now you can rename each resource to make use of this “prefix” variable, and use your other variables when configuring the app settings</li>
+</ul>
+
+<div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">resource</span> <span class="s2">"azurerm_service_plan"</span> <span class="s2">"main"</span> <span class="p">{</span>
+  <span class="nx">name</span>     <span class="p">=</span> <span class="s2">"</span><span class="k">${</span><span class="kd">var</span><span class="p">.</span><span class="nx">prefix</span><span class="k">}</span><span class="s2">-terraformed-asp"</span>
+  <span class="p">...</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Now when you run <code class="language-plaintext highlighter-rouge">terraform apply</code> it will prompt you for values of any variables without defaults.</li>
+  <li>To persist variables, you can either add them as defaults, or list them in another file named <code class="language-plaintext highlighter-rouge">terraform.tfvars</code>. This file should not be committed to Git.</li>
+  <li>To pass in variables on the command line, use the <code class="language-plaintext highlighter-rouge">-var</code> flag:
+<code class="language-plaintext highlighter-rouge">terraform apply -var 'prefix=test' -var 'oauth_client_id='xxxxxx'</code></li>
+</ul>
+
+<h3 id="step-2---output-variables">Step 2 - Output variables</h3>
+
+<p>Terraform also allows you to define <a href="https://www.terraform.io/docs/language/values/outputs.html">Output Variables</a>, to expose information on resources that have been created.</p>
+
+<p>Add a new file called <code class="language-plaintext highlighter-rouge">outputs.tf</code>, with the below contents:</p>
+
+<div class="language-terraform highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">output</span> <span class="s2">"webapp_url"</span> <span class="p">{</span>
+  <span class="nx">value</span> <span class="p">=</span> <span class="s2">"https://</span><span class="k">${</span><span class="nx">azurerm_linux_web_app</span><span class="p">.</span><span class="nx">main</span><span class="p">.</span><span class="nx">default_hostname</span><span class="k">}</span><span class="s2">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Now when you run <code class="language-plaintext highlighter-rouge">terraform apply</code>, it will output a link to the app.</p>
+
+<p>We are also going to use this functionality to export the CD webhook URL that you used in a previous exercise and added to your CD pipeline.</p>
+
+<p>Make another output variable that uses the <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_web_app#attributes-reference">attributes available in the app service</a> to form that webhook URL you obtained manually in a previous exercise:</p>
+
+<p><code class="language-plaintext highlighter-rouge">https://${azurerm_linux_web_app.main.site_credential[0].name}:${azurerm_linux_web_app.main.site_credential[0].password}@${azurerm_linux_web_app.main.name}.scm.azurewebsites.net/docker/hook</code></p>
+
+<p>The webhook URL includes a deployment key for your App Service. Make sure to mark it as <code class="language-plaintext highlighter-rouge">sensitive = true</code> so that it doesn’t appear in your CI/CD logs.</p>
+
+<p>After another <code class="language-plaintext highlighter-rouge">terraform apply</code>, you can then run <code class="language-plaintext highlighter-rouge">curl -dH -X POST "$(terraform output -raw cd_webhook)"</code> to test it works.</p>
+
+<h2 id="part-3---use-azure-blob-storage-as-remote-state">Part 3 - Use Azure Blob Storage as Remote State</h2>
+
+<p>Terraform stores <a href="https://www.terraform.io/docs/language/state/index.html">state</a> about which real-world infrastructure objects correspond to the resources in a configuration, along with associated metadata, in order to update or delete resources in response to changes.</p>
+
+<p>The default <code class="language-plaintext highlighter-rouge">local</code> <a href="https://developer.hashicorp.com/terraform/language/backend">backend</a> stores state as a json file on disk, <code class="language-plaintext highlighter-rouge">terraform.tfstate</code>, and also performs operations locally.</p>
+
+<p>There are a variety of other backends available.
+Some simply store the state files on a remote storage disk; others support locking the state while operations are being performed, which helps prevent conflicts and inconsistencies; and some also perform the provisioning and updating operations on a remote server.</p>
+
+<p>We’ll be using <a href="https://developer.hashicorp.com/terraform/language/backend/azurerm">the <code class="language-plaintext highlighter-rouge">azurerm</code> backend</a>, which stores the state as an encrypted Blob with the given Key within a Blob Container in a Blob Storage Account, and supports state locking and consistency checking via native capabilities of Azure Blob Storage.</p>
+
+<p>Run <code class="language-plaintext highlighter-rouge">terraform destroy</code> to de-provision your resources, delete the local state files and terraform directories, then have a go at following <a href="https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage#configure-storage-account">this tutorial</a> to set up a storage account and blobs and link your terraform configuration to it, or use the steps detailed below.</p>
+
+<h3 id="guide">Guide</h3>
+
+<p>The first thing we need is somewhere to store our state - we already have a resource group but we’ll need to create a Storage Account. We can do that through the Portal or using the CLI, and can create a “container” (which will act like a directory) within the account. Example commands:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az storage account create <span class="nt">--resource-group</span> &lt;resource_group_name&gt; <span class="nt">--name</span> &lt;storage_account_name&gt; <span class="nt">--sku</span> Standard_LRS <span class="nt">--encryption-services</span> blob
+
+az storage container create <span class="nt">--name</span> &lt;container_name&gt; <span class="nt">--account-name</span> &lt;storage_account_name&gt;
+</code></pre></div></div>
+
+<p>We can skip the steps to access an ARM_ACCESS_KEY because you’re already logged into the <code class="language-plaintext highlighter-rouge">az</code> CLI.</p>
+
+<p>Add a <code class="language-plaintext highlighter-rouge">backend</code> block to the existing <code class="language-plaintext highlighter-rouge">terraform</code> block in your <code class="language-plaintext highlighter-rouge">main.tf</code>. Note that the “key” here is the filename for your state file - not a secret key.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>terraform {
+    ...
+    backend "azurerm" {
+        resource_group_name  = "&lt;resource_group_name&gt;"
+        storage_account_name = "&lt;storage_account_name&gt;"
+        container_name       = "&lt;container_name&gt;"
+        key                  = "terraform.tfstate"
+    }
+}
+</code></pre></div></div>
+
+<p>You should now be able to run <code class="language-plaintext highlighter-rouge">terraform init</code> to recreate your state in the remote blob storage. If you forgot to delete the local state first, you may be prompted to add a <code class="language-plaintext highlighter-rouge">migrate-state</code> flag to the command. Once that’s working, try running <code class="language-plaintext highlighter-rouge">terraform apply</code> and check that:</p>
+<ul>
+  <li>It works</li>
+  <li>You can see the <code class="language-plaintext highlighter-rouge">terraform.tfstate</code> file in your Storage Account:
+    <ul>
+      <li>The easiest way to do that is to navigate to your resource group, into the Storage Account, and then through the “Storage Browser”.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="part-4---link-in-with-cicd">Part 4 - Link in with CI/CD</h2>
+
+<p>We now want the CD pipeline to run <code class="language-plaintext highlighter-rouge">terraform apply</code> to update the resources before deployment, and then use the terraform output to call the Azure CD webhook.</p>
+
+<h3 id="step-1---service-principal-authentication">Step 1 - Service Principal Authentication</h3>
+
+<p>So that your pipeline can access and alter your azure resources, we are going to set up <a href="https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret">Service Principal Authentication</a>.</p>
+
+<ul>
+  <li>First run <code class="language-plaintext highlighter-rouge">az account list</code>, and make note of the <code class="language-plaintext highlighter-rouge">id</code> field - this is your subscription ID.</li>
+  <li>If that command listed more than one Subscription, tell the Azure CLI which to use by running <code class="language-plaintext highlighter-rouge">az account set --subscription="SUBSCRIPTION_ID"</code></li>
+  <li>Now create a new Service Principal by running <code class="language-plaintext highlighter-rouge">az ad sp create-for-rbac --name "&lt;SERVICE PRINCIPAL NAME&gt;" --role Contributor --scopes /subscriptions/&lt;SUBSCRIPTION ID&gt;/resourceGroups/&lt;RESOURCE GROUP NAME&gt;"</code> where the resource group is your project exercise resource group.
+    <ul>
+      <li>In the Azure portal this will create an app registration with you as the owner.</li>
+    </ul>
+  </li>
+  <li>Add the following environment variables to your pipeline (securely): <code class="language-plaintext highlighter-rouge">ARM_CLIENT_ID</code>, <code class="language-plaintext highlighter-rouge">ARM_CLIENT_SECRET</code>, <code class="language-plaintext highlighter-rouge">ARM_TENANT_ID</code>, <code class="language-plaintext highlighter-rouge">ARM_SUBSCRIPTION_ID</code>. You can find the correct values for the first three from the newly created Service Principal.</li>
+</ul>
+
+<h3 id="step-2---set-up-terraform">Step 2 - Set up Terraform</h3>
+
+<p>Your CI/CD runner may already the Terraform CLI installed. For example, here is the list of software installed on the GitHub Actions Ubuntu 20.04 runner: <a href="https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md">https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2004-Readme.md</a></p>
+
+<p>You should script the installation of Terraform if you are using a different platform like GitLab, or if you just want to control the version of Terraform.</p>
+
+<blockquote>
+  <p>For GitLab, if you are running a script in the Docker-in-Docker container, the OS is Alpine which <a href="https://wiki.alpinelinux.org/wiki/Release_Notes_for_Alpine_3.19.0#HashiCorp_packages">has removed Terraform from its package repository</a> due to <a href="https://www.hashicorp.com/license-faq">the licensing changes</a>. Because of this,  the easiest installation is directly from the source:</p>
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- apk add --update-cache curl
+- &gt;
+  TERRAFORM_VERSION=1.9.0 
+  &amp;&amp; FILENAME=terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+  &amp;&amp; curl -LO https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/${FILENAME}
+  &amp;&amp; unzip FILENAME -d /usr/local/bin
+  &amp;&amp; rm FILENAME
+</code></pre></div>  </div>
+</blockquote>
+
+<p>Either way, add a step to your deployment job that runs <code class="language-plaintext highlighter-rouge">terraform init</code> and check that it runs successfully.</p>
+
+<h3 id="step-3---deploy-changes">Step 3 - Deploy changes</h3>
+
+<ul>
+  <li>Add your <code class="language-plaintext highlighter-rouge">terraform apply</code> command to your deployment job.
+    <ul>
+      <li>Include the <code class="language-plaintext highlighter-rouge">-auto-approve</code> flag because we want the pipeline to be non-interactive</li>
+      <li>Either set values for your input variables with <code class="language-plaintext highlighter-rouge">-var</code> tags, or set environment variables. E.g. an environment variable called “TF_VAR_client_secret” would automatically get used for a terraform input variable called “client_secret”.</li>
+    </ul>
+  </li>
+  <li>Update your curl command to the one you ran earlier, i.e. using the webhook URL provided by a terraform output variable.</li>
+</ul>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>Once you are happy with your Terraformed infrastructure and your Module 9-11 exercises have been approved, please delete the Azure resources you manually created in previous exercises.
+It is fine to wait until after this module has been approved too, if you think you might want to go back and look at it.</p>
+
+<p>A list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>Your app service and database are deployed using Terraform as part of your CI/CD pipeline</li>
+  <li>Your terraform config
+    <ul>
+      <li>uses attributes to enable sharing of information between resources</li>
+      <li>uses both input and output variables, including using the webhook output to restart the app</li>
+      <li>uses a shared blob to store state</li>
+    </ul>
+  </li>
+  <li>As always, your README should be up to date, your CI pipeline and tests should still run and pass, and your source code and CI/CD logs should not reveal any secrets</li>
+  <li>Any old (pre-Terraform) resources have been cleared out
+    <ul>
+      <li>This means that all resources in your project exercise resource group are managed by your Terraform scripts (apart from the storage account where the Terraform state file is stored)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="part-5-stretch---run-e2e-tests-on-terraformed-infrastructure">Part 5 (Stretch) - Run e2e tests on Terraformed Infrastructure</h2>
+
+<p>Best practice is to run tests against dedicated production-like test infrastructure.
+Change how your pipeline runs E2E testing so it:</p>
+
+<ol>
+  <li>Uses Terraform to create a test environment</li>
+  <li>Runs the E2E tests against it</li>
+  <li>Tears down the test environment</li>
+</ol>
+
+<p>You may also want to change the e2e test code but it is more likely only a matter of passing it the correct connection string.</p>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>

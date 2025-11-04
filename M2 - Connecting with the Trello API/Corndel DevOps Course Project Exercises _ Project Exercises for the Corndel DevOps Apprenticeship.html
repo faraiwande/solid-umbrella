@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://project-exercises.devops.corndel.com/exercises/m2_exercise -->
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Corndel DevOps Course Project Exercises | Project Exercises for the Corndel DevOps Apprenticeship</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Corndel DevOps Course Project Exercises">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:description" content="Project Exercises for the Corndel DevOps Apprenticeship">
+<meta property="og:site_name" content="Corndel DevOps Course Project Exercises">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Corndel DevOps Course Project Exercises">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Project Exercises for the Corndel DevOps Apprenticeship","headline":"Corndel DevOps Course Project Exercises","url":"/exercises/m2_exercise.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link rel="preload" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/css" as="style" type="text/css" crossorigin="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/style.css">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#content">Skip to the content.</a>
+    <header class="page-header" role="banner">
+      <div class="nav-bar">
+        <a href="https://project-exercises.devops.corndel.com/"><img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-home.svg" alt="Home" class="home-icon"></a>
+        <img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/shared-corndel-logo.png" class="corndel-logo">
+      </div>
+      <h1 class="project-name">Corndel DevOps Course Project Exercises</h1>
+      <h2 class="project-tagline">Project Exercises for the Corndel DevOps Apprenticeship</h2>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="module-2---project-exercise">Module 2 - Project Exercise</h1>
+
+<ul id="markdown-toc">
+  <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#module-2---project-exercise" id="markdown-toc-module-2---project-exercise">Module 2 - Project Exercise</a>    <ul>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#setup" id="markdown-toc-setup">Setup</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#step-1-git-setup" id="markdown-toc-step-1-git-setup">Step 1: Git setup</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#step-2-create-a-trello-account-and-api-credentials" id="markdown-toc-step-2-create-a-trello-account-and-api-credentials">Step 2: Create a Trello account and API credentials</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#exercise" id="markdown-toc-exercise">Exercise</a>        <ul>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#part-1-explore-the-trello-api" id="markdown-toc-part-1-explore-the-trello-api">Part 1: Explore the Trello API</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#part-2-keeping-your-secrets-safe" id="markdown-toc-part-2-keeping-your-secrets-safe">Part 2: Keeping your secrets safe!</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#part-3-replace-existing-app-logic-to-call-the-trello-api-instead" id="markdown-toc-part-3-replace-existing-app-logic-to-call-the-trello-api-instead">Part 3: Replace existing app logic to call the Trello API instead</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#part-4-change-the-status-of-to-do-items" id="markdown-toc-part-4-change-the-status-of-to-do-items">Part 4: Change the status of to-do items</a></li>
+          <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#part-5-create-a-class-for-to-do-items" id="markdown-toc-part-5-create-a-class-for-to-do-items">Part 5: Create a class for to-do items</a></li>
+        </ul>
+      </li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#submission-checklist" id="markdown-toc-submission-checklist">Submission checklist</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#stretch-goals" id="markdown-toc-stretch-goals">Stretch goals</a></li>
+      <li><a href="https://project-exercises.devops.corndel.com/exercises/m2_exercise#hints" id="markdown-toc-hints">Hints</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>We’ll use this exercise to build on the to-do app we made in module 1.</p>
+
+<p>So far, we’ve been storing the list of to-do items in a browser cookie (accessed in the app using the <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions"><code class="language-plaintext highlighter-rouge">session</code></a> object provided by Flask).</p>
+
+<blockquote>
+  <details> <summary style="font-size: 1.1rem"> Can you think of any drawbacks or limitations to using cookies to save the to-do list?</summary>
+The main drawback is that if you visit the app in another browser (or from another machine), all your carefully created tasks will no longer be available, because they're only saved in a cookie within the browser you used to create them. 
+</details>
+</blockquote>
+
+<p>In this exercise, we’ll use a web service called <a href="https://trello.com/"><strong>Trello</strong></a> to store and manage the to-do items for our app. Trello is a web-based list-making app popular among many dev teams because it provides a lightweight way to track work. Fortunately for us, it also provides a nice <a href="https://developers.trello.com/docs/api-introduction"><strong>REST API</strong></a> that we can use to create, read and update to-do items.</p>
+
+<p>In Trello, items or tasks are called <strong>cards</strong> and they are grouped together as <strong>lists</strong> (‘To Do’, ‘Done’, etc.) under <strong>boards</strong>. You can read about the basic concepts used by Trello in <a href="https://trello.com/en-GB/guide/trello-101">this overview</a>.</p>
+
+<p><strong>You’ll need to create a Trello account and a dedicated board to store the to-do items for your app</strong>. Then you can replace the existing app logic to get and create items with equivalent calls to Trello’s REST API instead. This means that you’ll be able to access your to-do list from any computer (or even directly within Trello’s web app)!</p>
+
+<p>This exercise should give you plenty of practice using REST APIs. It’s also a good opportunity to look for ways to refactor your code to improve its structure and readability.</p>
+
+<p>There are again hints available on the course’s <a href="https://faq.devops.corndel.com/Modules/Module_2/Project_Exercise/hints.html">FAQs site</a>.</p>
+
+<h2 id="setup">Setup</h2>
+
+<h3 id="step-1-git-setup">Step 1: Git setup</h3>
+
+<p><strong>Continue with your project code from the Module 1 exercise</strong>.</p>
+<ul>
+  <li>You will <strong>not</strong> need to create a new Git repo or use a new folder on your machine for this exercise (or any of the later exercises)</li>
+</ul>
+
+<p>Please also don’t forget to merge in your Pull/Merge Request and checkout a new branch before starting this exercise!</p>
+
+<h3 id="step-2-create-a-trello-account-and-api-credentials">Step 2: Create a Trello account and API credentials</h3>
+
+<p>We’re going to be using Trello’s API to fetch and save to-do tasks. In order to call their API, you’ll need to:</p>
+<ol>
+  <li><a href="https://trello.com/signup">Create a Trello account</a></li>
+  <li><a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#managing-your-api-key">Create an API Key for Trello</a>
+    <ul>
+      <li>To do this you’ll first need to create a Trello Power Up (<a href="https://trello.com/power-ups/admin">from this page</a>)</li>
+      <li>After creating a Trello Power Up you’ll be given the option to generate a new API key</li>
+    </ul>
+  </li>
+  <li>Create a API Token for Trello.
+    <ul>
+      <li>This can be done by clicking the “Token” link on the same page where your API key is displayed:
+<img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/trello_api_creds.png" alt="Trello API Credentials"></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Once generated please keep both your API Key &amp; Token safe for later.</strong></p>
+
+<h2 id="exercise">Exercise</h2>
+
+<h3 id="part-1-explore-the-trello-api">Part 1: Explore the Trello API</h3>
+
+<p>Probably the best place to start understanding how to use Trello’s API is <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/">their introductory page here</a>, in particular the section on <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#your-first-api-call">making your first request</a>.</p>
+
+<p>The examples in the documentation refer to using the <code class="language-plaintext highlighter-rouge">curl</code> tool in a terminal for making requests, however if it’s your first time using APIs we’d recommend <a href="https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client">the Thunder Client Extension for VSCode</a> as it’s a bit more user friendly.</p>
+<ul>
+  <li>For example here’s how the first example would look in Thunder Client:
+<img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/thunder_client_example.png" alt="Thunder Client Request"></li>
+</ul>
+
+<p>After making your first request you will want to use <a href="https://developer.atlassian.com/cloud/trello/rest">the API reference documentation</a> to further explore the available endpoints of Trello’s API.</p>
+
+<p>Recall that the todo app has two core functionalities:</p>
+<ul>
+  <li>Displaying todo items</li>
+  <li>Creating new items</li>
+</ul>
+
+<p><em>(We’ll cover updating items later)</em></p>
+
+<p>Can you identify the two API endpoints that best correspond to these actions?</p>
+
+<blockquote>
+  <details> <summary style="font-size: rem">Examples of Suitable Endpoints</summary>
+<div>
+      <p>The Trello equivalent of items would be cards so <a href="https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-cards-get">the Get Cards on a Board Endpoint</a> could be a good endpoint for displaying all the items.</p>
+      <div>
+        <ul>
+          <li>However if we also want to display an item’s status we’ll need to collect the Trello Lists (columns) as well, which means the <a href="https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-lists-get">Get Lists on a Board Endpoint</a> could also be useful
+<br></li>
+        </ul>
+        <div>
+          <p>For creating new items there’s the <a href="https://developer.atlassian.com/cloud/trello/rest/api-group-cards/#api-cards-post">Create a New Card Endpoint</a>.</p>
+        </div>
+      </div>
+    </div></details>
+</blockquote>
+
+<h3 id="part-2-keeping-your-secrets-safe">Part 2: Keeping your secrets safe!</h3>
+
+<p>All of these API calls require an <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/">API key and token</a> to authenticate the request. These credentials are tied to your account and need to be kept secret! For this reason, they shouldn’t be committed to your project’s Git repository.</p>
+
+<p>There are a <a href="https://ron.sh/configuring-python-applications/">number of ways</a> of specifying these credentials separately and then having the app read them in, such as using a separate configuration file or specifying environment variables.</p>
+
+<p><strong>The project is already set up with a <code class="language-plaintext highlighter-rouge">.env</code> file, so add the API key and token as new variables in there.</strong></p>
+<ul>
+  <li>Any new environment variable <em>names</em> should also be added to the <code class="language-plaintext highlighter-rouge">.env.template</code> file but <em>without</em> the <em>values</em> e.g.
+    <pre><code class="language-env">TRELLO_API_KEY=&lt;DELIBERATELY MISSING&gt;
+TRELLO_API_TOKEN=&lt;DELIBERATELY MISSING&gt;
+</code></pre>
+    <p><em>(This is so that any new developers on your project know to add their own credentials to get the code up and running.)</em></p>
+  </li>
+</ul>
+
+<p>You can access your environment variables from the Python code with <code class="language-plaintext highlighter-rouge">os.getenv('YOUR_ENV_VAR_NAME')</code>. By convention, environment variable names are all uppercase with underscores.</p>
+
+<p>The Trello board ID is not a sensitive value, but it is still something we will want to vary between environments - developers shouldn’t be testing against the “real” board. So add another environment variable for the board ID as well.</p>
+<ul>
+  <li>See <a href="https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/#your-first-api-call">the instructions here</a> on how to list your boards along with their ids</li>
+</ul>
+
+<p>Whichever way you store and read secrets, make sure that any files containing the secret values themselves are added to the <a href="https://www.pluralsight.com/blog/software-development/a-practical-guide-to-using--gitignore">.gitignore</a> file in your project repository, to make sure they cannot be committed by accident! This has already been done for <code class="language-plaintext highlighter-rouge">.env</code>.</p>
+
+<p>As these files will be ignored by git, anybody who downloads your project will no longer be able to run your app without creating their own secret files. <em>As a DevOps engineer it is crucial that you streamline the setup process for future developers of your app. Keeping the setup documentation up to date as you work through the exercises is an implicit but vital requirement!</em></p>
+
+<p>With this in mind you should add setup instructions to <code class="language-plaintext highlighter-rouge">README.md</code> file documenting the new steps required to get the project running. This should include any pre-requisite actions such as signing up to Trello. You should also ensure everything documented in the README is still true.</p>
+
+<h3 id="part-3-replace-existing-app-logic-to-call-the-trello-api-instead">Part 3: Replace existing app logic to call the Trello API instead</h3>
+<p>Now that you’re familiar with the API and how to fetch, create and modify cards, let’s update the to-do app to call the Trello API.</p>
+
+<p>Python has built-in modules for making web requests, but there are libraries available that make things easier. We’ll be using an external library called <a href="https://requests.readthedocs.io/en/master/">Requests</a> to make the API requests and interpret the JSON response.</p>
+
+<p>Add the <code class="language-plaintext highlighter-rouge">requests</code> library to your list of poetry dependencies in <code class="language-plaintext highlighter-rouge">pyproject.toml</code> by running <code class="language-plaintext highlighter-rouge">poetry add requests</code>.</p>
+
+<p>Requests should now be installed and ready for use in the app. Now is a good point to spend some time learning how to use it. In general, when looking for libraries that contain the functionality you want, you should choose a library that is <em>well-documented</em> (so that learning how to use it is as quick as possible) and <em>popular</em> (so you are more likely to get search results containing solutions to your problems). Accordingly, Requests is very popular, and its documentation is good too.</p>
+<ul>
+  <li>A quickstart guide is available <a href="https://requests.readthedocs.io/en/master/user/quickstart/#make-a-request">here</a>.</li>
+  <li>The API reference documentation also provides examples using <code class="language-plaintext highlighter-rouge">requests</code>:
+<img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/trello_api_code_export.png" alt="Trello API Reference Code Example"></li>
+  <li>Additionally it’s also possible to export requests made in Thunder Client to Python code:
+<img src="./Corndel DevOps Course Project Exercises _ Project Exercises for the Corndel DevOps Apprenticeship_files/thunder_client_code_export.png" alt="Thunder Client Code Export"></li>
+</ul>
+
+<p>Have a look at the methods available on the requests object and work out how to call the Trello API from your code. You will need to read the result, convert it into some sort of object, and replace the calls to <code class="language-plaintext highlighter-rouge">session_items</code> methods with calls to your new methods instead. The <a href="https://requests.readthedocs.io/en/master/user/quickstart/#json-response-content"><code class="language-plaintext highlighter-rouge">json()</code></a> method provided by Requests should help you to convert the JSON response into a Python dictionary.</p>
+
+<p>Create a file <code class="language-plaintext highlighter-rouge">trello_items.py</code>, next to <code class="language-plaintext highlighter-rouge">session_items.py</code>. As you add functions to <code class="language-plaintext highlighter-rouge">trello_items</code>, update <code class="language-plaintext highlighter-rouge">app.py</code> to use those instead of <code class="language-plaintext highlighter-rouge">session_items</code>.</p>
+
+<p>To start with you’ll want to add two functions to <code class="language-plaintext highlighter-rouge">trello_items.py</code>, one for each action/endpoint we identified in Part 1 (analogous to the <code class="language-plaintext highlighter-rouge">get_items</code> and <code class="language-plaintext highlighter-rouge">add_item</code> functions that we used from <code class="language-plaintext highlighter-rouge">session_items</code>).</p>
+
+<p>Adding/Creating items is probably the easiest action to switch over first.</p>
+<ul>
+  <li>You will have to refer to Trello board to check they’ve been added as they will not show up on the website yet (until you move over <code class="language-plaintext highlighter-rouge">get_items</code>)</li>
+  <li>You’ll need to specify the appropriate Trello List ID (<code class="language-plaintext highlighter-rouge">idList</code>) for the cards/items you are creating (this should be the first column on your board). Like with the Board ID, this can be hardcoded as an environment variable</li>
+</ul>
+
+<p>For the <code class="language-plaintext highlighter-rouge">get_items</code> method, please note that you can fetch all to-do items (cards) from your board in a single request to the <a href="https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-lists-get">Get Lists on a Board Endpoint</a> if you include the query parameter <code class="language-plaintext highlighter-rouge">cards=open</code> to make it include card data.</p>
+<blockquote>
+  <details> <summary style="font-size: 1.1rem">Hints for displaying Trello items on the Homepage</summary>
+<div>
+      <p>If you are finding that the Trello response is too large to read, try using the <code class="language-plaintext highlighter-rouge">card_fields</code> query parameter to filter to the relevant properties (e.g. <code class="language-plaintext highlighter-rouge">card_fields=id,name</code>).
+<br></p>
+      <div>
+        <p>When unpacking the response json you’ll want to extract the cards into a Python list of dictionaries. This can be achieved via a <code class="language-plaintext highlighter-rouge">for</code> loop:
+<br></p>
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="nf">json</span><span class="p">()</span>
+
+<span class="n">cards</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">trello_list</span> <span class="ow">in</span> <span class="n">response_json</span><span class="p">:</span>
+  <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">trello_list</span><span class="p">[</span><span class="sh">'</span><span class="s">cards</span><span class="sh">'</span><span class="p">]:</span>
+    <span class="n">cards</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">card</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">cards</span><span class="p">)</span>
+</code></pre></div>        </div>
+        <div>
+          <p>The <code class="language-plaintext highlighter-rouge">cards</code> object can then be passed to the <code class="language-plaintext highlighter-rouge">render_template</code> method in <code class="language-plaintext highlighter-rouge">app.py</code> (although note that some properties may have changed names).
+<br></p>
+          <div>
+            <p>The <code class="language-plaintext highlighter-rouge">status</code> property will also have to be pulled off of the <code class="language-plaintext highlighter-rouge">trello_list</code> object and onto the corresponding <code class="language-plaintext highlighter-rouge">card</code> objects.</p>
+          </div>
+        </div>
+      </div>
+    </div></details>
+</blockquote>
+
+<p><em>Don’t forget to commit your work often, making it easier to back-track if you run into problems.</em></p>
+
+<h3 id="part-4-change-the-status-of-to-do-items">Part 4: Change the status of to-do items</h3>
+
+<p>Let’s extend the functionality of the app by using more of the Trello API calls we looked at earlier.</p>
+
+<p>Change an item’s status by updating its <code class="language-plaintext highlighter-rouge">idList</code>.</p>
+<ul>
+  <li>You may have implemented this (using <code class="language-plaintext highlighter-rouge">session_items</code>) as a stretch goal in Module 1. If you did, you just need to swap from the browser session to Trello.</li>
+  <li>You can find out the ID for a given status by first making a request to the <a href="https://developer.atlassian.com/cloud/trello/rest/api-group-boards/#api-boards-id-lists-get">Get List on a Board endpoint</a> and locating the <code class="language-plaintext highlighter-rouge">id</code> of the list with the correct name.</li>
+  <li>It’s perfectly fine to store your board’s list ids in your <code class="language-plaintext highlighter-rouge">.env</code> file rather than having to make a call to this endpoint each time</li>
+</ul>
+
+<p>We need a way to mark items as completed. Add a <code class="language-plaintext highlighter-rouge">complete_item</code> route that accepts the ID of an item as a parameter and then calls a method to change its status from ‘To Do’ to ‘Done’ using the appropriate Trello API call(s). You’ll then need to expose that functionality through the UI: modify the <code class="language-plaintext highlighter-rouge">index.html</code> template to display a button for each item with a link to the route you just created.</p>
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">url_for()</code> method <a href="https://stackoverflow.com/questions/35188540/get-a-variable-from-the-url-in-a-flask-route">accepts keyword arguments</a> that can be used to specify the item ID in each link.</li>
+  <li>Alternatively you could provide the item ID via a hidden <code class="language-plaintext highlighter-rouge">&lt;input&gt;</code> element on a form linked to the button</li>
+</ul>
+
+<p>If you wanted to go further, you could add another route and logic to change status from ‘Done’ back to ‘To Do’.</p>
+
+<h3 id="part-5-create-a-class-for-to-do-items">Part 5: Create a class for to-do items</h3>
+
+<p>So far, you have probably been representing to-do items just as dictionaries, something like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">'</span><span class="s">status</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">Not Started</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">title</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">List saved to-do items</span><span class="sh">'</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>That’s been fine, but we can make the code cleaner and more readable now by adding an <code class="language-plaintext highlighter-rouge">Item</code> class. Note that class names are PascalCase by convention, rather than the snake_case of variable/function names.</p>
+
+<p>Using dictionaries is both long-winded and unreliable. You could easily miss a property when creating it or try to access one that doesn’t exist. If using Trello’s response data directly, the whole codebase is coupled to the Trello API’s data structure.</p>
+
+<p>Having a class will allow us to define what properties an item has (e.g.  <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">status</code> and <code class="language-plaintext highlighter-rouge">title</code>) in a single place in the codebase and only one place in the codebase needs to be able to map from Trello data to the Item class.</p>
+
+<p>You could also add functions to the class, e.g. to provide a common place to map from Trello’s JSON to an instance of an <code class="language-plaintext highlighter-rouge">Item</code>. But the only requirement for this exercise is to create a data class - a simple class that just has some attributes. That means an <code class="language-plaintext highlighter-rouge">__init__</code> function that takes the various to-do item properties as arguments and then sets e.g. <code class="language-plaintext highlighter-rouge">self.id = id</code> so they are persisted on the instance.</p>
+
+<p>Let’s add that class now; your class might look something like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Item</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">status</span> <span class="o">=</span> <span class="sh">'</span><span class="s">To Do</span><span class="sh">'</span><span class="p">):</span>
+        <span class="n">self</span><span class="p">.</span><span class="nb">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">status</span> <span class="o">=</span> <span class="n">status</span>
+
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_trello_card</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">card</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nf">cls</span><span class="p">(</span><span class="n">card</span><span class="p">[</span><span class="sh">'</span><span class="s">id</span><span class="sh">'</span><span class="p">],</span> <span class="n">card</span><span class="p">[</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="sh">'</span><span class="s">name</span><span class="sh">'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">classmethod</code> decorator defines this as a method accessible directly on the class, and the first argument will be passed through as the class itself. This will allow us to create new Items - in this case using an existing card dictionary and an existing list dictionary matching the formats returned by Trello’s responses - with a command like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">item</span> <span class="o">=</span> <span class="n">Item</span><span class="p">.</span><span class="nf">from_trello_card</span><span class="p">(</span><span class="n">card</span><span class="p">,</span> <span class="n">card_list</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Use your new class to convert the cards passed back from Trello into Items, which can be used by the index page to render the relevant information. Note that for now you’ll likely only use this class for GET endpoints displaying information about cards; e.g. for adding a new card, creating an Item instance from the details passed through by a user and then converting that back out to the format required by Trello would probably add unnecessary complexity here.</p>
+
+<h2 id="submission-checklist">Submission checklist</h2>
+
+<p>A non-exhaustive list of things to check before creating a Pull Request:</p>
+
+<ul>
+  <li>Your Trello API key and token aren’t committed in git</li>
+  <li>You can run your app, add an item, then change its status, and those changes are persisted (on your Trello board)</li>
+  <li>Your README includes any new steps required to set up your app and any new environment variables have placeholders in your <code class="language-plaintext highlighter-rouge">.env.template</code> file</li>
+  <li>Your new <code class="language-plaintext highlighter-rouge">Item</code> class is used by the code that displays your index page</li>
+  <li>You’ve deleted any unused or commented out code - it’ll be in your git history if you need it</li>
+</ul>
+
+<h2 id="stretch-goals">Stretch goals</h2>
+
+<p>Once you’re happy with the main exercise we encourage you to have a go at the stretch goals. These are always optional and we will not refer submissions in Aptem for attempting a stretch goal (unless you break the rest of your app by doing so!). If you’re interested or would like more practice then read on.</p>
+
+<ul>
+  <li>How clean is your code? Is there anything you could do to improve readability?</li>
+  <li>Sort items by status.</li>
+  <li>Add item descriptions.</li>
+  <li>Add due dates to items.
+    <ul>
+      <li>You may want to use a date-picker library, such as <a href="https://github.com/uxsolutions/bootstrap-datepicker">bootstrap-datepicker</a> (documentation available <a href="https://bootstrap-datepicker.readthedocs.io/en/latest/">here</a>). Note that Bootstrap and jQuery are already included in the project, so there’s no need to add them.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="hints">Hints</h2>
+<ul>
+  <li><a href="https://faq.devops.corndel.com/">Check the FAQs repo for hints</a></li>
+</ul>
+
+
+      <footer class="site-footer">
+        <span class="site-footer-credits">© 2024 Corndel</span>
+      </footer>
+    </main>
+  
+</body></html>
